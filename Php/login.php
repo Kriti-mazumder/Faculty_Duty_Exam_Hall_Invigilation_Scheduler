@@ -1,81 +1,464 @@
 <?php
+/**
+ * login.php – Premier University Invigilation Scheduler
+ * Shows the professional login UI. Already-authenticated users are redirected.
+ */
 if (session_status() === PHP_SESSION_NONE) session_start();
+
+// Redirect users who are already logged in
 if (!empty($_SESSION['user_id'])) {
     $target = ($_SESSION['role'] ?? '') === 'faculty' ? 'faculty_dashboard.php' : 'admin_dashboard.php';
     header('Location: /Faculty_Duty_Exam_Hall_Invigilation_Scheduler/Php/' . $target);
     exit();
 }
+
 $error = $_GET['error'] ?? '';
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Login – Premier University Invigilation Scheduler</title>
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Sign In – Premier University Invigilation Scheduler</title>
+  <meta name="description" content="Faculty Duty & Exam Hall Invigilation Scheduler — Office of the Controller of Examinations, Premier University."/>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet"/>
+
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config={theme:{extend:{colors:{"primary":"#004ac6","primary-container":"#2563eb","on-primary":"#ffffff","surface":"#f8f9ff","surface-container-lowest":"#ffffff","surface-container":"#e5eeff","on-surface":"#0b1c30","on-surface-variant":"#434655","error":"#ba1a1a","outline":"#737686","outline-variant":"#c3c6d7"},fontFamily:{sans:["Inter","sans-serif"]}}}};
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-primary-container": "#eeefff",
+            "background":           "#f8f9ff",
+            "secondary-container":  "#dae2fd",
+            "surface-dim":          "#cbdbf5",
+            "on-tertiary-fixed-variant": "#3323cc",
+            "primary-fixed-dim":    "#b4c5ff",
+            "on-surface":           "#0b1c30",
+            "on-secondary-container": "#5c647a",
+            "on-error-container":   "#93000a",
+            "on-primary":           "#ffffff",
+            "on-background":        "#0b1c30",
+            "on-secondary":         "#ffffff",
+            "surface-variant":      "#d3e4fe",
+            "inverse-surface":      "#213145",
+            "surface-container-highest": "#d3e4fe",
+            "on-secondary-fixed-variant": "#3f465c",
+            "error":                "#ba1a1a",
+            "error-container":      "#ffdad6",
+            "surface-tint":         "#0053db",
+            "tertiary-fixed":       "#e2dfff",
+            "surface-container-lowest": "#ffffff",
+            "outline-variant":      "#c3c6d7",
+            "tertiary-fixed-dim":   "#c3c0ff",
+            "on-tertiary-container":"#f2eeff",
+            "surface":              "#f8f9ff",
+            "on-tertiary-fixed":    "#0f0069",
+            "on-primary-fixed-variant": "#003ea8",
+            "inverse-primary":      "#b4c5ff",
+            "tertiary":             "#4338d9",
+            "on-error":             "#ffffff",
+            "secondary-fixed":      "#dae2fd",
+            "on-primary-fixed":     "#00174b",
+            "primary-fixed":        "#dbe1ff",
+            "surface-container":    "#e5eeff",
+            "on-tertiary":          "#ffffff",
+            "outline":              "#737686",
+            "inverse-on-surface":   "#eaf1ff",
+            "primary-container":    "#2563eb",
+            "surface-container-low":"#eff4ff",
+            "secondary":            "#565e74",
+            "surface-bright":       "#f8f9ff",
+            "secondary-fixed-dim":  "#bec6e0",
+            "on-surface-variant":   "#434655",
+            "tertiary-container":   "#5d55f3",
+            "on-secondary-fixed":   "#131b2e",
+            "primary":              "#004ac6",
+            "surface-container-high":"#dce9ff"
+          },
+          borderRadius: {
+            DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"
+          },
+          spacing: {
+            "space-lg":  "1.5rem", "gutter": "1.5rem", "gutter-mobile": "1rem",
+            "space-xs":  "0.25rem","space-sm": "0.5rem","space-xl":       "2rem",
+            "space-md":  "1rem",   "margin":   "2rem",  "margin-mobile":  "1rem"
+          },
+          fontFamily: {
+            "title-md":   ["Inter"], "headline-lg-mobile": ["Inter"],
+            "headline-sm":["Inter"], "body-lg":  ["Inter"], "body-md": ["Inter"],
+            "label-lg":   ["Inter"], "code":     ["JetBrains Mono"],
+            "display":    ["Inter"], "headline-lg": ["Inter"], "body-sm": ["Inter"],
+            "headline-md":["Inter"], "title-sm": ["Inter"], "label-md": ["Inter"],
+            "label-sm":   ["Inter"]
+          },
+          fontSize: {
+            "title-md":        ["16px",{"lineHeight":"22px","fontWeight":"600"}],
+            "headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],
+            "headline-sm":     ["18px",{"lineHeight":"24px","fontWeight":"600"}],
+            "body-lg":         ["16px",{"lineHeight":"24px","fontWeight":"400"}],
+            "body-md":         ["14px",{"lineHeight":"20px","fontWeight":"400"}],
+            "label-lg":        ["14px",{"lineHeight":"20px","fontWeight":"500"}],
+            "code":            ["12px",{"lineHeight":"16px","fontWeight":"500"}],
+            "display":         ["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"700"}],
+            "headline-lg":     ["30px",{"lineHeight":"38px","letterSpacing":"-0.015em","fontWeight":"600"}],
+            "body-sm":         ["12px",{"lineHeight":"16px","fontWeight":"400"}],
+            "headline-md":     ["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],
+            "title-sm":        ["14px",{"lineHeight":"20px","fontWeight":"600"}],
+            "label-md":        ["12px",{"lineHeight":"16px","letterSpacing":"0.025em","fontWeight":"600"}],
+            "label-sm":        ["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"700"}]
+          }
+        }
+      }
+    };
   </script>
+
   <style>
-    body { font-family: 'Inter', sans-serif; }
-    .glass {
-      background: rgba(255,255,255,0.85);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
+    @layer base {
+      html, body { margin: 0; padding: 0; }
+      body { overscroll-behavior: none; }
+      main > :first-child { margin-top: 0 !important; }
+      main > :last-child  { margin-bottom: 0 !important; }
     }
+    ::-webkit-scrollbar { display: none; }
   </style>
 </head>
-<body class="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#0f172a] via-[#1e3a5f] to-[#004ac6]">
-  <div class="glass rounded-2xl shadow-2xl w-full max-w-md p-10 border border-white/20">
-    <!-- Logo -->
-    <div class="flex flex-col items-center mb-8">
-      <div class="w-14 h-14 rounded-2xl bg-primary flex items-center justify-center mb-3 shadow-lg">
-        <span class="material-symbols-outlined text-white text-[32px]">school</span>
-      </div>
-      <h1 class="text-2xl font-bold text-[#0b1c30] tracking-tight">Premier University</h1>
-      <p class="text-sm text-[#434655] mt-1">Exam Hall Invigilation Scheduler</p>
+
+<body class="bg-background font-body-md text-on-surface antialiased min-h-screen flex items-center justify-center">
+<main class="w-full flex items-center justify-center p-space-md">
+  <div class="flex flex-col w-full items-center justify-center py-space-xl px-gutter relative overflow-hidden">
+
+    <!-- Background watermark shield -->
+    <div class="absolute inset-0 pointer-events-none flex items-center justify-center opacity-5 select-none">
+      <svg class="w-[680px] h-[680px] text-primary" fill="currentColor" viewBox="0 0 100 100">
+        <path d="M50 5 L88 22 V55 C88 74 72 90 50 96 C28 90 12 74 12 55 V22 Z M50 14 L20 28 V54 C20 69 33 82 50 87 C67 82 80 69 80 54 V28 Z M45 35 H55 V60 H45 Z M45 66 H55 V74 H45 Z"/>
+      </svg>
     </div>
 
-    <!-- Error Banner -->
-    <?php if ($error): ?>
-    <div class="mb-4 flex items-center gap-2 px-4 py-3 rounded-lg bg-red-50 border border-red-200 text-red-700 text-sm">
-      <span class="material-symbols-outlined text-[18px]">error</span>
-      <span>Invalid username or password. Please try again.</span>
-    </div>
-    <?php endif; ?>
+    <div class="w-full max-w-[560px] relative z-10 flex flex-col gap-space-lg">
 
-    <!-- Form -->
-    <form action="/Faculty_Duty_Exam_Hall_Invigilation_Scheduler/Php/login_process.php" method="POST" class="space-y-5">
-      <div>
-        <label class="block text-sm font-semibold text-[#0b1c30] mb-1.5" for="username">Username</label>
-        <div class="relative">
-          <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[#737686] text-[20px]">person</span>
-          <input id="username" name="username" type="text" required autocomplete="username"
-                 class="w-full pl-10 pr-4 py-3 rounded-xl border border-[#c3c6d7] bg-white/80 text-[#0b1c30] text-sm focus:outline-none focus:ring-2 focus:ring-[#004ac6] focus:border-transparent transition placeholder:text-[#737686]"
-                 placeholder="Enter your username"/>
+      <!-- ── System Notice Banner ─────────────────────────────────────── -->
+      <div class="bg-surface-container rounded-xl p-space-md shadow-sm flex items-start gap-space-md text-on-surface">
+        <div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-title-md">campaign</span>
+        </div>
+        <div class="flex flex-col min-w-0 pr-space-xs">
+          <div class="flex items-center gap-space-sm mb-0.5">
+            <span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">System Notice</span>
+            <span class="inline-block w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+            <span class="font-code text-code text-on-surface-variant">TERM: SP25-MT</span>
+          </div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Spring 2025 Midterm Invigilation Roster is now published. Faculty members must verify assigned examination slots and room allocations before the lockdown deadline.
+          </p>
         </div>
       </div>
-      <div>
-        <label class="block text-sm font-semibold text-[#0b1c30] mb-1.5" for="password">Password</label>
-        <div class="relative">
-          <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[#737686] text-[20px]">lock</span>
-          <input id="password" name="password" type="password" required autocomplete="current-password"
-                 class="w-full pl-10 pr-4 py-3 rounded-xl border border-[#c3c6d7] bg-white/80 text-[#0b1c30] text-sm focus:outline-none focus:ring-2 focus:ring-[#004ac6] focus:border-transparent transition placeholder:text-[#737686]"
-                 placeholder="Enter your password"/>
+
+      <!-- ── Login Card ───────────────────────────────────────────────── -->
+      <div class="bg-surface-container-lowest rounded-xl shadow-xl p-space-xl text-on-surface">
+
+        <!-- University Logo & Heading -->
+        <div class="flex flex-col items-center text-center pb-space-lg">
+          <div class="relative mb-space-md">
+            <div class="w-16 h-16 rounded-xl bg-surface-container flex items-center justify-center text-primary shadow-sm">
+              <span class="material-symbols-outlined text-display" style="font-variation-settings: 'FILL' 1;">account_balance</span>
+            </div>
+            <span class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-primary-container text-on-primary flex items-center justify-center text-label-sm font-label-sm shadow">
+              PU
+            </span>
+          </div>
+          <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary mb-1">
+            Office of the Controller of Examinations
+          </span>
+          <h1 class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">
+            Premier University
+          </h1>
+          <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            Faculty Duty &amp; Exam Hall Invigilation Scheduler
+          </p>
+        </div>
+
+        <!-- Role Selector Tabs -->
+        <div class="bg-surface-container-low p-1 rounded-lg flex mb-space-lg shadow-sm" role="tablist">
+          <button aria-selected="true"
+                  class="flex-1 py-2 px-space-md rounded-lg font-label-lg text-label-lg flex items-center justify-center gap-space-sm transition-all duration-150 bg-surface-container-lowest text-primary shadow-sm font-semibold"
+                  id="btn-role-faculty" onclick="selectRole('faculty')" role="tab" type="button">
+            <span class="material-symbols-outlined text-title-md">person_outline</span>
+            Faculty Member
+          </button>
+          <button aria-selected="false"
+                  class="flex-1 py-2 px-space-md rounded-lg font-label-lg text-label-lg flex items-center justify-center gap-space-sm transition-all duration-150 text-secondary hover:text-on-surface"
+                  id="btn-role-admin" onclick="selectRole('admin')" role="tab" type="button">
+            <span class="material-symbols-outlined text-title-md">admin_panel_settings</span>
+            Admin / Controller
+          </button>
+        </div>
+
+        <!-- ── PHP Error Banner ──────────────────────────────────────── -->
+        <?php if ($error === 'role_mismatch'): ?>
+        <div class="mb-space-md flex items-center gap-2 px-4 py-3 rounded-lg bg-amber-50 border border-amber-200 text-amber-900 text-sm shadow-sm" role="alert">
+          <span class="material-symbols-outlined text-[20px] text-amber-600 shrink-0">warning</span>
+          <span><strong>Access Denied:</strong> Your account role does not match the selected tab. Please switch to the correct tab (Faculty vs Admin / Controller) to log in.</span>
+        </div>
+        <?php elseif ($error): ?>
+        <div class="mb-space-md flex items-center gap-2 px-4 py-3 rounded-lg bg-red-50 border border-red-200 text-red-700 text-sm shadow-sm" role="alert">
+          <span class="material-symbols-outlined text-[18px] shrink-0">error</span>
+          <span>Invalid credentials. Please check your username / email and password and try again.</span>
+        </div>
+        <?php endif; ?>
+
+        <!-- ── Login Form ─────────────────────────────────────────────
+             Backend: login_process.php reads:
+               $_POST['login_identity'] OR $_POST['username'] OR $_POST['email']
+               $_POST['password'] OR $_POST['login_password']
+             We use name="login_identity" + name="login_password" to match exactly.
+        ──────────────────────────────────────────────────────────────── -->
+        <form action="/Faculty_Duty_Exam_Hall_Invigilation_Scheduler/Php/login_process.php"
+              class="flex flex-col gap-space-lg"
+              id="schedulerLoginForm"
+              method="POST">
+
+          <!-- Hidden role field (cosmetic — backend ignores it and uses DB role) -->
+          <input id="role_input" name="role" type="hidden" value="faculty"/>
+
+          <!-- Identity Field -->
+          <div class="flex flex-col gap-1.5">
+            <label class="font-label-lg text-label-lg text-on-surface flex items-center justify-between" for="login_identity">
+              <span id="label_identity_text">Official Institutional Email / Faculty ID</span>
+              <span class="text-error font-title-sm">*</span>
+            </label>
+            <div class="relative flex items-center">
+              <span class="material-symbols-outlined absolute left-3 text-secondary text-title-md pointer-events-none">badge</span>
+              <input class="w-full h-10 pl-10 pr-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-sm outline-none transition-shadow focus:shadow-md border border-outline-variant focus:border-primary-container"
+                     id="login_identity"
+                     name="login_identity"
+                     placeholder="e.g. rahman@premier.edu.bd or dr.rahman"
+                     required=""
+                     type="text"
+                     autocomplete="username"/>
+            </div>
+            <span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+              <span class="material-symbols-outlined text-label-md">info</span>
+              Enter your institutional email address or system username.
+            </span>
+          </div>
+
+          <!-- Password Field -->
+          <div class="flex flex-col gap-1.5">
+            <div class="flex items-center justify-between">
+              <label class="font-label-lg text-label-lg text-on-surface flex items-center gap-1" for="login_password">
+                <span>Account Password</span>
+                <span class="text-error font-title-sm">*</span>
+              </label>
+              <button class="font-label-md text-label-md text-primary hover:underline" onclick="openForgotModal()" type="button">
+                Forgot Password?
+              </button>
+            </div>
+            <div class="relative flex items-center">
+              <span class="material-symbols-outlined absolute left-3 text-secondary text-title-md pointer-events-none">lock</span>
+              <input class="w-full h-10 pl-10 pr-10 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-sm outline-none transition-shadow focus:shadow-md border border-outline-variant focus:border-primary-container"
+                     id="login_password"
+                     name="login_password"
+                     placeholder="••••••••••••"
+                     required=""
+                     type="password"
+                     autocomplete="current-password"/>
+              <button aria-label="Toggle password visibility"
+                      class="absolute right-3 text-secondary hover:text-on-surface flex items-center justify-center p-1 rounded"
+                      id="pwd_toggle_btn"
+                      onclick="togglePasswordVisibility()"
+                      type="button">
+                <span class="material-symbols-outlined text-title-md" id="pwd_toggle_icon">visibility</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Remember Me + Security Badge -->
+          <div class="flex items-center justify-between pt-1">
+            <label class="flex items-center gap-2 cursor-pointer select-none">
+              <input class="w-4 h-4 rounded bg-surface-container text-primary-container focus:ring-0 focus:outline-none"
+                     name="remember_me" type="checkbox" value="1"/>
+              <span class="font-body-sm text-body-sm text-on-surface-variant">
+                Remember my credentials on this terminal
+              </span>
+            </label>
+            <span class="inline-flex items-center gap-1 font-code text-code text-secondary bg-surface-container px-2 py-0.5 rounded">
+              SSL 256-BIT
+            </span>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="pt-space-xs flex flex-col gap-space-sm">
+            <button class="w-full h-11 bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg rounded-lg shadow-md transition-all duration-150 flex items-center justify-center gap-space-sm font-semibold tracking-wide"
+                    type="submit">
+              <span class="material-symbols-outlined text-title-md">login</span>
+              <span id="btn_submit_text">Sign In to Faculty Portal</span>
+            </button>
+          </div>
+
+        </form>
+
+        <!-- Footer Row inside Card -->
+        <div class="mt-space-lg pt-space-md flex items-center justify-between text-on-surface-variant border-t border-outline-variant/40">
+          <div class="flex items-center gap-space-xs">
+            <span class="inline-block w-2 h-2 rounded-full bg-surface-tint"></span>
+            <span class="font-label-sm text-label-sm text-secondary">Controller Gateway Active</span>
+          </div>
+          <span class="font-code text-code text-secondary">BUILD: v3.4.2-PROD</span>
         </div>
       </div>
-      <button type="submit"
-              class="w-full py-3 rounded-xl bg-[#004ac6] hover:bg-[#003ea8] text-white font-semibold text-sm tracking-wide shadow-lg hover:shadow-xl transition-all duration-200">
-        Sign In
+
+      <!-- Page Footer -->
+      <div class="flex flex-col items-center text-center gap-1 text-on-surface-variant">
+        <p class="font-body-sm text-body-sm">
+          Premier University &copy; 2025 &bull; Examination Control &amp; DBMS Division
+        </p>
+        <div class="flex items-center gap-space-sm font-code text-code text-secondary">
+          <span>Localhost / XAMPP Deployment</span>
+          <span>&bull;</span>
+          <span class="text-primary hover:underline cursor-pointer" onclick="openForgotModal()">IT Helpdesk Dispatch</span>
+        </div>
+      </div>
+
+    </div><!-- /max-w -->
+  </div><!-- /inner wrapper -->
+</main>
+
+<!-- ── Forgot Password Modal ────────────────────────────────────────────── -->
+<div aria-labelledby="forgotPasswordTitle"
+     aria-modal="true"
+     class="fixed inset-0 z-50 flex items-center justify-center p-space-md bg-inverse-surface/60 backdrop-blur-sm hidden"
+     id="forgotPasswordModal"
+     role="dialog">
+  <div class="bg-surface-container-lowest text-on-surface rounded-xl shadow-xl w-full max-w-[520px] overflow-hidden flex flex-col transform transition-all duration-200 scale-95 opacity-0"
+       id="modalContainer">
+
+    <!-- Modal Header -->
+    <div class="p-space-lg bg-surface-container-low flex items-start justify-between">
+      <div class="flex items-center gap-space-sm">
+        <div class="w-10 h-10 rounded-lg bg-error-container text-on-error-container flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-title-md">lock_reset</span>
+        </div>
+        <div class="flex flex-col">
+          <h2 class="font-title-md text-title-md text-on-surface font-bold" id="forgotPasswordTitle">
+            Account Access Recovery
+          </h2>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">
+            Central Institutional Authentication Assistance
+          </p>
+        </div>
+      </div>
+      <button aria-label="Close dialog"
+              class="w-8 h-8 rounded-lg bg-surface-container text-secondary hover:text-on-surface flex items-center justify-center"
+              onclick="closeForgotModal()" type="button">
+        <span class="material-symbols-outlined text-title-md">close</span>
       </button>
-    </form>
+    </div>
 
-    <p class="text-center text-xs text-[#737686] mt-6">
-      Academic Year 2024-25 &nbsp;·&nbsp; Office of the Controller of Examinations
-    </p>
+    <!-- Modal Body -->
+    <div class="p-space-lg flex flex-col gap-space-md">
+      <div class="bg-surface-container p-space-md rounded-lg flex flex-col gap-1 text-on-surface-variant">
+        <div class="flex items-center gap-1.5 text-primary font-label-md text-label-md font-semibold">
+          <span class="material-symbols-outlined text-label-lg">support_agent</span>
+          Institutional IT Security Policy
+        </div>
+        <p class="font-body-sm text-body-sm leading-relaxed">
+          Direct password resets require validation against institutional faculty records.
+          If you do not have automated recovery configured, contact the IT Helpdesk directly at:
+        </p>
+        <a class="font-code text-body-sm text-primary font-medium hover:underline inline-block mt-0.5"
+           href="mailto:it-helpdesk@premier.edu.bd">
+          it-helpdesk@premier.edu.bd
+        </a>
+      </div>
+      <div class="pt-space-xs flex items-center justify-end gap-space-sm">
+        <button class="h-10 px-space-md rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg"
+                onclick="closeForgotModal()" type="button">
+          Close
+        </button>
+      </div>
+    </div>
+
   </div>
+</div>
+
+<!-- ── JavaScript ───────────────────────────────────────────────────────── -->
+<script>
+  // ── Role tab switcher ──────────────────────────────────────────────────
+  function selectRole(role) {
+    const roleInput    = document.getElementById('role_input');
+    const btnFaculty   = document.getElementById('btn-role-faculty');
+    const btnAdmin     = document.getElementById('btn-role-admin');
+    const identityInput = document.getElementById('login_identity');
+    const identityLabel = document.getElementById('label_identity_text');
+    const submitText   = document.getElementById('btn_submit_text');
+
+    const ACTIVE   = 'flex-1 py-2 px-space-md rounded-lg font-label-lg text-label-lg flex items-center justify-center gap-space-sm transition-all duration-150 bg-surface-container-lowest text-primary shadow-sm font-semibold';
+    const INACTIVE = 'flex-1 py-2 px-space-md rounded-lg font-label-lg text-label-lg flex items-center justify-center gap-space-sm transition-all duration-150 text-secondary hover:text-on-surface';
+
+    roleInput.value = role;
+
+    if (role === 'faculty') {
+      btnFaculty.className = ACTIVE;   btnFaculty.setAttribute('aria-selected', 'true');
+      btnAdmin.className   = INACTIVE; btnAdmin.setAttribute('aria-selected', 'false');
+      identityLabel.innerText    = 'Official Institutional Email / Faculty ID';
+      identityInput.placeholder  = 'e.g. rahman@premier.edu.bd or dr.rahman';
+      submitText.innerText       = 'Sign In to Faculty Portal';
+    } else {
+      btnAdmin.className   = ACTIVE;   btnAdmin.setAttribute('aria-selected', 'true');
+      btnFaculty.className = INACTIVE; btnFaculty.setAttribute('aria-selected', 'false');
+      identityLabel.innerText    = 'Administrative Username / Controller ID';
+      identityInput.placeholder  = 'e.g. admin';
+      submitText.innerText       = 'Sign In to Controller Console';
+    }
+  }
+
+  // ── Password show/hide toggle ──────────────────────────────────────────
+  function togglePasswordVisibility() {
+    const pwd  = document.getElementById('login_password');
+    const icon = document.getElementById('pwd_toggle_icon');
+    if (pwd.type === 'password') {
+      pwd.type       = 'text';
+      icon.innerText = 'visibility_off';
+    } else {
+      pwd.type       = 'password';
+      icon.innerText = 'visibility';
+    }
+  }
+
+  // ── Forgot-password modal ──────────────────────────────────────────────
+  function openForgotModal() {
+    const modal     = document.getElementById('forgotPasswordModal');
+    const container = document.getElementById('modalContainer');
+    modal.classList.remove('hidden');
+    setTimeout(() => {
+      container.classList.remove('scale-95', 'opacity-0');
+      container.classList.add('scale-100', 'opacity-100');
+    }, 10);
+  }
+
+  function closeForgotModal() {
+    const modal     = document.getElementById('forgotPasswordModal');
+    const container = document.getElementById('modalContainer');
+    container.classList.remove('scale-100', 'opacity-100');
+    container.classList.add('scale-95', 'opacity-0');
+    setTimeout(() => { modal.classList.add('hidden'); }, 180);
+  }
+
+  // Close modal when clicking the backdrop
+  document.getElementById('forgotPasswordModal').addEventListener('click', function (e) {
+    if (e.target === this) closeForgotModal();
+  });
+</script>
+
 </body>
 </html>

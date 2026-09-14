@@ -45,6 +45,13 @@ if (!$passwordValid) {
     exit();
 }
 
+// Enforce selected role matching account role
+$selectedRole = trim($_POST['role'] ?? '');
+if ($selectedRole !== '' && $user['role'] !== $selectedRole) {
+    header('Location: /Faculty_Duty_Exam_Hall_Invigilation_Scheduler/Php/login.php?error=role_mismatch');
+    exit();
+}
+
 // If password was stored as plain text or needs rehash, upgrade it
 if ($password === $user['password_hash'] || password_needs_rehash($user['password_hash'], PASSWORD_DEFAULT)) {
     try {
