@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-low":"#eff4ff","secondary-fixed":"#dae2fd","primary-fixed":"#dbe1ff","surface-tint":"#0053db","inverse-surface":"#213145","on-tertiary-fixed-variant":"#3323cc","secondary":"#565e74","surface-dim":"#cbdbf5","on-tertiary-fixed":"#0f0069","outline-variant":"#c3c6d7","primary-fixed-dim":"#b4c5ff","surface-container-high":"#dce9ff","error":"#ba1a1a","on-secondary-fixed":"#131b2e","on-secondary":"#ffffff","on-surface":"#0b1c30","on-secondary-container":"#5c647a","on-tertiary":"#ffffff","inverse-on-surface":"#eaf1ff","surface-container-highest":"#d3e4fe","secondary-fixed-dim":"#bec6e0","on-background":"#0b1c30","surface-bright":"#f8f9ff","on-primary-fixed-variant":"#003ea8","primary":"#004ac6","on-error":"#ffffff","on-error-container":"#93000a","inverse-primary":"#b4c5ff","tertiary-container":"#5d55f3","background":"#f8f9ff","surface-variant":"#d3e4fe","outline":"#737686","primary-container":"#2563eb","tertiary-fixed":"#e2dfff","tertiary":"#4338d9","on-tertiary-container":"#f2eeff","on-primary-container":"#eeefff","on-surface-variant":"#434655","surface-container-lowest":"#ffffff","tertiary-fixed-dim":"#c3c0ff","on-secondary-fixed-variant":"#3f465c","surface":"#f8f9ff","on-primary-fixed":"#00174b","error-container":"#ffdad6","on-primary":"#ffffff","secondary-container":"#dae2fd","surface-container":"#e5eeff"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"gutter":"1.5rem","space-sm":"0.5rem","margin":"2rem","space-md":"1rem","gutter-mobile":"1rem","space-xl":"2rem","space-lg":"1.5rem","space-xs":"0.25rem","margin-mobile":"1rem"},fontFamily:{"code":["JetBrains Mono"],"label-sm":["Inter"],"display":["Inter"],"headline-sm":["Inter"],"title-sm":["Inter"],"headline-lg-mobile":["Inter"],"body-sm":["Inter"],"body-lg":["Inter"],"label-md":["Inter"],"label-lg":["Inter"],"headline-md":["Inter"],"body-md":["Inter"],"headline-lg":["Inter"],"title-md":["Inter"]},fontSize:{"code":["12px",{"lineHeight":"16px","fontWeight":"500"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"700"}],"display":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["18px",{"lineHeight":"24px","fontWeight":"600"}],"title-sm":["14px",{"lineHeight":"20px","fontWeight":"600"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.025em","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","fontWeight":"500"}],"headline-md":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"headline-lg":["30px",{"lineHeight":"38px","letterSpacing":"-0.015em","fontWeight":"600"}],"title-md":["16px",{"lineHeight":"22px","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-inverse-surface text-inverse-on-surface z-50 flex flex-col shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-lg flex items-center gap-space-sm bg-inverse-surface"><div class="w-8 h-8 rounded-xl bg-primary flex items-center justify-center text-on-primary font-headline-sm text-headline-sm"><span class="material-symbols-outlined text-[20px]">school</span></div><div class="flex flex-col"><span class="font-title-sm text-title-sm text-inverse-on-surface tracking-tight uppercase">Premier University</span><span class="font-label-sm text-label-sm text-outline-variant font-normal">Exam Control Division</span></div></div><div class="flex-1 overflow-y-auto px-space-md py-space-md space-y-space-lg"><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline-variant">Admin & Controller Tools</div><nav class="space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-label-lg rounded-xl"><a class="flex items-center px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="admin-dashboard" href="#">Admin Dashboard</a><a class="flex items-center px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="department-management" href="#">Department Management</a><a class="flex items-center px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="course-management" href="#">Course Management</a><a class="flex items-center px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="faculty-management" href="#">Faculty Management</a><a class="flex items-center px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="exam-management" href="#">Exam Management</a><a class="flex items-center px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="exam-timetable-and-rooms" href="#">Exam Timetable & Rooms</a><a aria-current="page" class="flex items-center px-space-md py-2.5 transition-colors bg-primary-container text-on-primary-container font-label-lg rounded-xl" data-path="room-management" href="#">Room Management</a><a class="flex items-center px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="invigilation-assignments" href="#">Invigilation Assignments</a><a class="flex items-center px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="conflict-center" href="#">Conflict Center</a><a class="flex items-center px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="reports-and-documents" href="#">Reports & Documents</a></nav></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline-variant">Faculty Portal (Preview)</div><nav class="space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-label-lg rounded-xl"><a class="flex items-center px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="faculty-dashboard" href="#">Faculty Dashboard</a><a class="flex items-center px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="my-assigned-duties" href="#">My Assigned Duties</a><a class="flex items-center px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="duty-preferences" href="#">Duty Preferences</a></nav></div></div><div class="p-space-md bg-inverse-surface shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-sm p-space-sm rounded-xl bg-surface-container-high/10"><span class="material-symbols-outlined text-outline-variant text-[20px]">security</span><div class="flex flex-col"><span class="font-label-md text-label-md text-inverse-on-surface">Session Secured</span><span class="font-label-sm text-label-sm text-outline-variant">Academic Year 2024-25</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-lg flex-1 max-w-2xl"><span class="font-title-sm text-title-sm text-on-surface whitespace-nowrap">Office of the Controller of Examinations</span><div class="relative w-full max-w-md"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span><input class="w-full h-10 pl-9 pr-space-md bg-surface-container-lowest font-body-sm text-body-sm text-on-surface placeholder:text-outline rounded-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] focus:outline-none focus:ring-2 focus:ring-primary-container" placeholder="Search faculty, courses, rooms, exams..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center justify-center w-10 h-10 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface cursor-pointer transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></div><div class="flex items-center gap-space-sm pl-space-sm"><div class="text-right hidden sm:flex flex-col"><span class="font-label-md text-label-md text-on-surface">Admin Controller</span><span class="font-label-sm text-label-sm text-on-surface-variant">Office of Exam Control</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface px-space-lg py-space-lg"><div class="flex flex-col w-full">
+<!-- Breadcrumbs & Document Authority Strip -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm pb-space-md">
+<div class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<span>Home</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span>Infrastructure & Rooms</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="font-label-sm text-label-sm text-primary font-bold tracking-normal">Exam Room Management</span>
+</div>
+<div class="flex items-center gap-space-md font-code text-code text-on-secondary-container">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 bg-surface-container rounded-lg">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span>REGISTRY SCHEMA: v4.8</span>
+</span>
+<span class="hidden sm:inline-flex items-center gap-1 px-space-sm py-1 bg-surface-container rounded-lg text-secondary">
+<span class="material-symbols-outlined text-[14px]">event_available</span>
+<span>TERM: SPRING 2025</span>
+</span>
+</div>
+</div>
+<!-- Header & Primary Global Actions -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-lg pb-space-lg">
+<div class="space-y-1.5 max-w-3xl">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-lg bg-surface-container-high text-primary font-label-sm text-label-sm uppercase tracking-wider">Prem-Univ Physical Plant</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Sec: OCE-EXAM-FACIL</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+        Examination Room & Hall Allocation Directory
+      </h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Manage exam halls, seating capacities, structural room types, and live student seating capacity overflow warnings.
+      </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm self-start lg:self-end shrink-0">
+<button class="inline-flex items-center justify-center gap-space-xs h-10 px-space-md bg-surface-container-lowest text-on-surface font-label-lg text-label-lg rounded-xl shadow-sm hover:bg-surface-container transition-all" onclick="exportRoomLedgerCSV()">
+<span class="material-symbols-outlined text-[20px] text-secondary">file_download</span>
+<span>Export Room Ledger CSV</span>
+</button>
+<button class="inline-flex items-center justify-center gap-space-xs h-10 px-space-lg bg-primary-container text-on-primary font-label-lg text-label-lg rounded-xl shadow-md hover:bg-primary transition-all" onclick="openRoomModal()">
+<span class="material-symbols-outlined text-[20px]">add_box</span>
+<span>+ Add New Exam Room</span>
+</button>
+</div>
+</div>
+<!-- Capacity Warning Institutional Banner -->
+<div class="relative overflow-hidden rounded-xl bg-error-container text-on-error-container p-space-md lg:p-space-lg mb-space-lg shadow-sm">
+<div class="absolute -right-8 -top-8 w-40 h-40 bg-error/10 rounded-full blur-2xl pointer-events-none"></div>
+<div class="relative flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-md z-10">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-xl bg-error text-on-error flex items-center justify-center shrink-0 shadow-sm mt-0.5">
+<span class="material-symbols-outlined text-[24px]">warning</span>
+</div>
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm bg-error text-on-error px-2 py-0.5 rounded uppercase tracking-wider">Critical Fault</span>
+<span class="font-title-sm text-title-sm text-error font-bold">CAPACITY WARNING: Room UB-402 Overloaded</span>
+</div>
+<p class="font-body-md text-body-md text-on-error-container/90">
+            Room UB-402 is allocated <span class="font-semibold">70 students</span> for May 21 Midterm but rated structural capacity is <span class="font-semibold">65</span> (5 Student Overflow / 107.7% Load). Reallocate examinees or split across adjacent rooms.
+          </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0 w-full lg:w-auto justify-end">
+<button class="px-space-md py-2 text-on-error-container font-label-md text-label-md hover:bg-error/10 rounded-xl transition-colors" onclick="inspectRoom('UB-402')">
+          View Seating Grid
+        </button>
+<button class="px-space-lg py-2 bg-error text-on-error font-label-md text-label-md rounded-xl shadow hover:bg-on-error-container transition-all" onclick="resolveClash('UB-402')">
+          Resolve Seating Allocation
+        </button>
+</div>
+</div>
+</div>
+<!-- KPI / Stats Grid (4 items) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md mb-space-lg">
+<!-- Stat 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase text-secondary tracking-wider">Registered Physical Assets</span>
+<div class="mt-1 font-display text-display text-on-surface">24</div>
+</div>
+<div class="w-10 h-10 rounded-xl bg-surface-container-high text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">meeting_room</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-secondary font-body-sm text-body-sm">
+<span>Rooms & Halls Active</span>
+<span class="font-code text-code text-on-surface">100% Monitored</span>
+</div>
+</div>
+<!-- Stat 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase text-secondary tracking-wider">Seating Capacity</span>
+<div class="mt-1 font-display text-display text-on-surface">1,480</div>
+</div>
+<div class="w-10 h-10 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">chair_alt</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-secondary font-body-sm text-body-sm">
+<span>Concurrent Exam Desks</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">+120 vs Fall '24</span>
+</div>
+</div>
+<!-- Stat 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase text-secondary tracking-wider">Hall Utilization Rate</span>
+<div class="mt-1 font-display text-display text-on-surface">78.4%</div>
+</div>
+<div class="w-10 h-10 rounded-xl bg-surface-container-high text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">speed</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-secondary font-body-sm text-body-sm">
+<span>Spring 2025 Midterm Peak</span>
+<div class="w-24 bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 78.4%"></div>
+</div>
+</div>
+</div>
+<!-- Stat 4 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase text-error tracking-wider font-bold">Capacity Overload Alerts</span>
+<div class="mt-1 font-display text-display text-error">02</div>
+</div>
+<div class="w-10 h-10 rounded-xl bg-error-container text-error flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">error_outline</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-error font-body-sm text-body-sm font-semibold">
+<span>Exceeding Max Threshold</span>
+<span class="font-code text-code">UB-402, 301</span>
+</div>
+</div>
+</div>
+<!-- Main Administrative Data Container -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col mb-space-xl">
+<!-- Filter, Search & Query Control Module -->
+<div class="p-space-lg bg-surface-container-low flex flex-col gap-space-md">
+<div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-md">
+<!-- Main Search Bar -->
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
+<input class="w-full h-11 pl-11 pr-space-md bg-surface-container-lowest font-body-sm text-body-sm text-on-surface rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-primary" id="table-search" onkeyup="filterRoomsTable()" placeholder="Search room number, building (e.g. Room 402, Building A)..." type="text"/>
+</div>
+<!-- Active Filter Counter Meta -->
+<div class="flex items-center gap-space-sm font-label-md text-label-md text-secondary shrink-0">
+<span>Active Registry: <strong class="text-on-surface" id="visible-count">7</strong> of 24 Allocated Rooms</span>
+<button class="text-primary hover:underline ml-2" onclick="resetFilters()">Reset Filters</button>
+</div>
+</div>
+<!-- Advanced Selectors Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Building Filter -->
+<div class="space-y-1">
+<label class="block font-label-sm text-label-sm text-on-surface uppercase" for="filter-building">Building Complex</label>
+<div class="relative">
+<select class="w-full h-10 px-3 pr-8 bg-surface-container-lowest font-body-sm text-body-sm text-on-surface rounded-lg appearance-none shadow-sm focus:outline-none focus:ring-2 focus:ring-primary" id="filter-building" name="building_filter" onchange="filterRoomsTable()">
+<option value="ALL">All Buildings</option>
+<option value="Academic Building A">Academic Building A</option>
+<option value="Academic Building B">Academic Building B</option>
+<option value="Academic Building C">Academic Building C</option>
+<option value="Science Complex (UB)">Science Complex (UB)</option>
+<option value="Main Auditorium Wing">Main Auditorium Wing</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none text-outline text-[18px]">expand_more</span>
+</div>
+</div>
+<!-- Room Type Filter -->
+<div class="space-y-1">
+<label class="block font-label-sm text-label-sm text-on-surface uppercase" for="filter-type">Structural Hall Type</label>
+<div class="relative">
+<select class="w-full h-10 px-3 pr-8 bg-surface-container-lowest font-body-sm text-body-sm text-on-surface rounded-lg appearance-none shadow-sm focus:outline-none focus:ring-2 focus:ring-primary" id="filter-type" name="room_type_filter" onchange="filterRoomsTable()">
+<option value="ALL">All Types</option>
+<option value="Standard Exam Hall">Standard Exam Hall</option>
+<option value="Tiered Lecture Hall">Tiered Lecture Hall</option>
+<option value="Computer Lab Hall">Computer Lab Hall</option>
+<option value="Auditorium">Auditorium</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none text-outline text-[18px]">expand_more</span>
+</div>
+</div>
+<!-- Status Filter -->
+<div class="space-y-1">
+<label class="block font-label-sm text-label-sm text-on-surface uppercase" for="filter-status">Allocation Status</label>
+<div class="relative">
+<select class="w-full h-10 px-3 pr-8 bg-surface-container-lowest font-body-sm text-body-sm text-on-surface rounded-lg appearance-none shadow-sm focus:outline-none focus:ring-2 focus:ring-primary" id="filter-status" name="status_filter" onchange="filterRoomsTable()">
+<option value="ALL">All Statuses</option>
+<option value="AVAILABLE">Available</option>
+<option value="OVER_CAPACITY">Capacity Warning (Overloaded)</option>
+<option value="OPTIMAL">Full / Optimal</option>
+<option value="HIGH_LOAD">High Load</option>
+<option value="MAINTENANCE">Maintenance / Offline</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none text-outline text-[18px]">expand_more</span>
+</div>
+</div>
+<!-- Capacity Band Filter -->
+<div class="space-y-1">
+<label class="block font-label-sm text-label-sm text-on-surface uppercase" for="filter-capacity">Seating Scale Band</label>
+<div class="relative">
+<select class="w-full h-10 px-3 pr-8 bg-surface-container-lowest font-body-sm text-body-sm text-on-surface rounded-lg appearance-none shadow-sm focus:outline-none focus:ring-2 focus:ring-primary" id="filter-capacity" name="capacity_filter" onchange="filterRoomsTable()">
+<option value="ALL">Any Capacity</option>
+<option value="SMALL">Small (< 40 Seats)</option>
+<option value="MEDIUM">Medium (40 - 70 Seats)</option>
+<option value="LARGE">Large (> 70 Seats)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none text-outline text-[18px]">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Data Table Canvas -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left text-on-surface" id="rooms-table">
+<thead>
+<tr class="bg-surface-container font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider select-none">
+<th class="py-3.5 px-space-md">Room Identification</th>
+<th class="py-3.5 px-space-md">Building / Wing</th>
+<th class="py-3.5 px-space-md text-right">Rated Capacity</th>
+<th class="py-3.5 px-space-md">Room Type</th>
+<th class="py-3.5 px-space-md min-w-[220px]">Live Allocation Load</th>
+<th class="py-3.5 px-space-md">Operational Status</th>
+<th class="py-3.5 px-space-md text-right">Controller Actions</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md divide-y-0" id="table-body">
+<!-- Sample Row 1: CRITICAL OVERLOAD -->
+<tr class="hover:bg-error-container/20 transition-colors bg-error-container/10 room-row" data-building="Science Complex (UB)" data-capacity="65" data-status="OVER_CAPACITY" data-type="Tiered Lecture Hall">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-xs font-title-sm text-title-sm text-on-surface font-semibold">
+<span class="material-symbols-outlined text-[18px] text-error">domain_verification</span>
+<span class="room-name">Room UB-402</span>
+</div>
+<span class="font-code text-code text-error font-medium">HALL_ID: 10402</span>
+</td>
+<td class="py-3.5 px-space-md text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">location_city</span>
+<span>Science Complex (UB)</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">Level 4, North Wing</span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">65</span>
+<span class="font-label-sm text-label-sm text-secondary block uppercase">Desks</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-lg bg-surface-container font-label-md text-label-md text-on-surface">
+<span class="material-symbols-outlined text-[14px]">stairs</span>
+                Tiered Lecture Hall
+              </span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="space-y-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="font-bold text-error">70 Allocated</span>
+<span class="font-code text-code text-error font-bold">107.7% Load</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 100%"></div>
+</div>
+<div class="font-body-sm text-body-sm text-error font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">add_circle</span>
+<span>5 examinees unseated</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-error text-on-error font-label-sm text-label-sm font-bold shadow-sm">
+<span class="material-symbols-outlined text-[16px]">emergency</span>
+                Exceeded by 5 seats
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-secondary hover:bg-surface-container-high hover:text-on-surface transition-colors" onclick="inspectRoom('UB-402')" title="View Seating Plan">
+<span class="material-symbols-outlined text-[18px]">grid_on</span>
+</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-primary hover:bg-surface-container-high transition-colors" onclick="editRoomRecord('UB-402', 'Science Complex (UB)', 65, 'Tiered Lecture Hall', 'Active')" title="Edit Room">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-error hover:bg-error-container transition-colors" onclick="deleteRoom('UB-402')" title="Decommission Room">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Sample Row 2: OPTIMAL / FULL -->
+<tr class="hover:bg-surface-container-low transition-colors room-row" data-building="Academic Building A" data-capacity="45" data-status="OPTIMAL" data-type="Standard Exam Hall">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-xs font-title-sm text-title-sm text-on-surface font-semibold">
+<span class="material-symbols-outlined text-[18px] text-primary">meeting_room</span>
+<span class="room-name">Room 402</span>
+</div>
+<span class="font-code text-code text-secondary">HALL_ID: 10402-A</span>
+</td>
+<td class="py-3.5 px-space-md text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">location_city</span>
+<span>Academic Building A</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">4th Floor, South Corridor</span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">45</span>
+<span class="font-label-sm text-label-sm text-secondary block uppercase">Desks</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-lg bg-surface-container font-label-md text-label-md text-on-surface">
+<span class="material-symbols-outlined text-[14px]">table_restaurant</span>
+                Standard Exam Hall
+              </span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="space-y-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface">45 Allocated</span>
+<span class="font-code text-code text-secondary font-bold">100.0% Load</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 100%"></div>
+</div>
+<div class="font-body-sm text-body-sm text-secondary">Exact desk-to-student parity</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+                Full / Optimal
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-secondary hover:bg-surface-container-high hover:text-on-surface transition-colors" onclick="inspectRoom('Room 402')" title="View Seating Plan">
+<span class="material-symbols-outlined text-[18px]">grid_on</span>
+</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-primary hover:bg-surface-container-high transition-colors" onclick="editRoomRecord('Room 402', 'Academic Building A', 45, 'Standard Exam Hall', 'Active')" title="Edit Room">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-error hover:bg-error-container transition-colors" onclick="deleteRoom('Room 402')" title="Decommission Room">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Sample Row 3: AVAILABLE -->
+<tr class="hover:bg-surface-container-low transition-colors room-row" data-building="Academic Building A" data-capacity="45" data-status="AVAILABLE" data-type="Standard Exam Hall">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-xs font-title-sm text-title-sm text-on-surface font-semibold">
+<span class="material-symbols-outlined text-[18px] text-primary">meeting_room</span>
+<span class="room-name">Room 403</span>
+</div>
+<span class="font-code text-code text-secondary">HALL_ID: 10403-A</span>
+</td>
+<td class="py-3.5 px-space-md text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">location_city</span>
+<span>Academic Building A</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">4th Floor, South Corridor</span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">45</span>
+<span class="font-label-sm text-label-sm text-secondary block uppercase">Desks</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-lg bg-surface-container font-label-md text-label-md text-on-surface">
+<span class="material-symbols-outlined text-[14px]">table_restaurant</span>
+                Standard Exam Hall
+              </span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="space-y-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface">35 Allocated</span>
+<span class="font-code text-code text-secondary font-bold">77.8% Load</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-surface-tint h-full rounded-full" style="width: 77.8%"></div>
+</div>
+<div class="font-body-sm text-body-sm text-secondary">10 spare seats available</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+                Available (Unfilled)
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-secondary hover:bg-surface-container-high hover:text-on-surface transition-colors" onclick="inspectRoom('Room 403')" title="View Seating Plan">
+<span class="material-symbols-outlined text-[18px]">grid_on</span>
+</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-primary hover:bg-surface-container-high transition-colors" onclick="editRoomRecord('Room 403', 'Academic Building A', 45, 'Standard Exam Hall', 'Active')" title="Edit Room">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-error hover:bg-error-container transition-colors" onclick="deleteRoom('Room 403')" title="Decommission Room">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Sample Row 4: AUDITORIUM LARGE -->
+<tr class="hover:bg-surface-container-low transition-colors room-row" data-building="Main Auditorium Wing" data-capacity="150" data-status="AVAILABLE" data-type="Auditorium">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-xs font-title-sm text-title-sm text-on-surface font-semibold">
+<span class="material-symbols-outlined text-[18px] text-tertiary">theater_comedy</span>
+<span class="room-name">Hall 101</span>
+</div>
+<span class="font-code text-code text-secondary">HALL_ID: 10101-AUD</span>
+</td>
+<td class="py-3.5 px-space-md text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">location_city</span>
+<span>Main Auditorium Wing</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">Ground Level, Central Foyer</span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">150</span>
+<span class="font-label-sm text-label-sm text-secondary block uppercase">Desks</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[14px]">stadium</span>
+                Auditorium
+              </span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="space-y-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface">120 Allocated</span>
+<span class="font-code text-code text-secondary font-bold">80.0% Load</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 80%"></div>
+</div>
+<div class="font-body-sm text-body-sm text-secondary">30 buffer spaces remaining</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+                Available
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-secondary hover:bg-surface-container-high hover:text-on-surface transition-colors" onclick="inspectRoom('Hall 101')" title="View Seating Plan">
+<span class="material-symbols-outlined text-[18px]">grid_on</span>
+</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-primary hover:bg-surface-container-high transition-colors" onclick="editRoomRecord('Hall 101', 'Main Auditorium Wing', 150, 'Auditorium', 'Active')" title="Edit Room">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-error hover:bg-error-container transition-colors" onclick="deleteRoom('Hall 101')" title="Decommission Room">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Sample Row 5: OVERLOAD CRITICAL -->
+<tr class="hover:bg-error-container/20 transition-colors bg-error-container/10 room-row" data-building="Academic Building B" data-capacity="50" data-status="OVER_CAPACITY" data-type="Tiered Lecture Hall">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-xs font-title-sm text-title-sm text-on-surface font-semibold">
+<span class="material-symbols-outlined text-[18px] text-error">domain_verification</span>
+<span class="room-name">Room 301</span>
+</div>
+<span class="font-code text-code text-error font-medium">HALL_ID: 10301-B</span>
+</td>
+<td class="py-3.5 px-space-md text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">location_city</span>
+<span>Academic Building B</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">3rd Floor, West Complex</span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">50</span>
+<span class="font-label-sm text-label-sm text-secondary block uppercase">Desks</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-lg bg-surface-container font-label-md text-label-md text-on-surface">
+<span class="material-symbols-outlined text-[14px]">stairs</span>
+                Tiered Lecture Hall
+              </span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="space-y-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="font-bold text-error">58 Allocated</span>
+<span class="font-code text-code text-error font-bold">116.0% Load</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 100%"></div>
+</div>
+<div class="font-body-sm text-body-sm text-error font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">add_circle</span>
+<span>8 examinees unseated</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-error text-on-error font-label-sm text-label-sm font-bold shadow-sm">
+<span class="material-symbols-outlined text-[16px]">emergency</span>
+                Exceeded by 8 seats
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-secondary hover:bg-surface-container-high hover:text-on-surface transition-colors" onclick="inspectRoom('Room 301')" title="View Seating Plan">
+<span class="material-symbols-outlined text-[18px]">grid_on</span>
+</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-primary hover:bg-surface-container-high transition-colors" onclick="editRoomRecord('Room 301', 'Academic Building B', 50, 'Tiered Lecture Hall', 'Active')" title="Edit Room">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-error hover:bg-error-container transition-colors" onclick="deleteRoom('Room 301')" title="Decommission Room">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Sample Row 6: COMPUTER LAB -->
+<tr class="hover:bg-surface-container-low transition-colors room-row" data-building="Science Complex (UB)" data-capacity="40" data-status="AVAILABLE" data-type="Computer Lab Hall">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-xs font-title-sm text-title-sm text-on-surface font-semibold">
+<span class="material-symbols-outlined text-[18px] text-primary">terminal</span>
+<span class="room-name">Room SC-305</span>
+</div>
+<span class="font-code text-code text-secondary">HALL_ID: 10305-UB</span>
+</td>
+<td class="py-3.5 px-space-md text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">location_city</span>
+<span>Science Complex (UB)</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">3rd Floor, Computing Center</span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">40</span>
+<span class="font-label-sm text-label-sm text-secondary block uppercase">Desks</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-lg bg-surface-container font-label-md text-label-md text-on-surface">
+<span class="material-symbols-outlined text-[14px]">laptop_mac</span>
+                Computer Lab Hall
+              </span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="space-y-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface">25 Allocated</span>
+<span class="font-code text-code text-secondary font-bold">62.5% Load</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-surface-tint h-full rounded-full" style="width: 62.5%"></div>
+</div>
+<div class="font-body-sm text-body-sm text-secondary">15 workstations spare</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+                Available
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-secondary hover:bg-surface-container-high hover:text-on-surface transition-colors" onclick="inspectRoom('Room SC-305')" title="View Seating Plan">
+<span class="material-symbols-outlined text-[18px]">grid_on</span>
+</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-primary hover:bg-surface-container-high transition-colors" onclick="editRoomRecord('Room SC-305', 'Science Complex (UB)', 40, 'Computer Lab Hall', 'Active')" title="Edit Room">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-error hover:bg-error-container transition-colors" onclick="deleteRoom('Room SC-305')" title="Decommission Room">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Sample Row 7: HIGH LOAD -->
+<tr class="hover:bg-surface-container-low transition-colors room-row" data-building="Academic Building C" data-capacity="50" data-status="HIGH_LOAD" data-type="Standard Exam Hall">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-xs font-title-sm text-title-sm text-on-surface font-semibold">
+<span class="material-symbols-outlined text-[18px] text-primary">meeting_room</span>
+<span class="room-name">Room 504</span>
+</div>
+<span class="font-code text-code text-secondary">HALL_ID: 10504-C</span>
+</td>
+<td class="py-3.5 px-space-md text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">location_city</span>
+<span>Academic Building C</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">5th Floor, East Annex</span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">50</span>
+<span class="font-label-sm text-label-sm text-secondary block uppercase">Desks</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-lg bg-surface-container font-label-md text-label-md text-on-surface">
+<span class="material-symbols-outlined text-[14px]">table_restaurant</span>
+                Standard Exam Hall
+              </span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="space-y-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface">45 Allocated</span>
+<span class="font-code text-code text-secondary font-bold">90.0% Load</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 90%"></div>
+</div>
+<div class="font-body-sm text-body-sm text-secondary">5 spaces buffer</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+                High Load (90%)
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-secondary hover:bg-surface-container-high hover:text-on-surface transition-colors" onclick="inspectRoom('Room 504')" title="View Seating Plan">
+<span class="material-symbols-outlined text-[18px]">grid_on</span>
+</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-primary hover:bg-surface-container-high transition-colors" onclick="editRoomRecord('Room 504', 'Academic Building C', 50, 'Standard Exam Hall', 'Active')" title="Edit Room">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-error hover:bg-error-container transition-colors" onclick="deleteRoom('Room 504')" title="Decommission Room">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Institutional Pagination & Query Footer -->
+<div class="p-space-md bg-surface-container flex flex-col sm:flex-row items-center justify-between gap-space-md text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-space-sm font-code text-code">
+<span>SHOWING ACTIVE LEDGER ENTRIES 1-7 OF 24 ROOMS</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-sm text-label-sm shadow-sm opacity-50 cursor-not-allowed">Previous</button>
+<button class="px-space-md py-1.5 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm shadow-sm">1</button>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-sm text-label-sm shadow-sm hover:bg-surface-container-high">2</button>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-sm text-label-sm shadow-sm hover:bg-surface-container-high">3</button>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-sm text-label-sm shadow-sm hover:bg-surface-container-high">Next</button>
+</div>
+</div>
+</div>
+<!-- Technical System & Schema Reference Card (Institutional Documentation) -->
+<div class="bg-surface-container-low rounded-xl p-space-lg mb-space-lg">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md pb-space-md border-b border-transparent">
+<div>
+<h3 class="font-title-md text-title-md text-on-surface">Physical Infrastructure Integration & Relational Map</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Live binding attributes utilized by the seating matrix generator and invigilator assignment engines.</p>
+</div>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 bg-surface-container-high rounded-full font-code text-code text-primary">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span>ENDPOINT: /api/v2/room_save.php</span>
+</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md pt-space-md">
+<div class="p-space-md bg-surface-container-lowest rounded-lg shadow-sm space-y-1">
+<span class="font-label-sm text-label-sm uppercase text-secondary">Foreign Key Cardinality</span>
+<div class="font-code text-code text-on-surface font-semibold">exam_room (FK: room_id, FK: exam_id)</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Maintains transactional allocations per exam sitting session with row locks.</p>
+</div>
+<div class="p-space-md bg-surface-container-lowest rounded-lg shadow-sm space-y-1">
+<span class="font-label-sm text-label-sm uppercase text-secondary">Capacity Verification Trigger</span>
+<div class="font-code text-code text-error font-semibold">allocated_students > capacity</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Automatically raises controller broadcast and blocks timetable publication when violated.</p>
+</div>
+<div class="p-space-md bg-surface-container-lowest rounded-lg shadow-sm space-y-1">
+<span class="font-label-sm text-label-sm uppercase text-secondary">Invigilation Ratio Standard</span>
+<div class="font-code text-code text-tertiary font-semibold">1 Invigilator : 25 Candidates</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Minimum 2 proctors mandatory per hall > 35 seats under University By-law 14-B.</p>
+</div>
+</div>
+</div>
+<!-- Modal Dialog: Add / Edit Examination Room -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-space-md bg-inverse-surface/60 backdrop-blur-sm hidden" id="room-modal">
+<div class="bg-surface-container-lowest w-full max-w-xl rounded-xl shadow-2xl overflow-hidden flex flex-col animate-in fade-in zoom-in-95 duration-150">
+<!-- Modal Header -->
+<div class="px-space-lg py-space-md bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[24px]">meeting_room</span>
+<div>
+<h2 class="font-title-md text-title-md text-on-surface" id="modal-title">Add / Edit Examination Room</h2>
+<span class="font-label-sm text-label-sm text-secondary">Database Target: room_save.php [POST]</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container-highest transition-colors" onclick="closeRoomModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Modal Target Form (POST to room_save.php) -->
+<form action="room_save.php" class="p-space-lg space-y-space-md" id="exam-room-form" method="POST">
+<!-- Hidden Record Identifiers -->
+<input id="form-room-id" name="room_id" type="hidden" value=""/>
+<input name="academic_year" type="hidden" value="2024-25"/>
+<!-- Field: Room Number -->
+<div class="space-y-1">
+<label class="block font-label-lg text-label-lg text-on-surface" for="input-room-no">
+            Room Number / Identification Code <span class="text-error">*</span>
+</label>
+<input class="w-full h-10 px-3 bg-surface-container-lowest font-body-md text-body-md text-on-surface rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary" id="input-room-no" name="room_no" placeholder="e.g. Room UB-402, Hall 204" required="" type="text"/>
+<span class="font-body-sm text-body-sm text-secondary">Must align with physical door placards and campus signage.</span>
+</div>
+<!-- Field: Building Wing -->
+<div class="space-y-1">
+<label class="block font-label-lg text-label-lg text-on-surface" for="input-building">
+            Campus Complex / Building <span class="text-error">*</span>
+</label>
+<div class="relative">
+<select class="w-full h-10 px-3 pr-8 bg-surface-container-lowest font-body-md text-body-md text-on-surface rounded-lg appearance-none shadow-sm focus:outline-none focus:ring-2 focus:ring-primary" id="input-building" name="building" required="">
+<option value="">Select Campus Building...</option>
+<option value="Academic Building A">Academic Building A</option>
+<option value="Academic Building B">Academic Building B</option>
+<option value="Academic Building C">Academic Building C</option>
+<option value="Science Complex (UB)">Science Complex (UB)</option>
+<option value="Main Auditorium Wing">Main Auditorium Wing</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none text-outline text-[18px]">expand_more</span>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Field: Rated Capacity -->
+<div class="space-y-1">
+<label class="block font-label-lg text-label-lg text-on-surface" for="input-capacity">
+              Rated Capacity (Seats) <span class="text-error">*</span>
+</label>
+<input class="w-full h-10 px-3 bg-surface-container-lowest font-body-md text-body-md text-on-surface rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary" id="input-capacity" max="500" min="10" name="capacity" placeholder="e.g. 65" required="" type="number"/>
+<span class="font-body-sm text-body-sm text-secondary">Physical max exam desks.</span>
+</div>
+<!-- Field: Room Type -->
+<div class="space-y-1">
+<label class="block font-label-lg text-label-lg text-on-surface" for="input-room-type">
+              Structural Room Type <span class="text-error">*</span>
+</label>
+<div class="relative">
+<select class="w-full h-10 px-3 pr-8 bg-surface-container-lowest font-body-md text-body-md text-on-surface rounded-lg appearance-none shadow-sm focus:outline-none focus:ring-2 focus:ring-primary" id="input-room-type" name="room_type" required="">
+<option value="Standard Exam Hall">Standard Exam Hall</option>
+<option value="Tiered Lecture Hall">Tiered Lecture Hall</option>
+<option value="Computer Lab Hall">Computer Lab Hall</option>
+<option value="Auditorium">Auditorium</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none text-outline text-[18px]">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Field: Status -->
+<div class="space-y-1">
+<label class="block font-label-lg text-label-lg text-on-surface" for="input-status">
+            Operational Registry Status <span class="text-error">*</span>
+</label>
+<div class="relative">
+<select class="w-full h-10 px-3 pr-8 bg-surface-container-lowest font-body-md text-body-md text-on-surface rounded-lg appearance-none shadow-sm focus:outline-none focus:ring-2 focus:ring-primary" id="input-status" name="status" required="">
+<option value="Active">Active (Eligible for Automatic Dispatch)</option>
+<option value="Maintenance">Maintenance (Offline for Renovations)</option>
+<option value="Reserved">Reserved (Special Accommodations Only)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none text-outline text-[18px]">expand_more</span>
+</div>
+</div>
+<!-- Modal Footer Controls -->
+<div class="pt-space-md flex items-center justify-end gap-space-sm">
+<button class="px-space-lg h-10 bg-surface-container-highest text-on-surface font-label-lg text-label-lg rounded-xl hover:bg-surface-container transition-colors" onclick="closeRoomModal()" type="button">
+            Cancel
+          </button>
+<button class="px-space-xl h-10 bg-primary-container text-on-primary font-label-lg text-label-lg rounded-xl shadow-md hover:bg-primary transition-all flex items-center gap-1.5" type="submit">
+<span class="material-symbols-outlined text-[18px]">save</span>
+<span>Save Room Record</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+<!-- Client Interaction Script -->
+<script>
+    function openRoomModal() {
+      document.getElementById('modal-title').textContent = 'Add New Examination Room';
+      document.getElementById('form-room-id').value = '';
+      document.getElementById('input-room-no').value = '';
+      document.getElementById('input-building').value = '';
+      document.getElementById('input-capacity').value = '';
+      document.getElementById('input-room-type').value = 'Standard Exam Hall';
+      document.getElementById('input-status').value = 'Active';
+      document.getElementById('room-modal').classList.remove('hidden');
+    }
+
+    function editRoomRecord(roomNo, building, capacity, type, status) {
+      document.getElementById('modal-title').textContent = 'Edit Examination Room: ' + roomNo;
+      document.getElementById('form-room-id').value = 'ID_' + roomNo.replace(/\s+/g, '_');
+      document.getElementById('input-room-no').value = roomNo;
+      document.getElementById('input-building').value = building;
+      document.getElementById('input-capacity').value = capacity;
+      document.getElementById('input-room-type').value = type;
+      document.getElementById('input-status').value = status || 'Active';
+      document.getElementById('room-modal').classList.remove('hidden');
+    }
+
+    function closeRoomModal() {
+      document.getElementById('room-modal').classList.add('hidden');
+    }
+
+    function filterRoomsTable() {
+      const searchVal = document.getElementById('table-search').value.toLowerCase();
+      const buildingVal = document.getElementById('filter-building').value;
+      const typeVal = document.getElementById('filter-type').value;
+      const statusVal = document.getElementById('filter-status').value;
+      const capVal = document.getElementById('filter-capacity').value;
+
+      const rows = document.querySelectorAll('#table-body tr.room-row');
+      let visibleCount = 0;
+
+      rows.forEach(row => {
+        const roomName = row.querySelector('.room-name').textContent.toLowerCase();
+        const building = row.getAttribute('data-building');
+        const type = row.getAttribute('data-type');
+        const status = row.getAttribute('data-status');
+        const cap = parseInt(row.getAttribute('data-capacity'), 10);
+
+        let matchSearch = roomName.includes(searchVal) || building.toLowerCase().includes(searchVal);
+        let matchBuilding = (buildingVal === 'ALL') || (building === buildingVal);
+        let matchType = (typeVal === 'ALL') || (type === typeVal);
+        let matchStatus = (statusVal === 'ALL') || (status === statusVal);
+
+        let matchCap = true;
+        if (capVal === 'SMALL') matchCap = (cap < 40);
+        else if (capVal === 'MEDIUM') matchCap = (cap >= 40 && cap <= 70);
+        else if (capVal === 'LARGE') matchCap = (cap > 70);
+
+        if (matchSearch && matchBuilding && matchType && matchStatus && matchCap) {
+          row.style.display = '';
+          visibleCount++;
+        } else {
+          row.style.display = 'none';
+        }
+      });
+
+      document.getElementById('visible-count').textContent = visibleCount;
+    }
+
+    function resetFilters() {
+      document.getElementById('table-search').value = '';
+      document.getElementById('filter-building').value = 'ALL';
+      document.getElementById('filter-type').value = 'ALL';
+      document.getElementById('filter-status').value = 'ALL';
+      document.getElementById('filter-capacity').value = 'ALL';
+      filterRoomsTable();
+    }
+
+    function exportRoomLedgerCSV() {
+      const headers = ["ROOM_NO", "BUILDING", "CAPACITY", "ROOM_TYPE", "STATUS"];
+      const rows = [
+        ["Room UB-402", "Science Complex (UB)", "65", "Tiered Lecture Hall", "OVER_CAPACITY"],
+        ["Room 402", "Academic Building A", "45", "Standard Exam Hall", "OPTIMAL"],
+        ["Room 403", "Academic Building A", "45", "Standard Exam Hall", "AVAILABLE"],
+        ["Hall 101", "Main Auditorium Wing", "150", "Auditorium", "AVAILABLE"],
+        ["Room 301", "Academic Building B", "50", "Tiered Lecture Hall", "OVER_CAPACITY"],
+        ["Room SC-305", "Science Complex (UB)", "40", "Computer Lab Hall", "AVAILABLE"],
+        ["Room 504", "Academic Building C", "50", "Standard Exam Hall", "HIGH_LOAD"]
+      ];
+
+      let csvContent = "data:text/csv;charset=utf-8," + [headers.join(","), ...rows.map(e => e.join(","))].join("\n");
+      const encodedUri = encodeURI(csvContent);
+      const link = document.createElement("a");
+      link.setAttribute("href", encodedUri);
+      link.setAttribute("download", "Premier_Univ_Exam_Rooms_Ledger.csv");
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    function resolveClash(roomNo) {
+      alert("Opening Conflict Resolver for " + roomNo + ": Redirecting to Seat Reallocation Matrix (/conflict-center)...");
+    }
+
+    function inspectRoom(roomNo) {
+      alert("Launching Visual Seating Matrix Inspector for: " + roomNo);
+    }
+
+    function deleteRoom(roomNo) {
+      if (confirm("Confirm decommission of examination room record: " + roomNo + "? Active seat allocations will be orphaned.")) {
+        alert("Request transmitted to room_save.php?action=delete&room=" + encodeURIComponent(roomNo));
+      }
+    }
+  </script>
+</div></main></div></body></html>

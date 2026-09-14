@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "outline-variant": "#c3c6d7", "secondary": "#565e74", "surface-container": "#e5eeff", "surface": "#f8f9ff", "tertiary-container": "#5d55f3", "tertiary-fixed-dim": "#c3c0ff", "tertiary": "#4338d9", "on-primary-container": "#eeefff", "primary-fixed": "#dbe1ff", "on-background": "#0b1c30", "on-secondary-fixed-variant": "#3f465c", "surface-container-highest": "#d3e4fe", "on-secondary": "#ffffff", "primary": "#004ac6", "surface-tint": "#0053db", "secondary-fixed": "#dae2fd", "error": "#ba1a1a", "surface-dim": "#cbdbf5", "on-error-container": "#93000a", "on-primary-fixed": "#00174b", "on-error": "#ffffff", "on-tertiary": "#ffffff", "error-container": "#ffdad6", "primary-container": "#2563eb", "surface-container-low": "#eff4ff", "on-primary-fixed-variant": "#003ea8", "surface-variant": "#d3e4fe", "inverse-on-surface": "#eaf1ff", "on-tertiary-fixed": "#0f0069", "on-tertiary-fixed-variant": "#3323cc", "secondary-container": "#dae2fd", "background": "#f8f9ff", "inverse-surface": "#213145", "tertiary-fixed": "#e2dfff", "on-surface": "#0b1c30", "primary-fixed-dim": "#b4c5ff", "secondary-fixed-dim": "#bec6e0", "on-primary": "#ffffff", "on-secondary-container": "#5c647a", "on-tertiary-container": "#f2eeff", "surface-bright": "#f8f9ff", "outline": "#737686", "on-surface-variant": "#434655", "inverse-primary": "#b4c5ff", "surface-container-lowest": "#ffffff", "surface-container-high": "#dce9ff", "on-secondary-fixed": "#131b2e" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-lg": "1.5rem", "margin": "2rem", "gutter-mobile": "1rem", "space-sm": "0.5rem", "space-md": "1rem", "space-xl": "2rem", "margin-mobile": "1rem", "gutter": "1.5rem", "space-xs": "0.25rem" }, "fontFamily": { "headline-md": [ "Inter" ], "body-lg": [ "Inter" ], "label-sm": [ "Inter" ], "label-md": [ "Inter" ], "code": [ "JetBrains Mono" ], "headline-lg": [ "Inter" ], "title-md": [ "Inter" ], "body-md": [ "Inter" ], "headline-sm": [ "Inter" ], "display": [ "Inter" ], "body-sm": [ "Inter" ], "label-lg": [ "Inter" ], "title-sm": [ "Inter" ], "headline-lg-mobile": [ "Inter" ] }, "fontSize": { "headline-md": [ "22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "body-lg": [ "16px", { "lineHeight": "24px", "fontWeight": "400" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.025em", "fontWeight": "600" } ], "code": [ "12px", { "lineHeight": "16px", "fontWeight": "500" } ], "headline-lg": [ "30px", { "lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "title-md": [ "16px", { "lineHeight": "22px", "fontWeight": "600" } ], "body-md": [ "14px", { "lineHeight": "20px", "fontWeight": "400" } ], "headline-sm": [ "18px", { "lineHeight": "24px", "fontWeight": "600" } ], "display": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "body-sm": [ "12px", { "lineHeight": "16px", "fontWeight": "400" } ], "label-lg": [ "14px", { "lineHeight": "20px", "fontWeight": "500" } ], "title-sm": [ "14px", { "lineHeight": "20px", "fontWeight": "600" } ], "headline-lg-mobile": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased min-h-screen"><aside class="fixed left-0 top-0 h-full w-72 bg-[#0f172a] text-white z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.12)] overflow-y-auto"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm bg-[#09101d]"><div class="w-9 h-9 rounded bg-primary-container flex items-center justify-center text-white shadow-sm flex-shrink-0"><span class="material-symbols-outlined text-[20px]">verified</span></div><div class="flex flex-col overflow-hidden"><span class="font-title-sm text-title-sm text-white tracking-wide truncate">Premier University</span><span class="font-label-sm text-label-sm text-slate-400 uppercase tracking-wider truncate">Exam Control Division</span></div></div><div class="px-space-md py-space-sm"><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary font-title-sm rounded-lg shadow-sm"><div class="pt-space-sm pb-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-slate-400 font-bold px-space-sm">Admin &amp; Controller Tools</span></div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors" data-path="admin-dashboard" href="#"><span class="material-symbols-outlined text-[18px]">dashboard</span><span class="font-body-md text-body-md">Admin Dashboard</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors" data-path="faculty-management" href="#"><span class="material-symbols-outlined text-[18px]">badge</span><span class="font-body-md text-body-md">Faculty Management</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors" data-path="department-management" href="#"><span class="material-symbols-outlined text-[18px]">corporate_fare</span><span class="font-body-md text-body-md">Department Management</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors" data-path="course-management" href="#"><span class="material-symbols-outlined text-[18px]">menu_book</span><span class="font-body-md text-body-md">Course Management</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors" data-path="exam-management" href="#"><span class="material-symbols-outlined text-[18px]">assignment</span><span class="font-body-md text-body-md">Exam Management</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors" data-path="exam-timetable-and-rooms" href="#"><span class="material-symbols-outlined text-[18px]">calendar_month</span><span class="font-body-md text-body-md">Exam Timetable &amp; Rooms</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors" data-path="room-management" href="#"><span class="material-symbols-outlined text-[18px]">meeting_room</span><span class="font-body-md text-body-md">Room Management</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors" data-path="invigilation-assignments" href="#"><span class="material-symbols-outlined text-[18px]">how_to_reg</span><span class="font-body-md text-body-md">Invigilation Assignments</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors" data-path="conflict-center" href="#"><span class="material-symbols-outlined text-[18px]">fmd_bad</span><span class="font-body-md text-body-md">Conflict Center</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors" data-path="faculty-workload" href="#"><span class="material-symbols-outlined text-[18px]">query_stats</span><span class="font-body-md text-body-md">Faculty Workload</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-2 transition-colors bg-primary-container text-on-primary font-title-sm rounded-lg shadow-sm" data-path="duty-reassignment" href="#"><span class="material-symbols-outlined text-[18px]">published_with_changes</span><span class="font-body-md text-body-md">Duty Reassignment</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors" data-path="reports-and-documents" href="#"><span class="material-symbols-outlined text-[18px]">description</span><span class="font-body-md text-body-md">Reports &amp; Documents</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors" data-path="notifications" href="#"><span class="material-symbols-outlined text-[18px]">notifications</span><span class="font-body-md text-body-md">Notifications</span></a><div class="pt-space-md pb-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-slate-400 font-bold px-space-sm">Faculty Portal (Preview)</span></div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors" data-path="faculty-dashboard" href="#"><span class="material-symbols-outlined text-[18px]">space_dashboard</span><span class="font-body-md text-body-md">Faculty Dashboard</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors" data-path="my-assigned-duties" href="#"><span class="material-symbols-outlined text-[18px]">checklist</span><span class="font-body-md text-body-md">My Assigned Duties</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors" data-path="faculty-availability" href="#"><span class="material-symbols-outlined text-[18px]">event_available</span><span class="font-body-md text-body-md">Faculty Availability</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors" data-path="duty-preferences" href="#"><span class="material-symbols-outlined text-[18px]">tune</span><span class="font-body-md text-body-md">Duty Preferences</span></a></nav></div></div><div class="p-space-md bg-[#09101d] mt-space-md"><div class="flex items-center gap-space-xs text-slate-400 font-body-sm text-body-sm"><span class="material-symbols-outlined text-[16px] text-emerald-400">verified_user</span><span>Session Secured</span></div><p class="font-label-sm text-label-sm text-slate-500 mt-1">Academic Year 2024-25</p></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-gutter"><div class="flex items-center gap-space-md"><span class="font-title-md text-title-md text-on-surface font-semibold tracking-tight">Premier University Office of the Controller of Examinations</span></div><div class="flex items-center gap-space-lg"><div class="relative w-80 hidden md:block"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span><input class="w-full pl-9 pr-space-md py-1.5 bg-surface-container-lowest text-on-surface rounded-lg font-body-sm text-body-sm placeholder:text-on-surface-variant/70 focus:outline-none focus:ring-2 focus:ring-primary-container shadow-[0_1px_3px_0_rgba(15,23,42,0.05)]" placeholder="Search faculty, courses, rooms, reports..." type="text"/></div><div class="flex items-center gap-space-md"><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2.5 h-2.5 bg-error rounded-full ring-2 ring-surface"></span></button><div class="flex items-center gap-space-sm pl-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden lg:flex flex-col items-start"><span class="font-label-md text-label-md text-on-surface font-bold">Admin Controller</span><span class="font-label-sm text-label-sm text-on-surface-variant">Office of Exam Control</span></div><span class="material-symbols-outlined text-on-surface-variant text-[18px]">arrow_drop_down</span></div></div></div></header><main class="w-full pt-16 bg-surface px-gutter min-h-screen"><div class="flex flex-col w-full pb-margin">
+<!-- Breadcrumb Navigation -->
+<div class="flex items-center justify-between py-space-sm">
+<nav class="flex items-center gap-space-xs font-label-md text-label-md text-secondary">
+<a class="hover:text-primary transition-colors" href="#">Home</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Scheduling Operations</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-on-surface font-semibold">Duty Reassignment</span>
+</nav>
+<div class="flex items-center gap-space-xs font-code text-code text-on-surface-variant bg-surface-container-high px-space-sm py-1 rounded">
+<span class="material-symbols-outlined text-[14px] text-primary">terminal</span>
+<span>SYSTEM ENGINE: HEURISTIC_V4.8_ACTIVE</span>
+</div>
+</div>
+<!-- Header Block with Asymmetric Counter Accent -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md pt-space-xs pb-space-lg">
+<div class="flex flex-col max-w-4xl">
+<div class="flex items-center gap-space-sm mb-space-xs">
+<span class="bg-primary text-on-primary font-label-sm text-label-sm px-2 py-0.5 rounded tracking-widest uppercase">Office of Exam Control</span>
+<span class="font-code text-code text-secondary tracking-tight">SEC-PROTO: 994-AUDIT</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">
+        Manual Invigilation Duty Reassignment &amp; Replacement
+      </h1>
+<p class="font-body-md text-body-md text-secondary mt-1 max-w-3xl">
+        Emergency and administrative re-allocation of proctors for scheduled examination slots with real-time heuristic validation against conflicts, quotas, and faculty preferences.
+      </p>
+</div>
+<div class="flex items-center gap-space-sm self-start lg:self-auto">
+<a class="flex items-center gap-space-xs px-space-md py-2 bg-surface-container text-on-surface font-label-md text-label-md rounded shadow-sm hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">history</span>
+<span>Reassignment Logs</span>
+</a>
+<button class="flex items-center gap-space-xs px-space-md py-2 bg-surface-container text-on-surface font-label-md text-label-md rounded shadow-sm hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">help_outline</span>
+<span>Standard Protocols</span>
+</button>
+</div>
+</div>
+<!-- Top Alert & Context Ribbon -->
+<div class="bg-surface-container-lowest rounded shadow-sm p-space-md mb-space-lg flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded bg-surface-container-high flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[26px]">assignment_turned_in</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-title-sm text-title-sm text-on-surface">Active Reassignment Ticket:</span>
+<span class="font-code text-code font-bold text-primary bg-primary-fixed px-2 py-0.5 rounded">REASSIGN-2025-089</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm bg-amber-100 text-amber-800 px-2 py-0.5 rounded">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-600 animate-pulse"></span>
+            Pending Controller Approval &amp; Audit Trail
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+          Exam Session Target: <span class="font-semibold text-on-surface">CSE311 - Database Management Systems (Midterm Exam)</span> • 45 Examinees
+        </p>
+</div>
+</div>
+<div class="flex items-center gap-space-lg pl-0 md:pl-space-md">
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm uppercase text-secondary">Initiated By</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Chief Deputy Controller</span>
+</div>
+<div class="h-8 w-px bg-outline-variant"></div>
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm uppercase text-secondary">Expiry TTL</span>
+<span class="font-code text-code text-error font-bold">01:42:19</span>
+</div>
+</div>
+</div>
+<!-- Two-Column Main Workstation Layout -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-gutter items-start">
+<!-- LEFT COLUMN: Active Duty Record & Reassignment Form -->
+<div class="xl:col-span-7 flex flex-col gap-space-lg">
+<!-- Card 1: Current Active Assignment -->
+<div class="bg-surface-container-lowest rounded shadow-sm overflow-hidden">
+<div class="px-space-md py-space-sm bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-error">assignment_late</span>
+<h2 class="font-title-md text-title-md text-on-surface font-semibold">Current Active Assignment (Outgoing)</h2>
+</div>
+<span class="font-label-sm text-label-sm bg-error-container text-on-error-container px-2 py-0.5 rounded font-bold uppercase tracking-wider">
+            Relief Required
+          </span>
+</div>
+<div class="p-space-md flex flex-col gap-space-md">
+<!-- Faculty Snapshot Header -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md p-space-md bg-surface-container-lowest rounded">
+<div class="flex items-center gap-space-md">
+<div class="relative w-14 h-14 rounded-full overflow-hidden flex-shrink-0 bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Official corporate headshot of senior academic male professor wearing spectacles and charcoal blazer against a clean scholarly library background in neutral tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXK6UgvSFZzKU1jBmOtKgWdRhEL4Y0q_UkHyHCRo04jggQsMUgyUHWVbUnbOMXbOJS7zv60xNvNWh-GMAqrWWeUlBwEBdfoG1ZC5TcQaoe_hsB34g9J-u-Xi4eJMtD10Eq4xskLbyBG2_oG7tWDOxcRKhRdVsPyY773T0Jvj-cBsfZ0lUgfVNzZ6YaHOokcSQTa8ulArdrAvtyV1sks25r-L_AY8booytn0IXQLWpuCKcZRK1dNlVW"/>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-title-sm text-title-sm text-on-surface font-bold">Prof. Mahbubur Rahman</span>
+<span class="font-code text-code bg-surface-container px-1.5 py-0.5 rounded text-on-surface-variant">FAC-EEE-019</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">Dept. of Electrical &amp; Electronic Engineering (EEE)</span>
+<span class="font-label-sm text-label-sm text-error font-medium mt-0.5">Role: Chief Invigilator</span>
+</div>
+</div>
+<!-- Overburdened Workload Badge -->
+<div class="flex flex-col items-start sm:items-end bg-error-container/40 p-2.5 rounded">
+<span class="font-label-sm text-label-sm text-on-error-container font-semibold uppercase">Duty Workload</span>
+<span class="font-title-md text-title-md text-error font-bold tracking-tight">6 Duties (Overburdened)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Max Recommended: 5</span>
+</div>
+</div>
+<!-- Exam Context Matrix -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div class="p-space-sm bg-surface-container rounded flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">menu_book</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase">Examination</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">CSE311 - Database Mgmt Systems</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Midterm Examination • Spring 2025</span>
+</div>
+</div>
+<div class="p-space-sm bg-surface-container rounded flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">calendar_month</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase">Schedule Slot</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">Sunday, 18 May 2025</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Shift: Morning (10:00 AM - 12:00 PM)</span>
+</div>
+</div>
+<div class="p-space-sm bg-surface-container rounded flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">meeting_room</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase">Location &amp; Capacity</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">Room 402, Academic Building A</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">45 Examinees Assigned</span>
+</div>
+</div>
+<div class="p-space-sm bg-surface-container rounded flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">badge</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase">Designated Authority</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">Chief Invigilator (Lead Proctor)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Requires Rank: Assoc. Prof or Higher</span>
+</div>
+</div>
+</div>
+<!-- Reason for Relief Callout -->
+<div class="p-space-sm bg-amber-50 rounded flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-amber-700 text-[20px] mt-0.5">clinical_notes</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-amber-900 font-bold">Relief Exemption Ground &amp; Formal Documentation</span>
+<p class="font-body-sm text-body-sm text-amber-950 mt-0.5">
+                Medical Leave / Dean Approved Exemption Ticket <span class="font-code font-bold text-amber-900">#MED-9921</span>. Outgoing faculty has submitted medical certificate for scheduled surgical recovery window (May 16 – May 22, 2025). Exemption validated by Academic Dean.
+              </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2: Reassignment Submission Form -->
+<div class="bg-surface-container-lowest rounded shadow-sm overflow-hidden">
+<div class="px-space-md py-space-sm bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-primary">published_with_changes</span>
+<h2 class="font-title-md text-title-md text-on-surface font-semibold">Reassignment Submission Form</h2>
+</div>
+<span class="font-code text-code text-on-surface-variant">ACTION: reassignment_save.php</span>
+</div>
+<form action="reassignment_save.php" class="p-space-md flex flex-col gap-space-md" id="reassignmentForm" method="POST">
+<!-- Backend Schema Hidden Inputs -->
+<input id="assignment_id" name="assignment_id" type="hidden" value="1042"/>
+<input id="original_faculty_id" name="original_faculty_id" type="hidden" value="FAC-EEE-019"/>
+<input id="exam_session_id" name="exam_session_id" type="hidden" value="SESS-2025-CSE311-M"/>
+<!-- Replacement Faculty Picker -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<label class="font-label-lg text-label-lg text-on-surface font-bold flex items-center gap-1" for="new_faculty_id">
+                Replacement Faculty Member <span class="text-error font-bold">*</span>
+</label>
+<span class="font-label-sm text-label-sm text-primary font-medium">Heuristic Filter: Ranked by Availability</span>
+</div>
+<div class="relative">
+<select class="w-full h-11 px-space-sm bg-surface-container-lowest text-on-surface rounded font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm cursor-pointer" id="new_faculty_id" name="new_faculty_id" onchange="window.evaluateFacultySelection(this.value)">
+<option selected="" value="FAC-CSE-042">Dr. Tariqul Islam (FAC-CSE-042) — Available | Dept of CSE | Workload: 3/5 [Optimal Match]</option>
+<option value="FAC-BBA-0311">Ms. Nusrat Ara (FAC-BBA-0311) — Available | Dept of BBA | Workload: 2/5</option>
+<option value="FAC-LAW-0089">Dr. S. K. Chowdhury (FAC-LAW-0089) — Available | Dept of Law | Workload: 2/5</option>
+<option class="text-secondary bg-surface-container" disabled="" value="FAC-CSE-088">Dr. Farhana Ahmed (FAC-CSE-088) — [Conflict: Already Assigned in Room 301]</option>
+</select>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">
+              Only faculty members cleared of concurrent room duty, sabbatical leaves, and workload caps are eligible for selection.
+            </p>
+</div>
+<!-- Active Replacement Candidate Mini Preview -->
+<div class="p-space-sm bg-surface-container-low rounded flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="relative w-10 h-10 rounded-full overflow-hidden flex-shrink-0 bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Professional studio portrait of an Asian male associate computer science professor with short groomed hair and navy collared shirt against a muted corporate office background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtIeNa9PgetH0lT_oflt4io9oRbq2Thg__NkrNtlJG0v1Fl3zzq_Vl8uCifccJSIPUKwuNFOT1LheuBkiI2ZIDJIlpS2ZqCiCJtzleICUCWa0KEh_5HzOMiXEe0xxPrXo8-wvreEgkcNaOjzelQ3MF7kA0oLVx3JQ0d3fUDOqD4YLi5q37tmBFWqDuj7i2o_iJCiup0y5eDk0KkpPXC6eRzIaNBUF9CVLNWLf4rlgBzqxX_KEU_lkK"/>
+</div>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold" id="candidateName">Dr. Tariqul Islam</span>
+<span class="font-body-sm text-body-sm text-secondary" id="candidateMeta">Associate Professor • CSE Department • ID: FAC-CSE-042</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm bg-green-100 text-green-800 px-2 py-0.5 rounded font-bold">PROCTOR ELIGIBLE</span>
+</div>
+</div>
+<!-- Reason Category Dropdown -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-lg text-label-lg text-on-surface font-bold flex items-center gap-1" for="reassignment_reason_type">
+                Reassignment Reason Category <span class="text-error font-bold">*</span>
+</label>
+<select class="w-full h-10 px-space-sm bg-surface-container-lowest text-on-surface rounded font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm cursor-pointer" id="reassignment_reason_type" name="reassignment_reason_type" required="">
+<option selected="" value="MEDICAL_EXEMPTION">Medical Exemption</option>
+<option value="TEACHING_CLASH">Departmental Teaching Clash</option>
+<option value="ADMINISTRATIVE_ORDER">Administrative Order</option>
+<option value="MUTUAL_PEER_SWAP">Mutual Peer Swap</option>
+<option value="EMERGENCY_ABSENCE">Emergency Absence</option>
+</select>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-lg text-label-lg text-on-surface font-bold" for="duty_role_override">
+                Assigned Role Position
+              </label>
+<input class="w-full h-10 px-space-sm bg-surface-container text-secondary rounded font-body-md text-body-md focus:outline-none cursor-not-allowed shadow-sm" id="duty_role_override" name="duty_role_override" readonly="" type="text" value="Chief Invigilator (Transfer Verified)"/>
+</div>
+</div>
+<!-- Administrative Justification Notes -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-lg text-label-lg text-on-surface font-bold flex items-center justify-between" for="justification_notes">
+<span>Administrative Justification Notes <span class="text-error font-bold">*</span></span>
+<span class="font-code text-code text-secondary font-normal">Audit Trail Requirement</span>
+</label>
+<textarea class="w-full p-space-sm bg-surface-container-lowest text-on-surface rounded font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm placeholder:text-secondary/60" id="justification_notes" name="justification_notes" placeholder="Provide official reference number or justification for Controller audit record..." required="" rows="3">Approved emergency proctor swap pursuant to Dean Certificate #MED-9921 dated May 15 2025. Dr. Tariqul Islam has certified schedule opening with Department Chair endorsement.</textarea>
+</div>
+<!-- Immediate Notification Checkbox -->
+<div class="flex items-start gap-space-sm p-space-sm bg-surface-container-lowest rounded shadow-sm">
+<input checked="" class="mt-1 w-4 h-4 rounded text-primary focus:ring-primary shadow-sm cursor-pointer" id="send_instant_notification" name="send_instant_notification" type="checkbox" value="1"/>
+<label class="flex flex-col cursor-pointer" for="send_instant_notification">
+<span class="font-label-md text-label-md text-on-surface font-bold">Dispatch Automated Immediate Notifications</span>
+<span class="font-body-sm text-body-sm text-secondary">
+                Notify both outgoing (Prof. Mahbubur Rahman) and replacement faculty (Dr. Tariqul Islam) via automated SMS alert, university email digest, and Faculty Portal real-time dashboard banner.
+              </span>
+</label>
+</div>
+<!-- Action Buttons Bar -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-xs">
+<a class="w-full sm:w-auto px-space-md py-2.5 bg-surface-container text-on-surface font-label-md text-label-md rounded text-center shadow-sm hover:bg-surface-container-high transition-colors flex items-center justify-center gap-space-xs" href="#">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>Cancel &amp; Return</span>
+</a>
+<div class="flex items-center gap-space-sm w-full sm:w-auto">
+<button class="w-full sm:w-auto px-space-md py-2.5 bg-surface-container text-secondary font-label-md text-label-md rounded shadow-sm hover:bg-surface-container-high hover:text-on-surface transition-colors" type="reset">
+                Reset Form
+              </button>
+<button class="w-full sm:w-auto px-space-lg py-2.5 bg-primary text-on-primary font-label-md text-label-md font-bold rounded shadow-md hover:bg-primary/90 transition-all flex items-center justify-center gap-space-xs" id="submitBtn" type="submit">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span>Confirm &amp; Execute Reassignment</span>
+</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+<!-- RIGHT COLUMN: Real-Time Heuristic Validation Engine Panel -->
+<div class="xl:col-span-5 flex flex-col gap-space-lg">
+<!-- Card: Heuristic Conflict & Rule Verification Engine -->
+<div class="bg-surface-container-lowest rounded shadow-sm overflow-hidden sticky top-20">
+<!-- Verification Header with Live Status Pulse -->
+<div class="px-space-md py-space-sm bg-[#09101d] text-white flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-emerald-400 text-[20px]">smart_toy</span>
+<div class="flex flex-col">
+<h2 class="font-title-sm text-title-sm text-white font-bold">Heuristic Conflict &amp; Rule Engine</h2>
+<span class="font-code text-code text-slate-400">Target: FAC-CSE-042 (Dr. Tariqul Islam)</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 bg-emerald-950 text-emerald-300 font-label-sm text-label-sm px-2.5 py-1 rounded">
+<span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+<span class="font-bold tracking-wider">ALL RULES CLEAR</span>
+</div>
+</div>
+<!-- Live Rule Verification Result Banner -->
+<div class="px-space-md py-3 bg-emerald-50 flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-emerald-600 text-[22px]">check_circle</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-emerald-900 font-bold">Live Rule Evaluation: PASS</span>
+<span class="font-body-sm text-body-sm text-emerald-800">No hard clashes, double bookings, or policy violations detected.</span>
+</div>
+</div>
+<span class="font-code text-code font-bold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded">100% SCORE</span>
+</div>
+<!-- Rules Checklist -->
+<div class="p-space-md flex flex-col gap-space-sm">
+<!-- Rule 1: Time-Slot Availability Check -->
+<div class="p-space-sm bg-surface-container-lowest rounded shadow-sm flex items-start gap-space-sm hover:bg-surface-container-low transition-colors">
+<div class="w-8 h-8 rounded bg-emerald-100 text-emerald-700 flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">event_available</span>
+</div>
+<div class="flex flex-col flex-grow">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-bold">Rule 1: Time-Slot Availability Check</span>
+<span class="font-label-sm text-label-sm bg-emerald-100 text-emerald-800 px-1.5 py-0.5 rounded font-bold uppercase">PASS</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5">
+                Faculty member explicitly declared <span class="font-semibold text-on-surface">‘Available’</span> in faculty portal ledger for Sunday, May 18, 2025 between 09:00 AM – 01:00 PM.
+              </p>
+<div class="flex items-center gap-space-xs mt-1 text-on-surface-variant font-code text-code">
+<span class="material-symbols-outlined text-[14px] text-emerald-600">done</span>
+<span>Portal sync timestamp: 2025-05-14 09:12:00</span>
+</div>
+</div>
+</div>
+<!-- Rule 2: Overlapping Duty Check -->
+<div class="p-space-sm bg-surface-container-lowest rounded shadow-sm flex items-start gap-space-sm hover:bg-surface-container-low transition-colors">
+<div class="w-8 h-8 rounded bg-emerald-100 text-emerald-700 flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">event_busy</span>
+</div>
+<div class="flex flex-col flex-grow">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-bold">Rule 2: Overlapping Duty Check</span>
+<span class="font-label-sm text-label-sm bg-emerald-100 text-emerald-800 px-1.5 py-0.5 rounded font-bold uppercase">PASS</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5">
+                Zero concurrent invigilation assignments detected across all university halls on 18 May 2025 (10:00 AM – 12:00 PM slot).
+              </p>
+<div class="flex items-center gap-space-xs mt-1 text-on-surface-variant font-code text-code">
+<span class="material-symbols-outlined text-[14px] text-emerald-600">verified</span>
+<span>Query executed across 48 active campus exam halls</span>
+</div>
+</div>
+</div>
+<!-- Rule 3: Duty Quota & Workload Impact -->
+<div class="p-space-sm bg-surface-container-lowest rounded shadow-sm flex items-start gap-space-sm hover:bg-surface-container-low transition-colors">
+<div class="w-8 h-8 rounded bg-emerald-100 text-emerald-700 flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">stacked_line_chart</span>
+</div>
+<div class="flex flex-col flex-grow">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-bold">Rule 3: Duty Quota &amp; Workload Impact</span>
+<span class="font-label-sm text-label-sm bg-emerald-100 text-emerald-800 px-1.5 py-0.5 rounded font-bold uppercase">PASS</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5">
+                Current: <span class="font-semibold text-on-surface">3 duties</span>. After reassignment: <span class="font-semibold text-on-surface">4 duties</span> (Within policy cap of 5 per semester).
+              </p>
+<!-- Workload Visual Progress Meter -->
+<div class="mt-2 flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-label-sm text-secondary">
+<span>Quota Saturation</span>
+<span class="font-code font-bold text-on-surface">4 / 5 Total Maximum Duties (80%)</span>
+</div>
+<div class="w-full h-2 rounded bg-surface-container-high overflow-hidden flex">
+<div class="bg-primary h-full rounded-l" style="width: 60%;"></div>
+<div class="bg-amber-500 h-full rounded-r" style="width: 20%;"></div>
+</div>
+<div class="flex items-center justify-between font-code text-code text-on-surface-variant mt-0.5">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-primary inline-block"></span> 3 Historical</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-amber-500 inline-block"></span> +1 This Assignment</span>
+<span class="text-secondary">1 Remaining Room</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Rule 4: Faculty Preference Alignment -->
+<div class="p-space-sm bg-surface-container-lowest rounded shadow-sm flex items-start gap-space-sm hover:bg-surface-container-low transition-colors">
+<div class="w-8 h-8 rounded bg-primary-fixed text-primary flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div class="flex flex-col flex-grow">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-bold">Rule 4: Faculty Preference Alignment</span>
+<span class="font-label-sm text-label-sm bg-primary-fixed text-on-primary-fixed font-bold px-1.5 py-0.5 rounded uppercase">OPTIMAL</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5">
+                Faculty preference ledger records indicate high preference for <span class="font-semibold text-primary">‘Morning Shift’</span> assignments on Sundays.
+              </p>
+<div class="flex items-center gap-space-xs mt-1 text-on-surface-variant font-code text-code">
+<span class="material-symbols-outlined text-[14px] text-primary">thumb_up</span>
+<span>Faculty Satisfaction Weight Index: +0.94</span>
+</div>
+</div>
+</div>
+<!-- Rule 5: Room Hall Proximity Check -->
+<div class="p-space-sm bg-surface-container-lowest rounded shadow-sm flex items-start gap-space-sm hover:bg-surface-container-low transition-colors">
+<div class="w-8 h-8 rounded bg-emerald-100 text-emerald-700 flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">near_me</span>
+</div>
+<div class="flex flex-col flex-grow">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-bold">Rule 5: Room Hall Proximity Check</span>
+<span class="font-label-sm text-label-sm bg-emerald-100 text-emerald-800 px-1.5 py-0.5 rounded font-bold uppercase">PASS</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5">
+                Academic Building A is candidate’s home department building (Faculty chamber located in Room 418, same floor).
+              </p>
+<div class="flex items-center gap-space-xs mt-1 text-on-surface-variant font-code text-code">
+<span class="material-symbols-outlined text-[14px] text-emerald-600">navigation</span>
+<span>Proximity delta: ~20 meters walking distance</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Inspector Summary Card Footer -->
+<div class="p-space-md bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Heuristic Integrity Token</span>
+<span class="font-code text-code text-on-surface font-bold">HASH_SHA256_e49b1...a90f</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">security</span>
+<span>Controller digital signature will lock this reassignment in audit ledger.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Audit Trail History Table Section -->
+<div class="mt-space-xl flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[22px]">manage_search</span>
+<h2 class="font-title-md text-title-md text-on-surface font-bold">
+          Recent Reassignment Audit Log (Last 5 Transactions)
+        </h2>
+</div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-secondary">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+<span>Continuous Ledger Sync Active</span>
+</div>
+</div>
+<!-- Table Container -->
+<div class="bg-surface-container-lowest rounded shadow-sm overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-secondary font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-space-md font-bold">Timestamp</th>
+<th class="py-3 px-space-md font-bold">Exam Code &amp; Shift</th>
+<th class="py-3 px-space-md font-bold">Outgoing Faculty</th>
+<th class="py-3 px-space-md font-bold">Replacement Faculty</th>
+<th class="py-3 px-space-md font-bold">Authorizing Officer</th>
+<th class="py-3 px-space-md font-bold">Reason</th>
+<th class="py-3 px-space-md font-bold text-right">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-sm text-body-sm text-on-surface">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-md font-code text-code text-secondary whitespace-nowrap">
+              2025-05-15 14:22:18
+            </td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="font-semibold text-on-surface">CSE211</span>
+<span class="text-secondary text-body-sm block">Morning • Hall 204</span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-2">
+<span class="font-medium text-on-surface">Dr. Anisur Rahman</span>
+<span class="font-code text-code text-secondary">(FAC-CSE-012)</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-2">
+<span class="font-medium text-primary">Dr. Monira Hasan</span>
+<span class="font-code text-code text-secondary">(FAC-MAT-044)</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="text-on-surface">Controller (Exam Ops)</span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="bg-amber-100 text-amber-900 px-2 py-0.5 rounded font-label-sm text-label-sm">Medical Leave</span>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm bg-green-100 text-green-800 px-2 py-0.5 rounded font-bold">
+<span class="material-symbols-outlined text-[14px]">check</span>
+                Committed
+              </span>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-md font-code text-code text-secondary whitespace-nowrap">
+              2025-05-15 11:05:40
+            </td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="font-semibold text-on-surface">EEE102</span>
+<span class="text-secondary text-body-sm block">Afternoon • Hall 101</span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-2">
+<span class="font-medium text-on-surface">Prof. K. Z. Ahmed</span>
+<span class="font-code text-code text-secondary">(FAC-EEE-005)</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-2">
+<span class="font-medium text-primary">Dr. S. Parveen</span>
+<span class="font-code text-code text-secondary">(FAC-PHY-021)</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="text-on-surface">Dean Academic Affairs</span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="bg-blue-100 text-blue-900 px-2 py-0.5 rounded font-label-sm text-label-sm">Mutual Peer Swap</span>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm bg-green-100 text-green-800 px-2 py-0.5 rounded font-bold">
+<span class="material-symbols-outlined text-[14px]">check</span>
+                Executed
+              </span>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-md font-code text-code text-secondary whitespace-nowrap">
+              2025-05-14 16:49:12
+            </td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="font-semibold text-on-surface">ENG101</span>
+<span class="text-secondary text-body-sm block">Morning • Room 303</span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-2">
+<span class="font-medium text-on-surface">Ms. R. Sultana</span>
+<span class="font-code text-code text-secondary">(FAC-ENG-031)</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-2">
+<span class="font-medium text-primary">Mr. Faisal Karim</span>
+<span class="font-code text-code text-secondary">(FAC-ENG-089)</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="text-on-surface">Deputy Controller</span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="bg-purple-100 text-purple-900 px-2 py-0.5 rounded font-label-sm text-label-sm">Teaching Clash</span>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm bg-green-100 text-green-800 px-2 py-0.5 rounded font-bold">
+<span class="material-symbols-outlined text-[14px]">check</span>
+                Committed
+              </span>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-md font-code text-code text-secondary whitespace-nowrap">
+              2025-05-14 10:14:02
+            </td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="font-semibold text-on-surface">LAW204</span>
+<span class="text-secondary text-body-sm block">Evening • Hall 501</span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-2">
+<span class="font-medium text-on-surface">Dr. M. Haque</span>
+<span class="font-code text-code text-secondary">(FAC-LAW-014)</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-2">
+<span class="font-medium text-primary">Dr. Kamal Hossain</span>
+<span class="font-code text-code text-secondary">(FAC-LAW-052)</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="text-on-surface">Head of Exam Control</span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="bg-red-100 text-red-900 px-2 py-0.5 rounded font-label-sm text-label-sm">Emergency Absence</span>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm bg-green-100 text-green-800 px-2 py-0.5 rounded font-bold">
+<span class="material-symbols-outlined text-[14px]">check</span>
+                Executed
+              </span>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-md font-code text-code text-secondary whitespace-nowrap">
+              2025-05-13 15:30:55
+            </td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="font-semibold text-on-surface">BBA301</span>
+<span class="text-secondary text-body-sm block">Morning • Room 202</span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-2">
+<span class="font-medium text-on-surface">Dr. Tanveer Alam</span>
+<span class="font-code text-code text-secondary">(FAC-BBA-019)</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-2">
+<span class="font-medium text-primary">Ms. Sadia Islam</span>
+<span class="font-code text-code text-secondary">(FAC-BBA-078)</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="text-on-surface">Controller (Exam Ops)</span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="bg-slate-100 text-slate-800 px-2 py-0.5 rounded font-label-sm text-label-sm">Administrative Order</span>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm bg-green-100 text-green-800 px-2 py-0.5 rounded font-bold">
+<span class="material-symbols-outlined text-[14px]">check</span>
+                Committed
+              </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Footer Database Schema & Architecture Card -->
+<div class="mt-space-lg p-space-md bg-surface-container-lowest rounded shadow-sm">
+<div class="flex items-center justify-between flex-wrap gap-space-sm pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">database</span>
+<h3 class="font-title-sm text-title-sm text-on-surface font-bold">Relational Transaction &amp; Database Binding Schema</h3>
+</div>
+<div class="flex items-center gap-space-sm font-code text-code text-on-surface-variant">
+<span>ENGINE: InnoDB</span>
+<span>•</span>
+<span>TRANSACTION: READ_COMMITTED</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm pt-space-xs">
+<div class="p-space-sm bg-surface-container-low rounded">
+<div class="flex items-center gap-1 font-label-md text-label-md text-primary font-bold">
+<span class="material-symbols-outlined text-[16px]">table_rows</span>
+<span>INVIGILATION_ASSIGNMENT</span>
+</div>
+<p class="font-code text-code text-on-surface-variant mt-1">
+          UPDATE `INVIGILATION_ASSIGNMENT`<br/>
+          SET `faculty_id` = :new_faculty_id,<br/>
+          `status` = 'REASSIGNED_CONFIRMED',<br/>
+          `updated_at` = NOW()<br/>
+          WHERE `assignment_id` = :assignment_id;
+        </p>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded">
+<div class="flex items-center gap-1 font-label-md text-label-md text-primary font-bold">
+<span class="material-symbols-outlined text-[16px]">history_edu</span>
+<span>DUTY_REASSIGNMENT_AUDIT</span>
+</div>
+<p class="font-code text-code text-on-surface-variant mt-1">
+          INSERT INTO `DUTY_REASSIGNMENT_AUDIT`<br/>
+          (`ticket_no`, `old_faculty_id`, `new_faculty_id`, `reason_code`, `justification`, `controller_uid`)<br/>
+          VALUES (:ticket, :orig_fac, :new_fac, :reason, :notes, :sess_user);
+        </p>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded">
+<div class="flex items-center gap-1 font-label-md text-label-md text-primary font-bold">
+<span class="material-symbols-outlined text-[16px]">outgoing_mail</span>
+<span>NOTIFICATION &amp; QUEUE</span>
+</div>
+<p class="font-code text-code text-on-surface-variant mt-1">
+          INSERT INTO `NOTIFICATION`<br/>
+          (`recipient_id`, `type`, `channel`, `payload`, `is_dispatched`)<br/>
+          SELECT faculty_id, 'DUTY_SWAP', 'SMS_AND_PORTAL', :json, 0<br/>
+          FROM FACULTY_LEDGER WHERE faculty_id IN (:old, :new);
+        </p>
+</div>
+</div>
+</div>
+</div>
+<script>
+(function() {
+  const candidateData = {
+    'FAC-CSE-042': {
+      name: 'Dr. Tariqul Islam',
+      meta: 'Associate Professor • CSE Department • ID: FAC-CSE-042',
+      workload: '3/5 Duties (Optimal)',
+      building: 'Academic Building A'
+    },
+    'FAC-BBA-0311': {
+      name: 'Ms. Nusrat Ara',
+      meta: 'Assistant Professor • BBA Department • ID: FAC-BBA-0311',
+      workload: '2/5 Duties',
+      building: 'Academic Building C'
+    },
+    'FAC-LAW-0089': {
+      name: 'Dr. S. K. Chowdhury',
+      meta: 'Senior Lecturer • Law Department • ID: FAC-LAW-0089',
+      workload: '2/5 Duties',
+      building: 'Law Annex Hall'
+    }
+  };
+
+  window.evaluateFacultySelection = function(facultyId) {
+    const candidate = candidateData[facultyId];
+    if (!candidate) return;
+
+    const nameEl = document.getElementById('candidateName');
+    const metaEl = document.getElementById('candidateMeta');
+
+    if (nameEl && metaEl) {
+      nameEl.textContent = candidate.name;
+      metaEl.textContent = candidate.meta;
+    }
+  };
+
+  const form = document.getElementById('reassignmentForm');
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      const confirmAction = window.confirm('Attention: You are committing an official proctor reallocation for Exam CSE311. This change is immediately written to live registers and triggers faculty SMS notifications. Proceed?');
+      if (!confirmAction) {
+        e.preventDefault();
+      }
+    });
+  }
+})();
+</script></main></div></body></html>

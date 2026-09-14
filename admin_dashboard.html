@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard – Premier University Exam Control</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-low":"#eff4ff","secondary-fixed":"#dae2fd","primary-fixed":"#dbe1ff","surface-tint":"#0053db","inverse-surface":"#213145","on-tertiary-fixed-variant":"#3323cc","secondary":"#565e74","surface-dim":"#cbdbf5","on-tertiary-fixed":"#0f0069","outline-variant":"#c3c6d7","primary-fixed-dim":"#b4c5ff","surface-container-high":"#dce9ff","error":"#ba1a1a","on-secondary-fixed":"#131b2e","on-secondary":"#ffffff","on-surface":"#0b1c30","on-secondary-container":"#5c647a","on-tertiary":"#ffffff","inverse-on-surface":"#eaf1ff","surface-container-highest":"#d3e4fe","secondary-fixed-dim":"#bec6e0","on-background":"#0b1c30","surface-bright":"#f8f9ff","on-primary-fixed-variant":"#003ea8","primary":"#004ac6","on-error":"#ffffff","on-error-container":"#93000a","inverse-primary":"#b4c5ff","tertiary-container":"#5d55f3","background":"#f8f9ff","surface-variant":"#d3e4fe","outline":"#737686","primary-container":"#2563eb","tertiary-fixed":"#e2dfff","tertiary":"#4338d9","on-tertiary-container":"#f2eeff","on-primary-container":"#eeefff","on-surface-variant":"#434655","surface-container-lowest":"#ffffff","tertiary-fixed-dim":"#c3c0ff","on-secondary-fixed-variant":"#3f465c","surface":"#f8f9ff","on-primary-fixed":"#00174b","error-container":"#ffdad6","on-primary":"#ffffff","secondary-container":"#dae2fd","surface-container":"#e5eeff"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"gutter":"1.5rem","space-sm":"0.5rem","margin":"2rem","space-md":"1rem","gutter-mobile":"1rem","space-xl":"2rem","space-lg":"1.5rem","space-xs":"0.25rem","margin-mobile":"1rem"},fontFamily:{"code":["JetBrains Mono"],"label-sm":["Inter"],"display":["Inter"],"headline-sm":["Inter"],"title-sm":["Inter"],"headline-lg-mobile":["Inter"],"body-sm":["Inter"],"body-lg":["Inter"],"label-md":["Inter"],"label-lg":["Inter"],"headline-md":["Inter"],"body-md":["Inter"],"headline-lg":["Inter"],"title-md":["Inter"]},fontSize:{"code":["12px",{"lineHeight":"16px","fontWeight":"500"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"700"}],"display":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["18px",{"lineHeight":"24px","fontWeight":"600"}],"title-sm":["14px",{"lineHeight":"20px","fontWeight":"600"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.025em","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","fontWeight":"500"}],"headline-md":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"headline-lg":["30px",{"lineHeight":"38px","letterSpacing":"-0.015em","fontWeight":"600"}],"title-md":["16px",{"lineHeight":"22px","fontWeight":"600"}]}}}}
+  </script>
+  <style>
+    @layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}
+    ::-webkit-scrollbar{display:none;}
+  </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased">
+
+  <!-- Sidebar -->
+  <aside class="fixed left-0 top-0 h-full w-72 bg-[#0f172a] text-white z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.12)] overflow-y-auto">
+    <div class="flex flex-col">
+      <div class="h-16 px-space-md flex items-center gap-space-sm bg-[#09101d] flex-shrink-0">
+        <div class="w-9 h-9 rounded bg-primary-container flex items-center justify-center text-white shadow-sm flex-shrink-0">
+          <span class="material-symbols-outlined text-[20px]">school</span>
+        </div>
+        <div class="flex flex-col overflow-hidden">
+          <span class="font-title-sm text-title-sm text-white tracking-wide truncate">Premier University</span>
+          <span class="font-label-sm text-label-sm text-slate-400 uppercase tracking-wider truncate">Exam Control Division</span>
+        </div>
+      </div>
+      <div class="px-space-md py-space-sm">
+        <nav class="flex flex-col gap-1">
+          <div class="pt-space-sm pb-space-xs">
+            <span class="font-label-sm text-label-sm uppercase tracking-wider text-slate-400 font-bold px-space-sm">Admin &amp; Controller Tools</span>
+          </div>
+          <a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg bg-primary-container text-on-primary font-title-sm shadow-sm transition-colors" href="admin_dashboard.php">
+            <span class="material-symbols-outlined text-[18px]">dashboard</span>
+            <span class="font-body-md text-body-md">Admin Dashboard</span>
+          </a>
+          <a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors" href="department_management.php">
+            <span class="material-symbols-outlined text-[18px]">corporate_fare</span>
+            <span class="font-body-md text-body-md">Department Management</span>
+          </a>
+          <a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors" href="course_management.php">
+            <span class="material-symbols-outlined text-[18px]">menu_book</span>
+            <span class="font-body-md text-body-md">Course Management</span>
+          </a>
+          <a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors" href="faculty_management.php">
+            <span class="material-symbols-outlined text-[18px]">badge</span>
+            <span class="font-body-md text-body-md">Faculty Management</span>
+          </a>
+          <a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors" href="exam_management.php">
+            <span class="material-symbols-outlined text-[18px]">assignment</span>
+            <span class="font-body-md text-body-md">Exam Management</span>
+          </a>
+          <a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors" href="exam_timetable.php">
+            <span class="material-symbols-outlined text-[18px]">calendar_month</span>
+            <span class="font-body-md text-body-md">Exam Timetable &amp; Rooms</span>
+          </a>
+          <a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors" href="room_management.php">
+            <span class="material-symbols-outlined text-[18px]">meeting_room</span>
+            <span class="font-body-md text-body-md">Room Management</span>
+          </a>
+          <a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors" href="exam_room_management.php">
+            <span class="material-symbols-outlined text-[18px]">how_to_reg</span>
+            <span class="font-body-md text-body-md">Invigilation Assignments</span>
+          </a>
+          <a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors" href="faculty_workload.php">
+            <span class="material-symbols-outlined text-[18px]">query_stats</span>
+            <span class="font-body-md text-body-md">Faculty Workload</span>
+          </a>
+          <a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors" href="manual_duty_reassignment.php">
+            <span class="material-symbols-outlined text-[18px]">published_with_changes</span>
+            <span class="font-body-md text-body-md">Duty Reassignment</span>
+          </a>
+          <a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors" href="reports_dashboard.php">
+            <span class="material-symbols-outlined text-[18px]">description</span>
+            <span class="font-body-md text-body-md">Reports &amp; Documents</span>
+          </a>
+          <a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors" href="notifications.php">
+            <span class="material-symbols-outlined text-[18px]">notifications</span>
+            <span class="font-body-md text-body-md">Notifications</span>
+          </a>
+
+          <div class="pt-space-md pb-space-xs">
+            <span class="font-label-sm text-label-sm uppercase tracking-wider text-slate-400 font-bold px-space-sm">Faculty Portal (Preview)</span>
+          </div>
+          <a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors" href="faculty_dashboard.php">
+            <span class="material-symbols-outlined text-[18px]">space_dashboard</span>
+            <span class="font-body-md text-body-md">Faculty Dashboard</span>
+          </a>
+          <a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors" href="my_duties.php">
+            <span class="material-symbols-outlined text-[18px]">checklist</span>
+            <span class="font-body-md text-body-md">My Assigned Duties</span>
+          </a>
+          <a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors" href="faculty_availability.php">
+            <span class="material-symbols-outlined text-[18px]">event_available</span>
+            <span class="font-body-md text-body-md">Faculty Availability</span>
+          </a>
+          <a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors" href="duty_preference_management.php">
+            <span class="material-symbols-outlined text-[18px]">tune</span>
+            <span class="font-body-md text-body-md">Duty Preferences</span>
+          </a>
+        </nav>
+      </div>
+    </div>
+    <div class="p-space-md bg-[#09101d]">
+      <div class="flex items-center gap-space-xs text-slate-400 font-body-sm text-body-sm">
+        <span class="material-symbols-outlined text-[16px] text-emerald-400">verified_user</span>
+        <span>Session Secured — admin</span>
+      </div>
+      <p class="font-label-sm text-label-sm text-slate-500 mt-1">Academic Year 2024-25</p>
+      <a href="logout.php" class="mt-2 flex items-center gap-1 text-slate-400 hover:text-red-400 font-label-sm text-label-sm transition-colors">
+        <span class="material-symbols-outlined text-[15px]">logout</span> Sign out
+      </a>
+    </div>
+  </aside>
+
+  <!-- Topnav -->
+  <header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-gutter">
+    <div class="flex items-center gap-space-md">
+      <span class="font-title-md text-title-md text-on-surface font-semibold tracking-tight">
+        Admin Dashboard – Premier University
+      </span>
+    </div>
+    <div class="flex items-center gap-space-lg">
+      <div class="relative w-72 hidden md:block">
+        <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span>
+        <input class="w-full pl-9 pr-space-md py-1.5 bg-surface-container-lowest text-on-surface rounded-lg font-body-sm text-body-sm placeholder:text-on-surface-variant/70 focus:outline-none focus:ring-2 focus:ring-primary-container shadow-sm" placeholder="Search faculty, courses, rooms..." type="text"/>
+      </div>
+      <div class="flex items-center gap-space-md">
+        <a href="notifications.php" class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors">
+          <span class="material-symbols-outlined text-[22px]">notifications</span>
+          <span class="absolute top-1.5 right-1.5 w-2.5 h-2.5 bg-error rounded-full ring-2 ring-surface"></span>
+        </a>
+        <div class="flex items-center gap-space-sm pl-space-sm">
+          <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
+            <span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+          </div>
+          <div class="hidden lg:flex flex-col items-start">
+            <span class="font-label-md text-label-md text-on-surface font-bold">Admin Controller</span>
+            <span class="font-label-sm text-label-sm text-on-surface-variant">Office of Exam Control</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="pl-72">
+    <main class="w-full pt-16 bg-surface px-gutter min-h-screen py-space-lg">
+
+      <!-- Dynamic Server Notice Banner -->
+      <div class="mb-6 p-4 rounded-xl bg-blue-50 border border-blue-200 flex items-center justify-between shadow-sm">
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-primary text-[24px]">database</span>
+          <div>
+            <h4 class="font-title-sm text-title-sm text-[#0b1c30]">Connected PHP &amp; MySQL Environment</h4>
+            <p class="font-body-sm text-body-sm text-[#434655]">For live database queries, authentication guards, and duty updates, run this project in XAMPP Apache.</p>
+          </div>
+        </div>
+        <a href="admin_dashboard.php" class="px-4 py-2 rounded-lg bg-primary hover:bg-primary-container text-white font-label-md text-label-md transition-colors flex items-center gap-1">
+          <span>Open Live PHP Dashboard</span>
+          <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+        </a>
+      </div>
+
+      <!-- Breadcrumb -->
+      <nav class="flex items-center gap-1 font-label-md text-label-md text-on-surface-variant mb-4">
+        <span class="material-symbols-outlined text-[16px]">home</span>
+        <span class="text-outline-variant">/</span>
+        <span class="font-title-sm text-title-sm text-primary">Admin Dashboard</span>
+      </nav>
+
+      <!-- Overview & Stats -->
+      <section class="mb-6">
+        <h2 class="font-headline-md text-headline-md text-on-surface mb-3">Overview &amp; Statistics</h2>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="bg-surface-container-lowest rounded-xl shadow-sm p-4 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-lg bg-primary text-on-primary flex items-center justify-center flex-shrink-0">
+              <span class="material-symbols-outlined text-[22px]">badge</span>
+            </div>
+            <div>
+              <p class="font-label-sm text-label-sm text-on-surface-variant">Total Faculty</p>
+              <p class="font-headline-sm text-headline-sm text-on-surface">48</p>
+            </div>
+          </div>
+          <div class="bg-surface-container-lowest rounded-xl shadow-sm p-4 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-lg bg-tertiary text-on-tertiary flex items-center justify-center flex-shrink-0">
+              <span class="material-symbols-outlined text-[22px]">assignment</span>
+            </div>
+            <div>
+              <p class="font-label-sm text-label-sm text-on-surface-variant">Upcoming Exams</p>
+              <p class="font-headline-sm text-headline-sm text-on-surface">12</p>
+            </div>
+          </div>
+          <div class="bg-surface-container-lowest rounded-xl shadow-sm p-4 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-lg bg-secondary text-on-secondary flex items-center justify-center flex-shrink-0">
+              <span class="material-symbols-outlined text-[22px]">how_to_reg</span>
+            </div>
+            <div>
+              <p class="font-label-sm text-label-sm text-on-surface-variant">Assigned Duties</p>
+              <p class="font-headline-sm text-headline-sm text-on-surface">36</p>
+            </div>
+          </div>
+          <div class="bg-surface-container-lowest rounded-xl shadow-sm p-4 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-lg bg-[#15803d] text-white flex items-center justify-center flex-shrink-0">
+              <span class="material-symbols-outlined text-[22px]">meeting_room</span>
+            </div>
+            <div>
+              <p class="font-label-sm text-label-sm text-on-surface-variant">Available Rooms</p>
+              <p class="font-headline-sm text-headline-sm text-on-surface">18</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Today's Overview -->
+      <section class="mb-6">
+        <h2 class="font-headline-md text-headline-md text-on-surface mb-3">Today's Overview
+          <span class="ml-2 px-2 py-0.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm">2 exams</span>
+        </h2>
+        <div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+          <table class="w-full table-auto text-sm">
+            <thead class="bg-surface-container-high">
+              <tr>
+                <th class="px-4 py-3 text-left font-label-sm text-label-sm text-on-surface-variant">Course</th>
+                <th class="px-4 py-3 text-left font-label-sm text-label-sm text-on-surface-variant">Exam</th>
+                <th class="px-4 py-3 text-left font-label-sm text-label-sm text-on-surface-variant">Time</th>
+                <th class="px-4 py-3 text-left font-label-sm text-label-sm text-on-surface-variant">Room</th>
+                <th class="px-4 py-3 text-left font-label-sm text-label-sm text-on-surface-variant">Invigilator(s)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-surface-container-high">
+              <tr class="hover:bg-surface-container-low transition-colors">
+                <td class="px-4 py-3 font-label-md text-label-md text-primary">CSE-301</td>
+                <td class="px-4 py-3">Database Systems Midterm</td>
+                <td class="px-4 py-3 font-code text-code">09:00 – 11:30</td>
+                <td class="px-4 py-3">Room 101, Academic Block A</td>
+                <td class="px-4 py-3">Dr. M. Rahman, Prof. S. Akter</td>
+              </tr>
+              <tr class="hover:bg-surface-container-low transition-colors">
+                <td class="px-4 py-3 font-label-md text-label-md text-primary">EEE-205</td>
+                <td class="px-4 py-3">Signals &amp; Systems Midterm</td>
+                <td class="px-4 py-3 font-code text-code">14:00 – 16:30</td>
+                <td class="px-4 py-3">Room 201, Academic Block B</td>
+                <td class="px-4 py-3">Dr. K. Hassan</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Upcoming Exams & Duties -->
+      <section class="mb-6">
+        <div class="flex items-center justify-between mb-3">
+          <h2 class="font-headline-md text-headline-md text-on-surface">Upcoming Exams &amp; Invigilation Duties</h2>
+          <a href="exam_timetable.php" class="font-label-md text-label-md text-primary hover:underline">View full timetable →</a>
+        </div>
+        <div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+          <table class="w-full table-auto text-sm">
+            <thead class="bg-surface-container-high">
+              <tr>
+                <th class="px-4 py-3 text-left font-label-sm text-label-sm text-on-surface-variant">Date</th>
+                <th class="px-4 py-3 text-left font-label-sm text-label-sm text-on-surface-variant">Time</th>
+                <th class="px-4 py-3 text-left font-label-sm text-label-sm text-on-surface-variant">Course</th>
+                <th class="px-4 py-3 text-left font-label-sm text-label-sm text-on-surface-variant">Exam</th>
+                <th class="px-4 py-3 text-left font-label-sm text-label-sm text-on-surface-variant">Room</th>
+                <th class="px-4 py-3 text-left font-label-sm text-label-sm text-on-surface-variant">Invigilator(s)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-surface-container-high">
+              <tr class="hover:bg-surface-container-low transition-colors">
+                <td class="px-4 py-3 font-code text-code">2026-09-15</td>
+                <td class="px-4 py-3 font-code text-code">09:30</td>
+                <td class="px-4 py-3 font-label-md text-label-md text-primary">CSE-401</td>
+                <td class="px-4 py-3">Artificial Intelligence Final</td>
+                <td class="px-4 py-3">Room 102</td>
+                <td class="px-4 py-3">Dr. N. Chowdhury</td>
+              </tr>
+              <tr class="hover:bg-surface-container-low transition-colors">
+                <td class="px-4 py-3 font-code text-code">2026-09-17</td>
+                <td class="px-4 py-3 font-code text-code">14:00</td>
+                <td class="px-4 py-3 font-label-md text-label-md text-primary">BUS-101</td>
+                <td class="px-4 py-3">Principles of Management</td>
+                <td class="px-4 py-3">Room 301</td>
+                <td class="px-4 py-3">Dr. K. Hassan</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Faculty Workload + Room Utilization -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+        <!-- Faculty Workload -->
+        <section>
+          <div class="flex items-center justify-between mb-3">
+            <h2 class="font-headline-md text-headline-md text-on-surface">Faculty Workload Summary</h2>
+            <a href="faculty_workload.php" class="font-label-md text-label-md text-primary hover:underline">View all →</a>
+          </div>
+          <div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+            <table class="w-full table-auto text-sm">
+              <thead class="bg-surface-container-high">
+                <tr>
+                  <th class="px-4 py-3 text-left font-label-sm text-label-sm text-on-surface-variant">Faculty</th>
+                  <th class="px-4 py-3 text-left font-label-sm text-label-sm text-on-surface-variant">Department</th>
+                  <th class="px-4 py-3 text-center font-label-sm text-label-sm text-on-surface-variant">Duties</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-surface-container-high">
+                <tr class="hover:bg-surface-container-low">
+                  <td class="px-4 py-3 font-semibold text-on-surface">Dr. M. Rahman</td>
+                  <td class="px-4 py-3 text-on-surface-variant">CSE</td>
+                  <td class="px-4 py-3 text-center"><span class="px-2 py-0.5 rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm">5</span></td>
+                </tr>
+                <tr class="hover:bg-surface-container-low">
+                  <td class="px-4 py-3 font-semibold text-on-surface">Prof. S. Akter</td>
+                  <td class="px-4 py-3 text-on-surface-variant">EEE</td>
+                  <td class="px-4 py-3 text-center"><span class="px-2 py-0.5 rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm">4</span></td>
+                </tr>
+                <tr class="hover:bg-surface-container-low">
+                  <td class="px-4 py-3 font-semibold text-on-surface">Dr. K. Hassan</td>
+                  <td class="px-4 py-3 text-on-surface-variant">BBA</td>
+                  <td class="px-4 py-3 text-center"><span class="px-2 py-0.5 rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm">4</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Room Utilization -->
+        <section>
+          <div class="flex items-center justify-between mb-3">
+            <h2 class="font-headline-md text-headline-md text-on-surface">Room Utilization</h2>
+            <a href="room_management.php" class="font-label-md text-label-md text-primary hover:underline">Manage rooms →</a>
+          </div>
+          <div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+            <table class="w-full table-auto text-sm">
+              <thead class="bg-surface-container-high">
+                <tr>
+                  <th class="px-4 py-3 text-left font-label-sm text-label-sm text-on-surface-variant">Room</th>
+                  <th class="px-4 py-3 text-left font-label-sm text-label-sm text-on-surface-variant">Building</th>
+                  <th class="px-4 py-3 text-center font-label-sm text-label-sm text-on-surface-variant">Capacity</th>
+                  <th class="px-4 py-3 text-center font-label-sm text-label-sm text-on-surface-variant">Status</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-surface-container-high">
+                <tr class="hover:bg-surface-container-low">
+                  <td class="px-4 py-3 font-semibold">Room 101</td>
+                  <td class="px-4 py-3 text-on-surface-variant">Academic Block A</td>
+                  <td class="px-4 py-3 text-center font-code text-code">60</td>
+                  <td class="px-4 py-3 text-center"><span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-label-sm text-label-sm">Active</span></td>
+                </tr>
+                <tr class="hover:bg-surface-container-low">
+                  <td class="px-4 py-3 font-semibold">Room 201</td>
+                  <td class="px-4 py-3 text-on-surface-variant">Academic Block B</td>
+                  <td class="px-4 py-3 text-center font-code text-code">80</td>
+                  <td class="px-4 py-3 text-center"><span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-label-sm text-label-sm">Active</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+
+      <!-- Quick Actions -->
+      <section class="mb-6">
+        <h2 class="font-headline-md text-headline-md text-on-surface mb-3">Quick Actions</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+          <a href="faculty_management.php" class="p-4 rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md hover:bg-surface-container-low transition flex flex-col items-center text-center gap-2">
+            <div class="w-10 h-10 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center">
+              <span class="material-symbols-outlined text-[22px]">person_add</span>
+            </div>
+            <span class="font-label-md text-label-md text-on-surface">Manage Faculty</span>
+          </a>
+          <a href="exam_management.php" class="p-4 rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md hover:bg-surface-container-low transition flex flex-col items-center text-center gap-2">
+            <div class="w-10 h-10 rounded-lg bg-tertiary-container text-on-tertiary-container flex items-center justify-center">
+              <span class="material-symbols-outlined text-[22px]">add_task</span>
+            </div>
+            <span class="font-label-md text-label-md text-on-surface">Manage Exams</span>
+          </a>
+          <a href="exam_room_management.php" class="p-4 rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md hover:bg-surface-container-low transition flex flex-col items-center text-center gap-2">
+            <div class="w-10 h-10 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center">
+              <span class="material-symbols-outlined text-[22px]">assignment_ind</span>
+            </div>
+            <span class="font-label-md text-label-md text-on-surface">Assign Invigilators</span>
+          </a>
+          <a href="room_management.php" class="p-4 rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md hover:bg-surface-container-low transition flex flex-col items-center text-center gap-2">
+            <div class="w-10 h-10 rounded-lg bg-surface-container-high text-on-surface flex items-center justify-center">
+              <span class="material-symbols-outlined text-[22px]">domain</span>
+            </div>
+            <span class="font-label-md text-label-md text-on-surface">Manage Rooms</span>
+          </a>
+          <a href="exam_timetable.php" class="p-4 rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md hover:bg-surface-container-low transition flex flex-col items-center text-center gap-2">
+            <div class="w-10 h-10 rounded-lg bg-primary text-on-primary flex items-center justify-center">
+              <span class="material-symbols-outlined text-[22px]">calendar_month</span>
+            </div>
+            <span class="font-label-md text-label-md text-on-surface">Exam Timetable</span>
+          </a>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</body>
+</html>

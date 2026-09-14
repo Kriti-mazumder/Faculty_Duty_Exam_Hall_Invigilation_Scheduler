@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "outline-variant": "#c3c6d7", "secondary": "#565e74", "surface-container": "#e5eeff", "surface": "#f8f9ff", "tertiary-container": "#5d55f3", "tertiary-fixed-dim": "#c3c0ff", "tertiary": "#4338d9", "on-primary-container": "#eeefff", "primary-fixed": "#dbe1ff", "on-background": "#0b1c30", "on-secondary-fixed-variant": "#3f465c", "surface-container-highest": "#d3e4fe", "on-secondary": "#ffffff", "primary": "#004ac6", "surface-tint": "#0053db", "secondary-fixed": "#dae2fd", "error": "#ba1a1a", "surface-dim": "#cbdbf5", "on-error-container": "#93000a", "on-primary-fixed": "#00174b", "on-error": "#ffffff", "on-tertiary": "#ffffff", "error-container": "#ffdad6", "primary-container": "#2563eb", "surface-container-low": "#eff4ff", "on-primary-fixed-variant": "#003ea8", "surface-variant": "#d3e4fe", "inverse-on-surface": "#eaf1ff", "on-tertiary-fixed": "#0f0069", "on-tertiary-fixed-variant": "#3323cc", "secondary-container": "#dae2fd", "background": "#f8f9ff", "inverse-surface": "#213145", "tertiary-fixed": "#e2dfff", "on-surface": "#0b1c30", "primary-fixed-dim": "#b4c5ff", "secondary-fixed-dim": "#bec6e0", "on-primary": "#ffffff", "on-secondary-container": "#5c647a", "on-tertiary-container": "#f2eeff", "surface-bright": "#f8f9ff", "outline": "#737686", "on-surface-variant": "#434655", "inverse-primary": "#b4c5ff", "surface-container-lowest": "#ffffff", "surface-container-high": "#dce9ff", "on-secondary-fixed": "#131b2e" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-lg": "1.5rem", "margin": "2rem", "gutter-mobile": "1rem", "space-sm": "0.5rem", "space-md": "1rem", "space-xl": "2rem", "margin-mobile": "1rem", "gutter": "1.5rem", "space-xs": "0.25rem" }, "fontFamily": { "headline-md": [ "Inter" ], "body-lg": [ "Inter" ], "label-sm": [ "Inter" ], "label-md": [ "Inter" ], "code": [ "JetBrains Mono" ], "headline-lg": [ "Inter" ], "title-md": [ "Inter" ], "body-md": [ "Inter" ], "headline-sm": [ "Inter" ], "display": [ "Inter" ], "body-sm": [ "Inter" ], "label-lg": [ "Inter" ], "title-sm": [ "Inter" ], "headline-lg-mobile": [ "Inter" ] }, "fontSize": { "headline-md": [ "22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "body-lg": [ "16px", { "lineHeight": "24px", "fontWeight": "400" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.025em", "fontWeight": "600" } ], "code": [ "12px", { "lineHeight": "16px", "fontWeight": "500" } ], "headline-lg": [ "30px", { "lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "title-md": [ "16px", { "lineHeight": "22px", "fontWeight": "600" } ], "body-md": [ "14px", { "lineHeight": "20px", "fontWeight": "400" } ], "headline-sm": [ "18px", { "lineHeight": "24px", "fontWeight": "600" } ], "display": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "body-sm": [ "12px", { "lineHeight": "16px", "fontWeight": "400" } ], "label-lg": [ "14px", { "lineHeight": "20px", "fontWeight": "500" } ], "title-sm": [ "14px", { "lineHeight": "20px", "fontWeight": "600" } ], "headline-lg-mobile": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased min-h-screen"><aside class="fixed left-0 top-0 h-full w-72 bg-[#0f172a] text-white z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.12)] overflow-y-auto"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm bg-[#09101d]"><div class="w-9 h-9 rounded bg-primary-container flex items-center justify-center text-white shadow-sm flex-shrink-0"><span class="material-symbols-outlined text-[20px]">verified</span></div><div class="flex flex-col overflow-hidden"><span class="font-title-sm text-title-sm text-white tracking-wide truncate">Premier University</span><span class="font-label-sm text-label-sm text-slate-400 uppercase tracking-wider truncate">Exam Control Division</span></div></div><div class="px-space-md py-space-sm"><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary font-title-sm rounded-lg shadow-sm"><div class="pt-space-sm pb-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-slate-400 font-bold px-space-sm">Admin &amp; Controller Tools</span></div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors" data-path="admin-dashboard" href="#"><span class="material-symbols-outlined text-[18px]">dashboard</span><span class="font-body-md text-body-md">Admin Dashboard</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors" data-path="faculty-management" href="#"><span class="material-symbols-outlined text-[18px]">badge</span><span class="font-body-md text-body-md">Faculty Management</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors" data-path="department-management" href="#"><span class="material-symbols-outlined text-[18px]">corporate_fare</span><span class="font-body-md text-body-md">Department Management</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors" data-path="course-management" href="#"><span class="material-symbols-outlined text-[18px]">menu_book</span><span class="font-body-md text-body-md">Course Management</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors" data-path="exam-management" href="#"><span class="material-symbols-outlined text-[18px]">assignment</span><span class="font-body-md text-body-md">Exam Management</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors" data-path="exam-timetable-and-rooms" href="#"><span class="material-symbols-outlined text-[18px]">calendar_month</span><span class="font-body-md text-body-md">Exam Timetable &amp; Rooms</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors" data-path="room-management" href="#"><span class="material-symbols-outlined text-[18px]">meeting_room</span><span class="font-body-md text-body-md">Room Management</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors" data-path="invigilation-assignments" href="#"><span class="material-symbols-outlined text-[18px]">how_to_reg</span><span class="font-body-md text-body-md">Invigilation Assignments</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors" data-path="conflict-center" href="#"><span class="material-symbols-outlined text-[18px]">fmd_bad</span><span class="font-body-md text-body-md">Conflict Center</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors" data-path="faculty-workload" href="#"><span class="material-symbols-outlined text-[18px]">query_stats</span><span class="font-body-md text-body-md">Faculty Workload</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors" data-path="duty-reassignment" href="#"><span class="material-symbols-outlined text-[18px]">published_with_changes</span><span class="font-body-md text-body-md">Duty Reassignment</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors" data-path="reports-and-documents" href="#"><span class="material-symbols-outlined text-[18px]">description</span><span class="font-body-md text-body-md">Reports &amp; Documents</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-2 transition-colors bg-primary-container text-on-primary font-title-sm rounded-lg shadow-sm" data-path="notifications" href="#"><span class="material-symbols-outlined text-[18px]">notifications</span><span class="font-body-md text-body-md">Notifications</span></a><div class="pt-space-md pb-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-slate-400 font-bold px-space-sm">Faculty Portal (Preview)</span></div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors" data-path="faculty-dashboard" href="#"><span class="material-symbols-outlined text-[18px]">space_dashboard</span><span class="font-body-md text-body-md">Faculty Dashboard</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors" data-path="my-assigned-duties" href="#"><span class="material-symbols-outlined text-[18px]">checklist</span><span class="font-body-md text-body-md">My Assigned Duties</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors" data-path="faculty-availability" href="#"><span class="material-symbols-outlined text-[18px]">event_available</span><span class="font-body-md text-body-md">Faculty Availability</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors" data-path="duty-preferences" href="#"><span class="material-symbols-outlined text-[18px]">tune</span><span class="font-body-md text-body-md">Duty Preferences</span></a></nav></div></div><div class="p-space-md bg-[#09101d] mt-space-md"><div class="flex items-center gap-space-xs text-slate-400 font-body-sm text-body-sm"><span class="material-symbols-outlined text-[16px] text-emerald-400">verified_user</span><span>Session Secured</span></div><p class="font-label-sm text-label-sm text-slate-500 mt-1">Academic Year 2024-25</p></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-gutter"><div class="flex items-center gap-space-md"><span class="font-title-md text-title-md text-on-surface font-semibold tracking-tight">Premier University Office of the Controller of Examinations</span></div><div class="flex items-center gap-space-lg"><div class="relative w-80 hidden md:block"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span><input class="w-full pl-9 pr-space-md py-1.5 bg-surface-container-lowest text-on-surface rounded-lg font-body-sm text-body-sm placeholder:text-on-surface-variant/70 focus:outline-none focus:ring-2 focus:ring-primary-container shadow-[0_1px_3px_0_rgba(15,23,42,0.05)]" placeholder="Search faculty, courses, rooms, reports..." type="text"/></div><div class="flex items-center gap-space-md"><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2.5 h-2.5 bg-error rounded-full ring-2 ring-surface"></span></button><div class="flex items-center gap-space-sm pl-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden lg:flex flex-col items-start"><span class="font-label-md text-label-md text-on-surface font-bold">Admin Controller</span><span class="font-label-sm text-label-sm text-on-surface-variant">Office of Exam Control</span></div><span class="material-symbols-outlined text-on-surface-variant text-[18px]">arrow_drop_down</span></div></div></div></header><main class="w-full pt-16 bg-surface px-gutter min-h-screen"><div class="flex flex-col w-full pb-margin">
+<!-- Breadcrumb & Status Bar -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-md pb-space-sm">
+<nav class="flex items-center gap-space-xs font-label-md text-label-md text-secondary">
+<a class="hover:text-primary transition-colors" href="#">Home</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Communications</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-on-surface font-semibold">Notification Center</span>
+</nav>
+<div class="flex items-center gap-space-sm bg-surface-container px-3 py-1 rounded-full shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-code text-code text-primary font-semibold">SOCKET://EXAM-FEED:ACTIVE</span>
+<span class="font-label-sm text-label-sm text-secondary">| Auto-syncing</span>
+</div>
+</div>
+<!-- Page Header Banner -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low p-space-lg mb-space-lg shadow-sm">
+<div class="absolute -right-8 -top-8 w-64 h-64 rounded-full bg-primary/5 blur-2xl pointer-events-none"></div>
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md relative z-10">
+<div class="max-w-3xl">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold mb-1">
+<span class="material-symbols-outlined text-[16px]">campaign</span>
+<span>Official Dispatch System</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+          Official Examination Communications &amp; Notifications
+        </h1>
+<p class="font-body-md text-body-md text-secondary mt-1 max-w-2xl">
+          System-wide alerts, duty assignments, swap request updates, timetable revisions, and automated conflict warnings for exam controllers and faculty members.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm flex-shrink-0">
+<button class="flex items-center gap-space-xs px-space-md py-2 bg-primary-container hover:bg-primary text-on-primary rounded-lg font-title-sm text-title-sm shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">add_alert</span>
+<span>Broadcast Notice</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Metric / Telemetry KPI Row -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md mb-space-lg">
+<!-- Card 1: Total Alerts -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md uppercase tracking-wider text-secondary">Total Alerts Received</span>
+<div class="flex items-baseline gap-space-xs mt-1">
+<span class="font-display text-display text-on-surface">28</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Messages Total</span>
+</div>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-primary mt-2">
+<span class="material-symbols-outlined text-[14px]">history</span>
+<span>Archive retention: 90 days</span>
+</div>
+</div>
+<div class="w-14 h-14 rounded-xl bg-surface-container flex items-center justify-center text-primary shadow-sm flex-shrink-0">
+<span class="material-symbols-outlined text-[28px]">mark_email_unread</span>
+</div>
+</div>
+<!-- Card 2: Unread Notifications -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md uppercase tracking-wider text-secondary">Unread Notifications</span>
+<div class="flex items-baseline gap-space-xs mt-1">
+<span class="font-display text-display text-primary">07</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm font-bold">Unread Queue</span>
+</div>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-secondary mt-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>Requires controller acknowledgment</span>
+</div>
+</div>
+<div class="w-14 h-14 rounded-xl bg-primary-fixed flex items-center justify-center text-on-primary-fixed shadow-sm flex-shrink-0">
+<span class="material-symbols-outlined text-[28px]">notifications_active</span>
+</div>
+</div>
+<!-- Card 3: Action Required Alerts -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md uppercase tracking-wider text-error">Action Required</span>
+<div class="flex items-baseline gap-space-xs mt-1">
+<span class="font-display text-display text-error">03</span>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">Critical Warnings</span>
+</div>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-error mt-2">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+<span>Hall clash &amp; capacity threshold breaches</span>
+</div>
+</div>
+<div class="w-14 h-14 rounded-xl bg-error-container flex items-center justify-center text-on-error-container shadow-sm flex-shrink-0">
+<span class="material-symbols-outlined text-[28px]">fmd_bad</span>
+</div>
+</div>
+</div>
+<!-- Bulk Action Bar & Filter Matrix -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm mb-space-lg flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-1 flex-col sm:flex-row items-stretch sm:items-center gap-space-sm">
+<!-- Search -->
+<div class="relative flex-1 min-w-[260px]">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-secondary text-[18px]">search</span>
+<input class="w-full pl-9 pr-space-md py-2 bg-surface-container-low text-on-surface rounded-lg font-body-sm text-body-sm placeholder:text-secondary/70 focus:outline-none focus:ring-2 focus:ring-primary-container shadow-inner" id="notification_filter_search" name="search_query" placeholder="Filter notifications by title, course, faculty..." type="text"/>
+</div>
+<!-- Filter Type -->
+<div class="relative">
+<select class="w-full sm:w-auto appearance-none pl-3 pr-8 py-2 bg-surface-container-low text-on-surface rounded-lg font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary-container font-medium" id="notification_category" name="notification_category">
+<option value="all">All Notification Types</option>
+<option value="duty_assignment">Duty Assignment</option>
+<option value="duty_reassignment">Duty Reassignment</option>
+<option value="swap_approval">Request Approvals</option>
+<option value="timetable_revision">Timetable Revisions</option>
+<option value="conflict_alert">Conflict Alerts</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-secondary pointer-events-none text-[18px]">expand_more</span>
+</div>
+<!-- Filter Status -->
+<div class="relative">
+<select class="w-full sm:w-auto appearance-none pl-3 pr-8 py-2 bg-surface-container-low text-on-surface rounded-lg font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary-container font-medium" id="notification_status" name="notification_status">
+<option value="all">All Status</option>
+<option selected="" value="unread">Unread Only (7)</option>
+<option value="read">Read Only</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-secondary pointer-events-none text-[18px]">filter_list</span>
+</div>
+</div>
+<!-- Batch Actions -->
+<div class="flex items-center gap-space-sm justify-end flex-shrink-0">
+<button class="flex items-center gap-space-xs px-space-md py-2 bg-surface-container hover:bg-surface-container-high text-on-surface rounded-lg font-title-sm text-title-sm transition-colors shadow-sm" id="btn_mark_all_read" onclick="handleMarkAllRead()" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">done_all</span>
+<span>Mark All as Read</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2 bg-surface-container-lowest hover:bg-surface-container-low text-secondary hover:text-error rounded-lg font-title-sm text-title-sm transition-colors shadow-sm" id="btn_clear_read" onclick="handleClearRead()" type="button">
+<span class="material-symbols-outlined text-[18px]">delete_sweep</span>
+<span>Clear Read</span>
+</button>
+</div>
+</div>
+<!-- Notification List Feed -->
+<div class="flex flex-col gap-space-md mb-space-lg" id="notification_feed_container">
+<!-- Notification 1: Room Overloaded Conflict (Unread, Alert / Conflict) -->
+<article class="group relative bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all duration-150 hover:shadow-md flex flex-col md:flex-row gap-space-md" data-id="101" data-status="unread">
+<div class="flex items-start gap-space-sm flex-1">
+<!-- Status dot & Icon Box -->
+<div class="relative flex-shrink-0">
+<div class="w-12 h-12 rounded-xl bg-error-container text-on-error-container flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[24px]">warning</span>
+</div>
+<span class="absolute -top-1 -right-1 w-3.5 h-3.5 bg-error rounded-full ring-2 ring-surface-container-lowest" title="Unread"></span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex flex-wrap items-center gap-space-xs mb-1">
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-bold tracking-wide">
+              CONFLICT WARNING - HIGH SEVERITY
+            </span>
+<span class="text-secondary font-label-sm text-label-sm">•</span>
+<span class="font-label-sm text-label-sm text-error font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>12 minutes ago (Today, 09:48 AM)</span>
+</span>
+</div>
+<h2 class="font-title-md text-title-md text-on-surface font-bold tracking-tight">
+            Room UB-402 Overloaded for May 21 Midterm
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1.5 leading-relaxed">
+            Examinee roster for <strong class="text-on-surface">BUS202</strong> exceeds rated room capacity by 5 desks (70 students assigned to 65-desk lecture hall). Re-allocation of excess students to Room UB-403 required immediately before roster publication.
+          </p>
+<!-- Metadata Tags -->
+<div class="flex flex-wrap items-center gap-space-sm mt-3 pt-2 text-secondary font-label-md text-label-md">
+<span class="flex items-center gap-1 bg-surface-container px-2.5 py-1 rounded">
+<span class="material-symbols-outlined text-[14px]">menu_book</span>
+<span>Affected Exam: <strong class="text-on-surface">BUS202</strong></span>
+</span>
+<span class="flex items-center gap-1 bg-surface-container px-2.5 py-1 rounded">
+<span class="material-symbols-outlined text-[14px]">apartment</span>
+<span>Building: <strong class="text-on-surface">Science Complex (UB)</strong></span>
+</span>
+<span class="font-code text-code text-secondary bg-surface-container px-2 py-1 rounded">ID: CLASH-2025-098</span>
+</div>
+</div>
+</div>
+<!-- Action Cluster -->
+<div class="flex md:flex-col items-center md:items-end justify-between md:justify-center gap-2 pt-2 md:pt-0 border-t md:border-t-0 border-surface-container flex-shrink-0">
+<a class="px-space-md py-1.5 bg-error text-on-error hover:bg-on-error-container rounded-lg font-title-sm text-title-sm flex items-center gap-1 shadow-sm transition-colors" href="#">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>Resolve Room Conflict</span>
+</a>
+<div class="flex items-center gap-1">
+<button class="p-1.5 text-secondary hover:text-primary hover:bg-surface-container rounded transition-colors flex items-center gap-1 font-label-md text-label-md" onclick="markItemRead(this)" title="Mark as Read" type="button">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span class="hidden sm:inline">Mark Read</span>
+</button>
+<button class="p-1.5 text-secondary hover:text-error hover:bg-surface-container rounded transition-colors" onclick="deleteItem(this)" title="Delete notification" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Notification 2: New Duty Assignment (Unread, Assignment Type) -->
+<article class="group relative bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all duration-150 hover:shadow-md flex flex-col md:flex-row gap-space-md" data-id="102" data-status="unread">
+<div class="flex items-start gap-space-sm flex-1">
+<!-- Status dot & Icon Box -->
+<div class="relative flex-shrink-0">
+<div class="w-12 h-12 rounded-xl bg-primary-container text-on-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[24px]">assignment_turned_in</span>
+</div>
+<span class="absolute -top-1 -right-1 w-3.5 h-3.5 bg-primary rounded-full ring-2 ring-surface-container-lowest" title="Unread"></span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex flex-wrap items-center gap-space-xs mb-1">
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold tracking-wide">
+              NEW DUTY ASSIGNMENT
+            </span>
+<span class="text-secondary font-label-sm text-label-sm">•</span>
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>45 minutes ago (Today, 09:15 AM)</span>
+</span>
+</div>
+<h2 class="font-title-md text-title-md text-on-surface font-bold tracking-tight">
+            Invigilation Duty Assigned: CSE311 Midterm Examination
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1.5 leading-relaxed">
+<strong class="text-on-surface">Dr. Tariqul Islam</strong> has been designated as Chief Invigilator for <strong class="text-on-surface">CSE311 (Database Management Systems)</strong> on Sunday, 18 May 2025 (10:00 AM - 12:00 PM) in Room 402, Academic Building A. Official duty slip is ready for download.
+          </p>
+<!-- Metadata Tags -->
+<div class="flex flex-wrap items-center gap-space-sm mt-3 pt-2 text-secondary font-label-md text-label-md">
+<span class="flex items-center gap-1 bg-surface-container px-2.5 py-1 rounded">
+<span class="material-symbols-outlined text-[14px]">badge</span>
+<span>Recipient: <strong class="text-on-surface">Dr. Tariqul Islam (FAC-CSE-042)</strong></span>
+</span>
+<span class="flex items-center gap-1 bg-surface-container px-2.5 py-1 rounded">
+<span class="material-symbols-outlined text-[14px]">tag</span>
+<span>Exam ID: <strong class="text-on-surface font-code text-code">EX-2025-0101</strong></span>
+</span>
+<span class="flex items-center gap-1 bg-surface-container px-2.5 py-1 rounded">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+<span>Room 402, Building A</span>
+</span>
+</div>
+</div>
+</div>
+<!-- Action Cluster -->
+<div class="flex md:flex-col items-center md:items-end justify-between md:justify-center gap-2 pt-2 md:pt-0 border-t md:border-t-0 border-surface-container flex-shrink-0">
+<div class="flex items-center gap-2">
+<a class="px-space-md py-1.5 bg-primary-container text-on-primary hover:bg-primary rounded-lg font-title-sm text-title-sm flex items-center gap-1 shadow-sm transition-colors" href="#">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>View Duty</span>
+</a>
+<button class="px-space-sm py-1.5 bg-surface-container text-on-surface hover:bg-surface-container-high rounded-lg font-title-sm text-title-sm flex items-center gap-1 transition-colors" title="Download Official PDF Slip" type="button">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span class="hidden lg:inline">Duty Slip</span>
+</button>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1.5 text-secondary hover:text-primary hover:bg-surface-container rounded transition-colors flex items-center gap-1 font-label-md text-label-md" onclick="markItemRead(this)" title="Mark as Read" type="button">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span class="hidden sm:inline">Mark Read</span>
+</button>
+<button class="p-1.5 text-secondary hover:text-error hover:bg-surface-container rounded transition-colors" onclick="deleteItem(this)" title="Delete notification" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Notification 3: Duty Swap Approved (Unread, Green Theme Tag) -->
+<article class="group relative bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all duration-150 hover:shadow-md flex flex-col md:flex-row gap-space-md" data-id="103" data-status="unread">
+<div class="flex items-start gap-space-sm flex-1">
+<!-- Status dot & Icon Box -->
+<div class="relative flex-shrink-0">
+<div class="w-12 h-12 rounded-xl bg-surface-container text-on-surface flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[24px] text-primary">swap_horiz</span>
+</div>
+<span class="absolute -top-1 -right-1 w-3.5 h-3.5 bg-primary rounded-full ring-2 ring-surface-container-lowest" title="Unread"></span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex flex-wrap items-center gap-space-xs mb-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-bold tracking-wide">
+              DUTY SWAP APPROVED
+            </span>
+<span class="text-secondary font-label-sm text-label-sm">•</span>
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>2 hours ago (Today, 07:50 AM)</span>
+</span>
+</div>
+<h2 class="font-title-md text-title-md text-on-surface font-bold tracking-tight">
+            Duty Swap Request #REQ-884 Approved by Exam Controller
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1.5 leading-relaxed">
+            Mutual swap request between <strong class="text-on-surface">Dr. Nadia Sultana</strong> and <strong class="text-on-surface">Prof. Mahbubur Rahman</strong> for May 21 Afternoon shift has been approved. Invigilation rosters and attendance sheets have been synchronized accordingly.
+          </p>
+<!-- Metadata Tags -->
+<div class="flex flex-wrap items-center gap-space-sm mt-3 pt-2 text-secondary font-label-md text-label-md">
+<span class="flex items-center gap-1 bg-surface-container px-2.5 py-1 rounded">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+<span>Approved by: <strong class="text-on-surface">Office of Exam Control</strong></span>
+</span>
+<span class="flex items-center gap-1 bg-surface-container px-2.5 py-1 rounded">
+<span class="material-symbols-outlined text-[14px]">date_range</span>
+<span>Cycle: <strong class="text-on-surface">Spring 2025 Regular</strong></span>
+</span>
+</div>
+</div>
+</div>
+<!-- Action Cluster -->
+<div class="flex md:flex-col items-center md:items-end justify-between md:justify-center gap-2 pt-2 md:pt-0 border-t md:border-t-0 border-surface-container flex-shrink-0">
+<a class="px-space-md py-1.5 bg-surface-container hover:bg-surface-container-high text-on-surface rounded-lg font-title-sm text-title-sm flex items-center gap-1 shadow-sm transition-colors" href="#">
+<span class="material-symbols-outlined text-[16px] text-primary">calendar_month</span>
+<span>View Updated Roster</span>
+</a>
+<div class="flex items-center gap-1">
+<button class="p-1.5 text-secondary hover:text-primary hover:bg-surface-container rounded transition-colors flex items-center gap-1 font-label-md text-label-md" onclick="markItemRead(this)" title="Mark as Read" type="button">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span class="hidden sm:inline">Mark Read</span>
+</button>
+<button class="p-1.5 text-secondary hover:text-error hover:bg-surface-container rounded transition-colors" onclick="deleteItem(this)" title="Delete notification" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Notification 4: Proctor Replacement Recorded (Read, Purple Theme Tag) -->
+<article class="group relative bg-surface-container-low/60 rounded-xl p-space-md shadow-sm transition-all duration-150 hover:shadow-md flex flex-col md:flex-row gap-space-md" data-id="104" data-status="read">
+<div class="flex items-start gap-space-sm flex-1">
+<div class="relative flex-shrink-0">
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[24px]">published_with_changes</span>
+</div>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex flex-wrap items-center gap-space-xs mb-1">
+<span class="px-2 py-0.5 rounded bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm font-bold tracking-wide">
+              MANUAL DUTY REASSIGNMENT
+            </span>
+<span class="text-secondary font-label-sm text-label-sm">•</span>
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>Yesterday, 04:30 PM</span>
+</span>
+<span class="ml-2 text-secondary font-label-sm text-label-sm italic">(Read)</span>
+</div>
+<h2 class="font-title-md text-title-md text-on-surface font-semibold tracking-tight">
+            Proctor Replacement Recorded for EEE201
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1.5 leading-relaxed">
+            Due to approved medical leave, <strong class="text-on-surface">Ms. Sarah Z. Ahmed</strong> has been reassigned to replace Prof. Anisur Rahman for <strong class="text-on-surface">EEE201</strong> on Monday, 19 May 2025 in Room 301. Workload balance updated.
+          </p>
+<!-- Metadata Tags -->
+<div class="flex flex-wrap items-center gap-space-sm mt-3 pt-2 text-secondary font-label-md text-label-md">
+<span class="flex items-center gap-1 bg-surface-container px-2.5 py-1 rounded">
+<span class="material-symbols-outlined text-[14px]">sync_alt</span>
+<span>Replacement: <strong class="text-on-surface">Sarah Z. Ahmed ← Prof. Anisur Rahman</strong></span>
+</span>
+<span class="flex items-center gap-1 bg-surface-container px-2.5 py-1 rounded">
+<span class="material-symbols-outlined text-[14px]">balance</span>
+<span>Quota delta: +1 invigilation session</span>
+</span>
+</div>
+</div>
+</div>
+<!-- Action Cluster -->
+<div class="flex md:flex-col items-center md:items-end justify-between md:justify-center gap-2 pt-2 md:pt-0 border-t md:border-t-0 border-surface-container flex-shrink-0">
+<a class="px-space-md py-1.5 bg-surface-container hover:bg-surface-container-high text-on-surface rounded-lg font-title-sm text-title-sm flex items-center gap-1 transition-colors shadow-sm" href="#">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>View Assignment</span>
+</a>
+<div class="flex items-center gap-1">
+<button class="p-1.5 text-secondary hover:text-error hover:bg-surface-container rounded transition-colors" onclick="deleteItem(this)" title="Delete notification" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Notification 5: Timetable Schedule Revised (Read, Amber Theme Tag) -->
+<article class="group relative bg-surface-container-low/60 rounded-xl p-space-md shadow-sm transition-all duration-150 hover:shadow-md flex flex-col md:flex-row gap-space-md" data-id="105" data-status="read">
+<div class="flex items-start gap-space-sm flex-1">
+<div class="relative flex-shrink-0">
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest text-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[24px]">edit_calendar</span>
+</div>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex flex-wrap items-center gap-space-xs mb-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-label-sm text-label-sm font-bold tracking-wide">
+              TIMETABLE SCHEDULE REVISED
+            </span>
+<span class="text-secondary font-label-sm text-label-sm">•</span>
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>2 days ago (14 May 2025)</span>
+</span>
+<span class="ml-2 text-secondary font-label-sm text-label-sm italic">(Read)</span>
+</div>
+<h2 class="font-title-md text-title-md text-on-surface font-semibold tracking-tight">
+            Room Change Broadcast: LAW105 Constitutional Law I
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1.5 leading-relaxed">
+            Examination hall for <strong class="text-on-surface">LAW105</strong> on Thursday, 22 May 2025 has been moved from Room 403 to <strong class="text-on-surface">Moot Court Hall (Room 504)</strong> to accommodate oral argument setup.
+          </p>
+<!-- Metadata Tags -->
+<div class="flex flex-wrap items-center gap-space-sm mt-3 pt-2 text-secondary font-label-md text-label-md">
+<span class="flex items-center gap-1 bg-surface-container px-2.5 py-1 rounded">
+<span class="material-symbols-outlined text-[14px]">meeting_room</span>
+<span>Relocation: <strong class="text-on-surface">Room 403 → Room 504 (Moot Court)</strong></span>
+</span>
+<span class="flex items-center gap-1 bg-surface-container px-2.5 py-1 rounded">
+<span class="material-symbols-outlined text-[14px]">groups</span>
+<span>Capacity: 85 Seats</span>
+</span>
+</div>
+</div>
+</div>
+<!-- Action Cluster -->
+<div class="flex md:flex-col items-center md:items-end justify-between md:justify-center gap-2 pt-2 md:pt-0 border-t md:border-t-0 border-surface-container flex-shrink-0">
+<a class="px-space-md py-1.5 bg-surface-container hover:bg-surface-container-high text-on-surface rounded-lg font-title-sm text-title-sm flex items-center gap-1 transition-colors shadow-sm" href="#">
+<span class="material-symbols-outlined text-[16px]">calendar_month</span>
+<span>View Timetable</span>
+</a>
+<div class="flex items-center gap-1">
+<button class="p-1.5 text-secondary hover:text-error hover:bg-surface-container rounded transition-colors" onclick="deleteItem(this)" title="Delete notification" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+<!-- Pagination & Feed Summary Controls -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm mb-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="font-body-sm text-body-sm text-secondary">
+      Showing <strong class="text-on-surface font-semibold">1</strong> to <strong class="text-on-surface font-semibold">5</strong> of <strong class="text-on-surface font-semibold">28</strong> notifications
+    </div>
+<nav aria-label="Notification pagination" class="flex items-center gap-1">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-secondary hover:bg-surface-container-high font-title-sm text-title-sm disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">chevron_left</span>
+<span>Previous</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-primary-container text-on-primary font-title-sm text-title-sm font-semibold flex items-center justify-center shadow-sm" type="button">
+        1
+      </button>
+<button class="w-8 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-title-sm text-title-sm flex items-center justify-center" type="button">
+        2
+      </button>
+<button class="w-8 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-title-sm text-title-sm flex items-center justify-center" type="button">
+        3
+      </button>
+<span class="px-1 text-secondary">...</span>
+<button class="w-8 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-title-sm text-title-sm flex items-center justify-center" type="button">
+        6
+      </button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-title-sm text-title-sm flex items-center gap-1" type="button">
+<span>Next</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</nav>
+</div>
+<!-- Footer Database Schema & API Integration Blueprint Card -->
+<div class="rounded-xl bg-surface-container-low p-space-md shadow-sm">
+<div class="flex items-center justify-between pb-space-sm mb-space-sm">
+<div class="flex items-center gap-space-xs font-title-sm text-title-sm text-on-surface">
+<span class="material-symbols-outlined text-[20px] text-primary">terminal</span>
+<span class="font-bold">Backend Schema Mapping &amp; Live API Triggers</span>
+</div>
+<span class="font-code text-code text-secondary bg-surface-container px-2 py-0.5 rounded">MySQL RDBMS Engine</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md">
+<!-- Schema Column -->
+<div class="bg-surface-container-lowest p-space-sm rounded-lg shadow-sm flex flex-col justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-bold tracking-wider">Primary Entity Schema</span>
+<div class="mt-1 p-2 rounded bg-surface-container font-code text-code text-on-surface overflow-x-auto">
+<code>NOTIFICATION(notification_id PK, user_id FK, title, message, category, is_read TINYINT(1), created_at TIMESTAMP)</code>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mt-2">
+          Strict indexing on <code class="font-code text-code text-primary">(user_id, is_read, created_at DESC)</code> ensures sub-millisecond retrieval across active exam cycles.
+        </p>
+</div>
+<!-- Endpoint Column -->
+<div class="bg-surface-container-lowest p-space-sm rounded-lg shadow-sm flex flex-col justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-bold tracking-wider">REST / PHP Controller Endpoints</span>
+<div class="mt-1 flex flex-col gap-1 font-code text-code">
+<div class="flex items-center justify-between p-1.5 rounded bg-surface-container text-on-surface">
+<span>POST /api/notification_mark_read.php</span>
+<span class="px-1.5 py-0.2 rounded bg-primary text-on-primary text-[10px]">200 OK</span>
+</div>
+<div class="flex items-center justify-between p-1.5 rounded bg-surface-container text-on-surface">
+<span>POST /api/notification_delete.php</span>
+<span class="px-1.5 py-0.2 rounded bg-secondary text-on-secondary text-[10px]">AUTH REQ</span>
+</div>
+<div class="flex items-center justify-between p-1.5 rounded bg-surface-container text-on-surface">
+<span>POST /api/notification_clear_all.php</span>
+<span class="px-1.5 py-0.2 rounded bg-error text-on-error text-[10px]">TRANSACTION</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function markItemRead(btn) {
+    const card = btn.closest('article');
+    if (!card) return;
+    card.setAttribute('data-status', 'read');
+    card.classList.remove('bg-surface-container-lowest');
+    card.classList.add('bg-surface-container-low/60');
+    
+    // Remove unread indicators
+    const unreadDot = card.querySelector('.ring-surface-container-lowest');
+    if (unreadDot) unreadDot.remove();
+
+    // Change badge text or show read marker
+    const titleArea = card.querySelector('h2');
+    if (titleArea && !card.querySelector('.italic')) {
+      const readMarker = document.createElement('span');
+      readMarker.className = 'ml-2 text-secondary font-label-sm text-label-sm italic';
+      readMarker.textContent = '(Read)';
+      titleArea.previousElementSibling.appendChild(readMarker);
+    }
+    btn.remove();
+  }
+
+  function deleteItem(btn) {
+    const card = btn.closest('article');
+    if (!card) return;
+    card.style.transition = 'opacity 0.25s ease, transform 0.25s ease';
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(-10px)';
+    setTimeout(() => card.remove(), 250);
+  }
+
+  function handleMarkAllRead() {
+    const unreadCards = document.querySelectorAll('article[data-status="unread"]');
+    unreadCards.forEach(card => {
+      const btn = card.querySelector('button[title="Mark as Read"]');
+      if (btn) markItemRead(btn);
+    });
+  }
+
+  function handleClearRead() {
+    const readCards = document.querySelectorAll('article[data-status="read"]');
+    readCards.forEach(card => {
+      card.style.transition = 'opacity 0.25s ease, transform 0.25s ease';
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(-10px)';
+      setTimeout(() => card.remove(), 250);
+    });
+  }
+
+  // Client-side quick filter logic
+  const searchInput = document.getElementById('notification_filter_search');
+  if (searchInput) {
+    searchInput.addEventListener('input', function(e) {
+      const term = e.target.value.toLowerCase();
+      const cards = document.querySelectorAll('#notification_feed_container article');
+      cards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        card.style.display = text.includes(term) ? 'flex' : 'none';
+      });
+    });
+  }
+</script></main></div></body></html>

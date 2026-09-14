@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-low":"#eff4ff","secondary-fixed":"#dae2fd","primary-fixed":"#dbe1ff","surface-tint":"#0053db","inverse-surface":"#213145","on-tertiary-fixed-variant":"#3323cc","secondary":"#565e74","surface-dim":"#cbdbf5","on-tertiary-fixed":"#0f0069","outline-variant":"#c3c6d7","primary-fixed-dim":"#b4c5ff","surface-container-high":"#dce9ff","error":"#ba1a1a","on-secondary-fixed":"#131b2e","on-secondary":"#ffffff","on-surface":"#0b1c30","on-secondary-container":"#5c647a","on-tertiary":"#ffffff","inverse-on-surface":"#eaf1ff","surface-container-highest":"#d3e4fe","secondary-fixed-dim":"#bec6e0","on-background":"#0b1c30","surface-bright":"#f8f9ff","on-primary-fixed-variant":"#003ea8","primary":"#004ac6","on-error":"#ffffff","on-error-container":"#93000a","inverse-primary":"#b4c5ff","tertiary-container":"#5d55f3","background":"#f8f9ff","surface-variant":"#d3e4fe","outline":"#737686","primary-container":"#2563eb","tertiary-fixed":"#e2dfff","tertiary":"#4338d9","on-tertiary-container":"#f2eeff","on-primary-container":"#eeefff","on-surface-variant":"#434655","surface-container-lowest":"#ffffff","tertiary-fixed-dim":"#c3c0ff","on-secondary-fixed-variant":"#3f465c","surface":"#f8f9ff","on-primary-fixed":"#00174b","error-container":"#ffdad6","on-primary":"#ffffff","secondary-container":"#dae2fd","surface-container":"#e5eeff"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"gutter":"1.5rem","space-sm":"0.5rem","margin":"2rem","space-md":"1rem","gutter-mobile":"1rem","space-xl":"2rem","space-lg":"1.5rem","space-xs":"0.25rem","margin-mobile":"1rem"},fontFamily:{"code":["JetBrains Mono"],"label-sm":["Inter"],"display":["Inter"],"headline-sm":["Inter"],"title-sm":["Inter"],"headline-lg-mobile":["Inter"],"body-sm":["Inter"],"body-lg":["Inter"],"label-md":["Inter"],"label-lg":["Inter"],"headline-md":["Inter"],"body-md":["Inter"],"headline-lg":["Inter"],"title-md":["Inter"]},fontSize:{"code":["12px",{"lineHeight":"16px","fontWeight":"500"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"700"}],"display":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["18px",{"lineHeight":"24px","fontWeight":"600"}],"title-sm":["14px",{"lineHeight":"20px","fontWeight":"600"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.025em","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","fontWeight":"500"}],"headline-md":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"headline-lg":["30px",{"lineHeight":"38px","letterSpacing":"-0.015em","fontWeight":"600"}],"title-md":["16px",{"lineHeight":"22px","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-inverse-surface text-inverse-on-surface z-50 flex flex-col shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-lg flex items-center gap-space-sm bg-inverse-surface"><div class="w-8 h-8 rounded-xl bg-primary flex items-center justify-center text-on-primary font-headline-sm text-headline-sm"><span class="material-symbols-outlined text-[20px]">school</span></div><div class="flex flex-col"><span class="font-title-sm text-title-sm text-inverse-on-surface tracking-tight uppercase">Premier University</span><span class="font-label-sm text-label-sm text-outline-variant font-normal">Exam Control Division</span></div></div><div class="flex-1 overflow-y-auto px-space-md py-space-md space-y-space-lg"><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline-variant">Admin & Controller Tools</div><nav class="space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-label-lg rounded-xl"><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="admin-dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span>Admin Dashboard</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="faculty-management" href="#"><span class="material-symbols-outlined text-[20px]">groups</span>Faculty Management</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="department-management" href="#"><span class="material-symbols-outlined text-[20px]">corporate_fare</span>Department Management</a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-2.5 transition-colors bg-primary-container text-on-primary-container font-label-lg rounded-xl" data-path="course-management" href="#"><span class="material-symbols-outlined text-[20px]">menu_book</span>Course Management</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="exam-management" href="#"><span class="material-symbols-outlined text-[20px]">assignment</span>Exam Management</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="timetable-and-rooms" href="#"><span class="material-symbols-outlined text-[20px]">meeting_room</span>Timetable & Rooms</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="invigilation-assignments" href="#"><span class="material-symbols-outlined text-[20px]">badge</span>Invigilation Assignments</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="conflict-center" href="#"><span class="material-symbols-outlined text-[20px]">warning</span>Conflict Center</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="reports-and-documents" href="#"><span class="material-symbols-outlined text-[20px]">description</span>Reports & Documents</a></nav></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline-variant">Faculty Portal (Preview)</div><nav class="space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-label-lg rounded-xl"><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="faculty-dashboard" href="#"><span class="material-symbols-outlined text-[20px]">person</span>Faculty Dashboard</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="my-assigned-duties" href="#"><span class="material-symbols-outlined text-[20px]">event_available</span>My Assigned Duties</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="duty-preferences" href="#"><span class="material-symbols-outlined text-[20px]">tune</span>Duty Preferences</a></nav></div></div><div class="p-space-md bg-inverse-surface shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-sm p-space-sm rounded-xl bg-surface-container-high/10"><span class="material-symbols-outlined text-outline-variant text-[20px]">security</span><div class="flex flex-col"><span class="font-label-md text-label-md text-inverse-on-surface">Session Secured</span><span class="font-label-sm text-label-sm text-outline-variant">Academic Year 2024-25</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-lg flex-1 max-w-2xl"><span class="font-title-sm text-title-sm text-on-surface whitespace-nowrap">Office of the Controller of Examinations</span><div class="relative w-full max-w-md"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span><input class="w-full h-10 pl-9 pr-space-md bg-surface-container-lowest font-body-sm text-body-sm text-on-surface placeholder:text-outline rounded-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] focus:outline-none focus:ring-2 focus:ring-primary-container" placeholder="Search faculty, courses, departments..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center justify-center w-10 h-10 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface cursor-pointer transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></div><div class="flex items-center gap-space-sm pl-space-sm"><div class="text-right hidden sm:flex flex-col"><span class="font-label-md text-label-md text-on-surface">Admin Controller</span><span class="font-label-sm text-label-sm text-on-surface-variant">Office of Exam Control</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface px-space-lg py-space-lg"><div class="flex flex-col w-full">
+<!-- Breadcrumb and Context Nav -->
+<div class="flex items-center justify-between pb-space-md">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
+<span class="hover:text-primary cursor-pointer transition-colors">Home</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="hover:text-primary cursor-pointer transition-colors">Academic Structure</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-semibold">Course Management</span>
+</div>
+<!-- Institutional Registry Stamp Tag -->
+<div class="hidden sm:flex items-center gap-2 bg-surface-container-low px-3 py-1 rounded-xl shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-code text-code text-primary uppercase tracking-wider">REGISTRY V2.4 • SEMESTER FALL-2024</span>
+</div>
+</div>
+<!-- Page Header Title Block -->
+<div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-space-md mb-space-lg">
+<div>
+<div class="flex items-center gap-space-sm mb-1">
+<span class="material-symbols-outlined text-primary text-[28px]">menu_book</span>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Course Catalog & Exam Allocation Directory</h1>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+        Centralized course database tracking syllabi, lecture-to-lab credit hours, associated department chairs, and synchronized examination hall seats for Fall 2024.
+      </p>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="flex items-center gap-2 px-4 py-2.5 bg-surface-container-low text-on-surface font-label-lg text-label-lg rounded-xl shadow-sm hover:bg-surface-container transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+        Export Catalog
+      </button>
+<button class="flex items-center gap-2 px-5 py-2.5 bg-primary-container text-on-primary-container font-label-lg text-label-lg rounded-xl shadow-md hover:bg-primary transition-all" onclick="document.getElementById('courseModal').classList.remove('hidden')">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+        + Add New Course
+      </button>
+</div>
+</div>
+<!-- Top KPI Executive Metric Tiles -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md mb-space-lg">
+<!-- Tile 1 -->
+<div class="relative overflow-hidden bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Total Active Courses</span>
+<div class="font-display text-display text-on-surface mt-1">114</div>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Curricular Offerings Registered</p>
+</div>
+<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[26px]">library_books</span>
+</div>
+</div>
+<div class="mt-4 flex items-center gap-1.5 font-label-sm text-label-sm text-primary">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>100% Synced with Syllabus Board</span>
+</div>
+<!-- Decorative Backdrop Graphic -->
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-primary-fixed/20 rounded-full blur-xl pointer-events-none"></div>
+</div>
+<!-- Tile 2 -->
+<div class="relative overflow-hidden bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Midterm Examination</span>
+<div class="font-display text-display text-primary-container mt-1">42</div>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Courses In Exam Schedule</p>
+</div>
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[26px]">assignment_turned_in</span>
+</div>
+</div>
+<div class="mt-4 flex items-center gap-1.5 font-label-sm text-label-sm text-tertiary">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>Slots Configured in Halls A-E</span>
+</div>
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-secondary-fixed/30 rounded-full blur-xl pointer-events-none"></div>
+</div>
+<!-- Tile 3 -->
+<div class="relative overflow-hidden bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Faculty Instructors</span>
+<div class="font-display text-display text-on-surface mt-1">48</div>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Active Tenured & Adjunct Members</p>
+</div>
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-[26px]">groups</span>
+</div>
+</div>
+<div class="mt-4 flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+<span>Avg. 2.37 Courses / Faculty</span>
+</div>
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-tertiary-fixed/30 rounded-full blur-xl pointer-events-none"></div>
+</div>
+<!-- Tile 4 -->
+<div class="relative overflow-hidden bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Departments</span>
+<div class="font-display text-display text-on-surface mt-1">06</div>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Represented Faculties</p>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[26px]">account_balance</span>
+</div>
+</div>
+<div class="mt-4 flex items-center gap-1.5 font-label-sm text-label-sm text-secondary">
+<span class="material-symbols-outlined text-[16px]">domain</span>
+<span>CSE, EEE, BBA, LAW, ENG, PHAR</span>
+</div>
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-surface-container-high/40 rounded-full blur-xl pointer-events-none"></div>
+</div>
+</div>
+<!-- Search, Filter, and View Controls Hub -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm mb-space-lg">
+<div class="flex flex-col lg:flex-row gap-space-md items-stretch lg:items-center justify-between">
+<!-- Search input -->
+<div class="relative flex-1 min-w-[280px]">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
+<input class="w-full h-11 pl-10 pr-space-md bg-surface-container-low font-body-sm text-body-sm text-on-surface placeholder:text-outline rounded-xl shadow-inner focus:outline-none focus:ring-2 focus:ring-primary" id="course_search" name="course_search" placeholder="Search course code or title, e.g. CSE311, Algorithms..." type="text"/>
+</div>
+<!-- Filters Row -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<!-- Department Select -->
+<div class="flex flex-col">
+<select class="h-11 px-3 bg-surface-container-low font-label-lg text-label-lg text-on-surface rounded-xl shadow-inner focus:outline-none focus:ring-2 focus:ring-primary cursor-pointer" id="filter_department_id" name="filter_department_id">
+<option value="">All Departments (6)</option>
+<option value="1">Computer Science & Engineering (CSE)</option>
+<option value="2">Electrical & Electronic Engg (EEE)</option>
+<option value="3">Business Administration (BBA)</option>
+<option value="4">School of Law (LAW)</option>
+<option value="5">Department of English (ENG)</option>
+<option value="6">Department of Pharmacy (PHAR)</option>
+</select>
+</div>
+<!-- Semester / Level Select -->
+<div class="flex flex-col">
+<select class="h-11 px-3 bg-surface-container-low font-label-lg text-label-lg text-on-surface rounded-xl shadow-inner focus:outline-none focus:ring-2 focus:ring-primary cursor-pointer" id="filter_level" name="filter_level">
+<option value="">All Academic Levels</option>
+<option value="undergraduate">Undergraduate Degree (B.Sc / BBA / LL.B)</option>
+<option value="graduate">Graduate Degree (M.Sc / MBA / LL.M)</option>
+</select>
+</div>
+<!-- Quick Filter Button: Courses with Upcoming Exams (42) -->
+<button class="h-11 px-4 flex items-center gap-2 rounded-xl bg-surface-container-high text-on-surface font-label-sm text-label-sm shadow-sm transition-all hover:bg-surface-dim" id="quickFilterExams" onclick="this.classList.toggle('bg-primary-container'); this.classList.toggle('text-on-primary-container'); this.classList.toggle('bg-surface-container-high'); this.classList.toggle('text-on-surface');">
+<span class="material-symbols-outlined text-[18px]">event_seat</span>
+<span>Courses with Upcoming Exams</span>
+<span class="px-1.5 py-0.5 rounded-full bg-surface text-primary font-bold">42</span>
+</button>
+<!-- Reset Button -->
+<button class="h-11 px-3 text-secondary hover:text-on-surface hover:bg-surface-container-low rounded-xl transition-colors" title="Reset Filters">
+<span class="material-symbols-outlined text-[20px]">filter_alt_off</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Course Catalog Table Module -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden mb-space-lg">
+<div class="px-space-lg py-space-md bg-surface-container-low/70 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-on-surface">Curricular Master Directory</span>
+<span class="px-2.5 py-0.5 rounded-full font-code text-code bg-surface-container text-on-surface-variant">Table: courses</span>
+</div>
+<div class="flex items-center gap-space-sm text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+<span>Auto-synced with Exam Roster DB</span>
+</div>
+</div>
+<!-- Data Table Canvas -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-secondary font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-4">
+<div class="flex items-center gap-1">
+<span>Course ID</span>
+<span class="font-code text-[10px] text-outline">[id]</span>
+</div>
+</th>
+<th class="py-3 px-4">
+<div class="flex items-center gap-1">
+<span>Course Code</span>
+<span class="font-code text-[10px] text-outline">[course_code]</span>
+</div>
+</th>
+<th class="py-3 px-4">
+<div class="flex items-center gap-1">
+<span>Course Title</span>
+<span class="font-code text-[10px] text-outline">[course_title]</span>
+</div>
+</th>
+<th class="py-3 px-4">
+<div class="flex items-center gap-1">
+<span>Department</span>
+<span class="font-code text-[10px] text-outline">[dept_id]</span>
+</div>
+</th>
+<th class="py-3 px-4">
+<div class="flex items-center gap-1">
+<span>Scheduled Exams</span>
+<span class="font-code text-[10px] text-outline">[exam_count]</span>
+</div>
+</th>
+<th class="py-3 px-4">
+<div class="flex items-center gap-1">
+<span>Credits & Type</span>
+<span class="font-code text-[10px] text-outline">[credit_hours]</span>
+</div>
+</th>
+<th class="py-3 px-4 text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-md text-body-md text-on-surface">
+<!-- Row 1: CSE311 -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-3.5 px-4 font-code text-code text-on-surface-variant font-medium">CRS-0311</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center px-2.5 py-1 rounded bg-primary-fixed text-on-primary-fixed font-title-sm text-title-sm">
+                CSE311
+              </span>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Database Management Systems</span>
+<span class="font-body-sm text-body-sm text-secondary">Prereq: CSE221 • Core Major Module</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span class="font-body-sm text-body-sm">Computer Science & Engineering</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">fact_check</span>
+                2 Scheduled (Mid & Final)
+              </span>
+</td>
+<td class="py-3.5 px-4 font-body-sm text-body-sm">
+<span class="font-semibold text-on-surface">3.0</span> Credits
+              <span class="text-secondary mx-1">•</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant text-code font-code">Theory</span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 rounded text-primary hover:bg-surface-container-high transition-colors" title="View Syllabus & Exam Slots">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded text-secondary hover:bg-surface-container-high transition-colors" title="Edit Course">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded text-error hover:bg-error-container transition-colors" title="Delete Course">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: CSE110 -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-3.5 px-4 font-code text-code text-on-surface-variant font-medium">CRS-0101</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center px-2.5 py-1 rounded bg-primary-fixed text-on-primary-fixed font-title-sm text-title-sm">
+                CSE110
+              </span>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Programming Language I (Java)</span>
+<span class="font-body-sm text-body-sm text-secondary">Foundational Year 1 Offering</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span class="font-body-sm text-body-sm">Computer Science & Engineering</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">fact_check</span>
+                2 Scheduled (Mid & Final)
+              </span>
+</td>
+<td class="py-3.5 px-4 font-body-sm text-body-sm">
+<span class="font-semibold text-on-surface">3.0</span> Credits
+              <span class="text-secondary mx-1">•</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant text-code font-code">Theory + Lab</span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 rounded text-primary hover:bg-surface-container-high transition-colors" title="View Syllabus & Exam Slots">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded text-secondary hover:bg-surface-container-high transition-colors" title="Edit Course">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded text-error hover:bg-error-container transition-colors" title="Delete Course">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: EEE201 -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-3.5 px-4 font-code text-code text-on-surface-variant font-medium">CRS-0205</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center px-2.5 py-1 rounded bg-tertiary-fixed text-on-tertiary-fixed font-title-sm text-title-sm">
+                EEE201
+              </span>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Circuits & Electronics</span>
+<span class="font-body-sm text-body-sm text-secondary">Includes Hardware Simulation Modules</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-body-sm text-body-sm">Electrical & Electronic Engg</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">fact_check</span>
+                1 Scheduled (Midterm)
+              </span>
+</td>
+<td class="py-3.5 px-4 font-body-sm text-body-sm">
+<span class="font-semibold text-on-surface">4.0</span> Credits
+              <span class="text-secondary mx-1">•</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant text-code font-code">Core Lab</span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 rounded text-primary hover:bg-surface-container-high transition-colors" title="View Syllabus & Exam Slots">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded text-secondary hover:bg-surface-container-high transition-colors" title="Edit Course">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded text-error hover:bg-error-container transition-colors" title="Delete Course">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: BUS202 -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-3.5 px-4 font-code text-code text-on-surface-variant font-medium">CRS-0202</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center px-2.5 py-1 rounded bg-secondary-container text-on-secondary-fixed font-title-sm text-title-sm">
+                BUS202
+              </span>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Principles of Management</span>
+<span class="font-body-sm text-body-sm text-secondary">General Business Core Requirement</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-body-sm text-body-sm">Business Administration</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">fact_check</span>
+                2 Scheduled (Mid & Final)
+              </span>
+</td>
+<td class="py-3.5 px-4 font-body-sm text-body-sm">
+<span class="font-semibold text-on-surface">3.0</span> Credits
+              <span class="text-secondary mx-1">•</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant text-code font-code">Theory</span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 rounded text-primary hover:bg-surface-container-high transition-colors" title="View Syllabus & Exam Slots">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded text-secondary hover:bg-surface-container-high transition-colors" title="Edit Course">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded text-error hover:bg-error-container transition-colors" title="Delete Course">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: LAW105 -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-3.5 px-4 font-code text-code text-on-surface-variant font-medium">CRS-0105</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center px-2.5 py-1 rounded bg-primary-fixed text-on-primary-fixed font-title-sm text-title-sm">
+                LAW105
+              </span>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Constitutional Law I</span>
+<span class="font-body-sm text-body-sm text-secondary">Jurisprudence & Bill of Rights</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-on-tertiary-fixed-variant"></span>
+<span class="font-body-sm text-body-sm">School of Law</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">fact_check</span>
+                1 Scheduled (Midterm)
+              </span>
+</td>
+<td class="py-3.5 px-4 font-body-sm text-body-sm">
+<span class="font-semibold text-on-surface">3.0</span> Credits
+              <span class="text-secondary mx-1">•</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant text-code font-code">Theory</span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 rounded text-primary hover:bg-surface-container-high transition-colors" title="View Syllabus & Exam Slots">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded text-secondary hover:bg-surface-container-high transition-colors" title="Edit Course">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded text-error hover:bg-error-container transition-colors" title="Delete Course">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6: CSE221 -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-3.5 px-4 font-code text-code text-on-surface-variant font-medium">CRS-0221</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center px-2.5 py-1 rounded bg-primary-fixed text-on-primary-fixed font-title-sm text-title-sm">
+                CSE221
+              </span>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Data Structures & Algorithms</span>
+<span class="font-body-sm text-body-sm text-secondary">Graph Theory, Trees & Dynamic Prog</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span class="font-body-sm text-body-sm">Computer Science & Engineering</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">fact_check</span>
+                2 Scheduled (Mid & Final)
+              </span>
+</td>
+<td class="py-3.5 px-4 font-body-sm text-body-sm">
+<span class="font-semibold text-on-surface">3.0</span> Credits
+              <span class="text-secondary mx-1">•</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant text-code font-code">Theory + Lab</span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 rounded text-primary hover:bg-surface-container-high transition-colors" title="View Syllabus & Exam Slots">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded text-secondary hover:bg-surface-container-high transition-colors" title="Edit Course">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded text-error hover:bg-error-container transition-colors" title="Delete Course">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 7: MAT101 -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-3.5 px-4 font-code text-code text-on-surface-variant font-medium">CRS-0102</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center px-2.5 py-1 rounded bg-surface-container text-on-surface font-title-sm text-title-sm">
+                MAT101
+              </span>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Differential Calculus & Coordinate Geometry</span>
+<span class="font-body-sm text-body-sm text-secondary">General Science Faculty Requirement</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-body-sm text-body-sm">Department of Mathematics</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">remove_circle_outline</span>
+                0 Exams (Continuous Eval)
+              </span>
+</td>
+<td class="py-3.5 px-4 font-body-sm text-body-sm">
+<span class="font-semibold text-on-surface">3.0</span> Credits
+              <span class="text-secondary mx-1">•</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant text-code font-code">Theory</span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 rounded text-primary hover:bg-surface-container-high transition-colors" title="View Syllabus & Exam Slots">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded text-secondary hover:bg-surface-container-high transition-colors" title="Edit Course">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded text-error hover:bg-error-container transition-colors" title="Delete Course">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination & Record Volume Stats -->
+<div class="px-space-lg py-space-md bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="font-body-sm text-body-sm text-secondary">
+        Showing <span class="font-semibold text-on-surface">1</span> to <span class="font-semibold text-on-surface">7</span> of <span class="font-semibold text-on-surface">114</span> entries
+      </div>
+<div class="flex items-center gap-1">
+<button class="px-3 py-1.5 rounded bg-surface-container text-secondary text-label-sm font-label-sm hover:bg-surface-dim transition-colors disabled:opacity-50" disabled="">
+          Previous
+        </button>
+<button class="px-3 py-1.5 rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm">
+          1
+        </button>
+<button class="px-3 py-1.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-surface-dim transition-colors">
+          2
+        </button>
+<button class="px-3 py-1.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-surface-dim transition-colors">
+          3
+        </button>
+<span class="px-2 text-secondary">...</span>
+<button class="px-3 py-1.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-surface-dim transition-colors">
+          12
+        </button>
+<button class="px-3 py-1.5 rounded bg-surface-container text-secondary text-label-sm font-label-sm hover:bg-surface-dim transition-colors">
+          Next
+        </button>
+</div>
+</div>
+</div>
+<!-- Schema & Architecture Inspection Footer (Developer Contextual Bar) -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-space-sm text-secondary font-code text-code">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">terminal</span>
+<span>MySQL Schema: <strong>`courses`</strong> (`id`, `course_code`, `course_title`, `department_id`, `credit_hours`, `created_at`)</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="inline-flex items-center gap-1 text-primary">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+        Foreign Key: department_id → departments(id)
+      </span>
+<span>Action Script: <code class="text-on-surface">POST course_save.php</code></span>
+</div>
+</div>
+<!-- ADD / EDIT NEW COURSE MODAL (PHP Backend Schema Aligned) -->
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-inverse-surface/60 backdrop-blur-sm transition-opacity" id="courseModal">
+<div class="bg-surface-container-lowest w-full max-w-xl rounded-xl shadow-2xl overflow-hidden flex flex-col animate-in fade-in zoom-in-95 duration-200">
+<!-- Modal Header -->
+<div class="px-space-lg py-space-md bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">add_box</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface">Add New Course Offering</h3>
+<span class="font-code text-[11px] text-secondary">Target: Premier Univ. Fall 2024 Course Matrix</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-outline hover:text-on-surface hover:bg-surface-container transition-colors" onclick="document.getElementById('courseModal').classList.add('hidden')" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Modal Body (PHP $_POST Form) -->
+<form action="course_save.php" class="p-space-lg space-y-space-md" id="addCourseForm" method="POST">
+<!-- Field 1: course_code -->
+<div class="space-y-1">
+<label class="block font-label-lg text-label-lg text-on-surface" for="course_code">
+            Course Code <span class="text-error font-bold">*</span>
+</label>
+<div class="relative">
+<input class="w-full h-10 px-3 bg-surface-container-lowest border border-outline-variant font-code text-code text-on-surface rounded focus:outline-none focus:ring-2 focus:ring-primary uppercase tracking-wider placeholder:normal-case placeholder:font-body-md" id="course_code" name="course_code" placeholder="e.g. CSE311" required="" type="text"/>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">Unique departmental catalog key (e.g. CSE311, MAT101, EEE201)</span>
+</div>
+<!-- Field 2: course_title -->
+<div class="space-y-1">
+<label class="block font-label-lg text-label-lg text-on-surface" for="course_title">
+            Course Title <span class="text-error font-bold">*</span>
+</label>
+<input class="w-full h-10 px-3 bg-surface-container-lowest border border-outline-variant font-body-md text-body-md text-on-surface rounded focus:outline-none focus:ring-2 focus:ring-primary" id="course_title" name="course_title" placeholder="e.g. Database Management Systems" required="" type="text"/>
+</div>
+<!-- Two Column Cluster: department_id & credit_hours -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Field 3: department_id -->
+<div class="space-y-1">
+<label class="block font-label-lg text-label-lg text-on-surface" for="department_id">
+              Department <span class="text-error font-bold">*</span>
+</label>
+<select class="w-full h-10 px-3 bg-surface-container-lowest border border-outline-variant font-body-md text-body-md text-on-surface rounded focus:outline-none focus:ring-2 focus:ring-primary cursor-pointer" id="department_id" name="department_id" required="">
+<option disabled="" selected="" value="">Select Department...</option>
+<option value="1">Computer Science & Engineering</option>
+<option value="2">Electrical & Electronic Engg</option>
+<option value="3">Business Administration</option>
+<option value="4">School of Law</option>
+<option value="5">Department of English</option>
+<option value="6">Department of Pharmacy</option>
+</select>
+</div>
+<!-- Field 4: credit_hours -->
+<div class="space-y-1">
+<label class="block font-label-lg text-label-lg text-on-surface" for="credit_hours">
+              Credit Hours <span class="text-error font-bold">*</span>
+</label>
+<input class="w-full h-10 px-3 bg-surface-container-lowest border border-outline-variant font-code text-code text-on-surface rounded focus:outline-none focus:ring-2 focus:ring-primary" id="credit_hours" max="6.0" min="1.0" name="credit_hours" required="" step="0.5" type="number" value="3.0"/>
+<span class="font-body-sm text-body-sm text-secondary">Standard semester credit weight</span>
+</div>
+</div>
+<!-- Verification Notice Box -->
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-start gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-primary mt-0.5">info</span>
+<span>Saving this course makes it instantly selectable for exam hall room allocation, Chief Proctor duty lists, and invigilator load distribution.</span>
+</div>
+<!-- Modal Footer Actions -->
+<div class="pt-space-md flex items-center justify-end gap-space-sm">
+<button class="px-4 py-2 bg-surface-container text-on-surface font-label-lg text-label-lg rounded-xl hover:bg-surface-dim transition-colors" onclick="document.getElementById('courseModal').classList.add('hidden')" type="button">
+            Cancel
+          </button>
+<button class="flex items-center gap-2 px-5 py-2 bg-primary-container text-on-primary-container font-label-lg text-label-lg rounded-xl shadow-md hover:bg-primary transition-all" type="submit">
+<span class="material-symbols-outlined text-[18px]">save</span>
+            Save Course
+          </button>
+</div>
+</form>
+</div>
+</div>
+</div></main></div></body></html>

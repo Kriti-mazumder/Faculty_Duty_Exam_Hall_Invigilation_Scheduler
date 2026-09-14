@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-low":"#eff4ff","secondary-fixed":"#dae2fd","primary-fixed":"#dbe1ff","surface-tint":"#0053db","inverse-surface":"#213145","on-tertiary-fixed-variant":"#3323cc","secondary":"#565e74","surface-dim":"#cbdbf5","on-tertiary-fixed":"#0f0069","outline-variant":"#c3c6d7","primary-fixed-dim":"#b4c5ff","surface-container-high":"#dce9ff","error":"#ba1a1a","on-secondary-fixed":"#131b2e","on-secondary":"#ffffff","on-surface":"#0b1c30","on-secondary-container":"#5c647a","on-tertiary":"#ffffff","inverse-on-surface":"#eaf1ff","surface-container-highest":"#d3e4fe","secondary-fixed-dim":"#bec6e0","on-background":"#0b1c30","surface-bright":"#f8f9ff","on-primary-fixed-variant":"#003ea8","primary":"#004ac6","on-error":"#ffffff","on-error-container":"#93000a","inverse-primary":"#b4c5ff","tertiary-container":"#5d55f3","background":"#f8f9ff","surface-variant":"#d3e4fe","outline":"#737686","primary-container":"#2563eb","tertiary-fixed":"#e2dfff","tertiary":"#4338d9","on-tertiary-container":"#f2eeff","on-primary-container":"#eeefff","on-surface-variant":"#434655","surface-container-lowest":"#ffffff","tertiary-fixed-dim":"#c3c0ff","on-secondary-fixed-variant":"#3f465c","surface":"#f8f9ff","on-primary-fixed":"#00174b","error-container":"#ffdad6","on-primary":"#ffffff","secondary-container":"#dae2fd","surface-container":"#e5eeff"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"gutter":"1.5rem","space-sm":"0.5rem","margin":"2rem","space-md":"1rem","gutter-mobile":"1rem","space-xl":"2rem","space-lg":"1.5rem","space-xs":"0.25rem","margin-mobile":"1rem"},fontFamily:{"code":["JetBrains Mono"],"label-sm":["Inter"],"display":["Inter"],"headline-sm":["Inter"],"title-sm":["Inter"],"headline-lg-mobile":["Inter"],"body-sm":["Inter"],"body-lg":["Inter"],"label-md":["Inter"],"label-lg":["Inter"],"headline-md":["Inter"],"body-md":["Inter"],"headline-lg":["Inter"],"title-md":["Inter"]},fontSize:{"code":["12px",{"lineHeight":"16px","fontWeight":"500"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"700"}],"display":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["18px",{"lineHeight":"24px","fontWeight":"600"}],"title-sm":["14px",{"lineHeight":"20px","fontWeight":"600"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.025em","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","fontWeight":"500"}],"headline-md":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"headline-lg":["30px",{"lineHeight":"38px","letterSpacing":"-0.015em","fontWeight":"600"}],"title-md":["16px",{"lineHeight":"22px","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-inverse-surface text-inverse-on-surface z-50 flex flex-col shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-lg flex items-center gap-space-sm bg-inverse-surface"><div class="w-8 h-8 rounded-xl bg-primary flex items-center justify-center text-on-primary font-headline-sm text-headline-sm"><span class="material-symbols-outlined text-[20px]">school</span></div><div class="flex flex-col"><span class="font-title-sm text-title-sm text-inverse-on-surface tracking-tight uppercase">Premier University</span><span class="font-label-sm text-label-sm text-outline-variant font-normal">Exam Control Division</span></div></div><div class="flex-1 overflow-y-auto px-space-md py-space-md space-y-space-lg"><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline-variant">Admin & Controller Tools</div><nav class="space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-label-lg rounded-xl"><a class="flex items-center px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="admin-dashboard" href="#">Admin Dashboard</a><a class="flex items-center px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="department-management" href="#">Department Management</a><a class="flex items-center px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="course-management" href="#">Course Management</a><a class="flex items-center px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="faculty-management" href="#">Faculty Management</a><a aria-current="page" class="flex items-center px-space-md py-2.5 transition-colors bg-primary-container text-on-primary-container font-label-lg rounded-xl" data-path="exam-management" href="#">Exam Management</a><a class="flex items-center px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="exam-timetable-and-rooms" href="#">Exam Timetable & Rooms</a><a class="flex items-center px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="room-management" href="#">Room Management</a><a class="flex items-center px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="invigilation-assignments" href="#">Invigilation Assignments</a><a class="flex items-center px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="conflict-center" href="#">Conflict Center</a><a class="flex items-center px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="reports-and-documents" href="#">Reports & Documents</a></nav></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline-variant">Faculty Portal (Preview)</div><nav class="space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-label-lg rounded-xl"><a class="flex items-center px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="faculty-dashboard" href="#">Faculty Dashboard</a><a class="flex items-center px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="my-assigned-duties" href="#">My Assigned Duties</a><a class="flex items-center px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="duty-preferences" href="#">Duty Preferences</a></nav></div></div><div class="p-space-md bg-inverse-surface shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-sm p-space-sm rounded-xl bg-surface-container-high/10"><span class="material-symbols-outlined text-outline-variant text-[20px]">security</span><div class="flex flex-col"><span class="font-label-md text-label-md text-inverse-on-surface">Session Secured</span><span class="font-label-sm text-label-sm text-outline-variant">Academic Year 2024-25</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-lg flex-1 max-w-2xl"><span class="font-title-sm text-title-sm text-on-surface whitespace-nowrap">Office of the Controller of Examinations</span><div class="relative w-full max-w-md"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span><input class="w-full h-10 pl-9 pr-space-md bg-surface-container-lowest font-body-sm text-body-sm text-on-surface placeholder:text-outline rounded-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] focus:outline-none focus:ring-2 focus:ring-primary-container" placeholder="Search faculty, courses, rooms, exams..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center justify-center w-10 h-10 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface cursor-pointer transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></div><div class="flex items-center gap-space-sm pl-space-sm"><div class="text-right hidden sm:flex flex-col"><span class="font-label-md text-label-md text-on-surface">Admin Controller</span><span class="font-label-sm text-label-sm text-on-surface-variant">Office of Exam Control</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface px-space-lg py-space-lg"><div class="flex flex-col w-full">
+<!-- Breadcrumb Navigation & Top Metadata Band -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-md">
+<nav class="flex items-center gap-space-xs font-label-md text-label-md text-secondary">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[16px]">home</span> Home
+      </a>
+<span class="text-outline-variant">/</span>
+<span class="text-secondary font-medium">Admin Operations</span>
+<span class="text-outline-variant">/</span>
+<span class="text-on-surface font-semibold">Exam Management</span>
+</nav>
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-code text-code">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+        TERM: SP25-MID-ACTIVE
+      </span>
+<span class="inline-flex items-center px-space-sm py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-code text-code">
+        DB: `exam` PRIMARY KEY
+      </span>
+</div>
+</div>
+<!-- Page Title & Primary Operational Header -->
+<div class="flex flex-col xl:flex-row xl:items-end justify-between gap-space-md pb-space-lg">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-primary font-label-sm text-label-sm uppercase tracking-wider">Controller Module 04</span>
+<span class="text-secondary font-label-sm text-label-sm">Academic Cycle 2024–2025</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Examination Master Registry & Scheduling</h1>
+<p class="font-body-md text-body-md text-secondary max-w-3xl">
+        Centralized control for examination sessions, candidate allocations, and proctoring quotas for Spring 2025 Midterms. Direct sync with room matrix and automated invigilator duty balances.
+      </p>
+</div>
+<!-- Global Actions -->
+<div class="flex items-center gap-space-sm self-start xl:self-auto shrink-0">
+<button class="h-10 px-space-md rounded-xl bg-surface-container-lowest text-on-surface hover:bg-surface-container-high shadow-sm font-label-lg text-label-lg flex items-center gap-2 transition-colors" onclick="exportCSV()">
+<span class="material-symbols-outlined text-[18px] text-secondary">file_download</span>
+        Export Schedule CSV
+      </button>
+<button class="h-10 px-space-md rounded-xl bg-primary text-on-primary hover:bg-primary-container shadow-md font-label-lg text-label-lg flex items-center gap-2 transition-all hover:scale-[1.01] active:scale-[0.99]" onclick="openExamModal()">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+        + Create New Exam
+      </button>
+</div>
+</div>
+<!-- Top KPI Summary Cards (4 Cards Layout) -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md pb-space-lg">
+<!-- Card 1: Total Scheduled Exams -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Scheduled Sessions</span>
+<div class="font-display text-display text-on-surface font-semibold tracking-tight">42</div>
+</div>
+<div class="w-11 h-11 rounded-xl bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">event_note</span>
+</div>
+</div>
+<div class="pt-space-md flex items-center justify-between text-secondary font-body-sm text-body-sm">
+<span class="flex items-center gap-1 text-primary font-medium">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> Midterm Cycle active
+        </span>
+<span class="font-code text-code">6 faculties</span>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-primary"></div>
+</div>
+<!-- Card 2: Total Examinees -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Total Examinees</span>
+<div class="font-display text-display text-on-surface font-semibold tracking-tight">3,420</div>
+</div>
+<div class="w-11 h-11 rounded-xl bg-surface-container-high flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[24px]">groups</span>
+</div>
+</div>
+<div class="pt-space-md flex items-center justify-between text-secondary font-body-sm text-body-sm">
+<span>Across 6 Departments</span>
+<span class="font-code text-code text-secondary font-medium">Avg 81/slot</span>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-tertiary"></div>
+</div>
+<!-- Card 3: Invigilation Quota -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Invigilation Quota</span>
+<div class="flex items-baseline gap-2">
+<span class="font-display text-display text-on-surface font-semibold tracking-tight">84</span>
+<span class="font-title-sm text-title-sm text-secondary">/ 126 Proctors</span>
+</div>
+</div>
+<div class="w-11 h-11 rounded-xl bg-surface-container-high flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[24px]">badge</span>
+</div>
+</div>
+<div class="pt-space-md space-y-1.5">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-secondary">66% Policy Compliance</span>
+<span class="font-code text-code text-primary font-bold">42 pending</span>
+</div>
+<div class="w-full h-2 rounded bg-surface-container-high overflow-hidden">
+<div class="h-full bg-primary-container rounded" style="width: 66.6%;"></div>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-primary-container"></div>
+</div>
+<!-- Card 4: Unassigned Hall Slots -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-error uppercase tracking-wider font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">warning</span> Action Required
+          </span>
+<div class="font-display text-display text-error font-semibold tracking-tight">4 Slots</div>
+</div>
+<div class="w-11 h-11 rounded-xl bg-error-container flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[24px]">meeting_room</span>
+</div>
+</div>
+<div class="pt-space-md flex items-center justify-between text-on-surface font-body-sm text-body-sm">
+<span class="text-error font-medium">Halls unassigned</span>
+<button class="text-primary font-label-sm text-label-sm hover:underline" onclick="applyQuickFilter('Needs Action')">Inspect 4 items →</button>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-error"></div>
+</div>
+</section>
+<!-- Filter & Search Toolbar -->
+<section class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm mb-space-lg space-y-space-md">
+<div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-md">
+<!-- Search Input -->
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
+<input class="w-full h-11 pl-10 pr-space-md bg-surface-container-low font-body-md text-body-md text-on-surface rounded-xl focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary shadow-inner" id="searchInput" onkeyup="filterExams()" placeholder="Search by exam title, course code (e.g. CSE311, Data Structures)..." type="text"/>
+</div>
+<!-- Filters Ribbon -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<!-- Department Dropdown -->
+<div class="relative">
+<select class="h-11 pl-3 pr-8 bg-surface-container-low font-label-md text-label-md text-on-surface rounded-xl appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary" id="deptFilter" onchange="filterExams()">
+<option value="">All Departments</option>
+<option value="CSE">Computer Science & Engineering</option>
+<option value="EEE">Electrical & Electronic Engg</option>
+<option value="BUS">Business Administration</option>
+<option value="LAW">Faculty of Law</option>
+<option value="ENG">Department of English</option>
+<option value="PHR">Department of Pharmacy</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none text-outline text-[18px]">expand_more</span>
+</div>
+<!-- Exam Type / Term Dropdown -->
+<div class="relative">
+<select class="h-11 pl-3 pr-8 bg-surface-container-low font-label-md text-label-md text-on-surface rounded-xl appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary" id="termFilter" onchange="filterExams()">
+<option value="">All Terms</option>
+<option value="Midterm">Midterm Examination</option>
+<option value="Final">Final Examination</option>
+<option value="Special">Special Supplementary</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none text-outline text-[18px]">expand_more</span>
+</div>
+<!-- Status Filter Dropdown -->
+<div class="relative">
+<select class="h-11 pl-3 pr-8 bg-surface-container-low font-label-md text-label-md text-on-surface rounded-xl appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary" id="statusFilter" onchange="filterExams()">
+<option value="">All Statuses</option>
+<option value="Fully Configured">Fully Configured</option>
+<option value="Needs Invigilators">Needs Invigilators</option>
+<option value="Rooms Pending">Rooms Pending</option>
+<option value="Scheduled">Scheduled</option>
+<option value="In Progress">In Progress</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none text-outline text-[18px]">expand_more</span>
+</div>
+<!-- Quick Reset -->
+<button class="h-11 px-space-sm rounded-xl text-secondary hover:text-on-surface hover:bg-surface-container-high transition-colors text-label-md font-label-md flex items-center gap-1" onclick="resetFilters()" title="Reset Filters">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+          Reset
+        </button>
+</div>
+</div>
+<!-- Active Tag Chips Bar -->
+<div class="flex items-center flex-wrap gap-2 pt-2 text-label-sm font-label-sm">
+<span class="text-secondary">Quick views:</span>
+<button class="px-3 py-1 rounded-full bg-primary text-on-primary font-medium transition-all shadow-sm" id="chip-all" onclick="applyQuickFilter('all')">
+        All Midterms (42)
+      </button>
+<button class="px-3 py-1 rounded-full bg-error-container text-on-error-container hover:bg-error hover:text-on-error font-medium transition-all flex items-center gap-1" id="chip-action" onclick="applyQuickFilter('Needs Action')">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+        Needs Action (4)
+      </button>
+<button class="px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant hover:bg-surface-container-highest transition-all" id="chip-proctor" onclick="applyQuickFilter('Pending Proctor')">
+        Invigilators Needed (2)
+      </button>
+<button class="px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant hover:bg-surface-container-highest transition-all" id="chip-rooms" onclick="applyQuickFilter('Rooms Pending')">
+        Hall Not Set (2)
+      </button>
+<div class="ml-auto flex items-center gap-2 text-secondary font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+<span>Auto-synced: Today at 09:40 AM</span>
+</div>
+</div>
+</section>
+<!-- Exam Master Data Table Section -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden mb-space-xl">
+<!-- Table Header Toolbar -->
+<div class="px-space-lg py-space-md bg-surface-container-low flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[22px]">table_rows</span>
+<div>
+<h2 class="font-title-md text-title-md text-on-surface leading-tight">Master Examination Schedule</h2>
+<span class="font-label-sm text-label-sm text-secondary">Displaying 6 of 42 active exam records</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-secondary">Sort by:</span>
+<button class="px-2.5 py-1 rounded-lg bg-surface-container-lowest text-on-surface font-label-sm text-label-sm flex items-center gap-1 shadow-sm">
+          Date (Earliest First)
+          <span class="material-symbols-outlined text-[14px]">arrow_downward</span>
+</button>
+</div>
+</div>
+<!-- Responsive Table Wrapper -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse" id="examTable">
+<thead>
+<tr class="bg-surface-container-high/40 text-secondary font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-4 w-12 text-center">
+<input class="rounded bg-surface-container-lowest text-primary focus:ring-primary h-4 w-4" id="selectAll" type="checkbox"/>
+</th>
+<th class="py-3 px-4">Exam Session</th>
+<th class="py-3 px-4">Course & Dept</th>
+<th class="py-3 px-4">Date & Shift</th>
+<th class="py-3 px-4">Start - End Time</th>
+<th class="py-3 px-4 text-center">Students</th>
+<th class="py-3 px-4">Required Invigilators</th>
+<th class="py-3 px-4">Status</th>
+<th class="py-3 px-4 text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high/40 font-body-md text-body-md text-on-surface">
+<!-- Row 1: CSE311 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors exam-row" data-action="false" data-dept="CSE" data-status="Fully Configured" data-term="Midterm">
+<td class="py-3.5 px-4 text-center">
+<input class="row-checkbox rounded bg-surface-container-lowest text-primary focus:ring-primary h-4 w-4" type="checkbox"/>
+</td>
+<td class="py-3.5 px-4 font-semibold text-on-surface">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">event</span>
+<div>
+<div class="font-title-sm text-title-sm">Midterm Exam</div>
+<span class="font-code text-code text-secondary">EX-2025-0101</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-semibold text-on-surface">CSE311 - Database Management Systems</div>
+<div class="font-body-sm text-body-sm text-secondary flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary"></span> Computer Science & Engg • Hall 401, 402
+              </div>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-medium text-on-surface">18 May 2025</div>
+<div class="font-label-sm text-label-sm text-secondary">Sunday • Morning</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="font-code text-code px-2 py-0.5 rounded bg-surface-container-high text-on-surface">10:00 AM - 12:00 PM</span>
+<div class="font-body-sm text-body-sm text-secondary mt-0.5">Duration: 120 mins</div>
+</td>
+<td class="py-3.5 px-4 text-center">
+<span class="inline-flex items-center gap-1 font-semibold text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary">person</span> 64
+              </span>
+<div class="font-label-sm text-label-sm text-secondary">Registered</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2">
+<span class="font-code text-code font-bold text-on-surface">2/2 Assigned</span>
+<span class="material-symbols-outlined text-[16px] text-primary">verified</span>
+</div>
+<div class="text-secondary font-label-sm text-label-sm">Prof. A. Rahman, Dr. K. Roy</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Fully Configured
+              </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-secondary hover:text-primary hover:bg-surface-container-high transition-colors" onclick="viewExam('EX-2025-0101')" title="View Details">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg text-secondary hover:text-primary hover:bg-surface-container-high transition-colors" onclick="editExam('EX-2025-0101', 'CSE311 - Database Management Systems', 'Midterm Exam', '2025-05-18', '10:00', '12:00', 64, 2)" title="Edit Exam Session">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-secondary hover:text-primary hover:bg-surface-container-high transition-colors" title="Assign/Inspect Rooms">
+<span class="material-symbols-outlined text-[18px]">apartment</span>
+</button>
+<button class="p-1.5 rounded-lg text-secondary hover:text-primary hover:bg-surface-container-high transition-colors" title="Schedule Invigilators">
+<span class="material-symbols-outlined text-[18px]">assignment_ind</span>
+</button>
+<button class="p-1.5 rounded-lg text-secondary hover:text-error hover:bg-error-container transition-colors" onclick="confirmDelete('EX-2025-0101')" title="Delete Exam">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: CSE110 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors exam-row" data-action="false" data-dept="CSE" data-status="Fully Configured" data-term="Midterm">
+<td class="py-3.5 px-4 text-center">
+<input class="row-checkbox rounded bg-surface-container-lowest text-primary focus:ring-primary h-4 w-4" type="checkbox"/>
+</td>
+<td class="py-3.5 px-4 font-semibold text-on-surface">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">event</span>
+<div>
+<div class="font-title-sm text-title-sm">Midterm Exam</div>
+<span class="font-code text-code text-secondary">EX-2025-0102</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-semibold text-on-surface">CSE110 - Programming Language I</div>
+<div class="font-body-sm text-body-sm text-secondary flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary"></span> Computer Science & Engg • Aud-A, Lab 201
+              </div>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-medium text-on-surface">24 May 2025</div>
+<div class="font-label-sm text-label-sm text-secondary">Saturday • Morning</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="font-code text-code px-2 py-0.5 rounded bg-surface-container-high text-on-surface">09:00 AM - 11:00 AM</span>
+<div class="font-body-sm text-body-sm text-secondary mt-0.5">Duration: 120 mins</div>
+</td>
+<td class="py-3.5 px-4 text-center">
+<span class="inline-flex items-center gap-1 font-semibold text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary">person</span> 120
+              </span>
+<div class="font-label-sm text-label-sm text-secondary">Registered</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2">
+<span class="font-code text-code font-bold text-on-surface">4/4 Assigned</span>
+<span class="material-symbols-outlined text-[16px] text-primary">verified</span>
+</div>
+<div class="text-secondary font-label-sm text-label-sm">4 Faculty Proctors Verified</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Fully Configured
+              </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-secondary hover:text-primary hover:bg-surface-container-high transition-colors" onclick="viewExam('EX-2025-0102')" title="View Details">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg text-secondary hover:text-primary hover:bg-surface-container-high transition-colors" onclick="editExam('EX-2025-0102', 'CSE110 - Programming Language I', 'Midterm Exam', '2025-05-24', '09:00', '11:00', 120, 4)" title="Edit Exam Session">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-secondary hover:text-primary hover:bg-surface-container-high transition-colors" title="Assign/Inspect Rooms">
+<span class="material-symbols-outlined text-[18px]">apartment</span>
+</button>
+<button class="p-1.5 rounded-lg text-secondary hover:text-primary hover:bg-surface-container-high transition-colors" title="Schedule Invigilators">
+<span class="material-symbols-outlined text-[18px]">assignment_ind</span>
+</button>
+<button class="p-1.5 rounded-lg text-secondary hover:text-error hover:bg-error-container transition-colors" onclick="confirmDelete('EX-2025-0102')" title="Delete Exam">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: EEE201 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors exam-row bg-error-container/10" data-action="true" data-dept="EEE" data-status="Needs Invigilators" data-term="Midterm">
+<td class="py-3.5 px-4 text-center">
+<input class="row-checkbox rounded bg-surface-container-lowest text-primary focus:ring-primary h-4 w-4" type="checkbox"/>
+</td>
+<td class="py-3.5 px-4 font-semibold text-on-surface">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]">event</span>
+<div>
+<div class="font-title-sm text-title-sm">Midterm Exam</div>
+<span class="font-code text-code text-secondary">EX-2025-0103</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-semibold text-on-surface">EEE201 - Circuits & Electronics</div>
+<div class="font-body-sm text-body-sm text-secondary flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span> Electrical & Electronic • Hall 204
+              </div>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-medium text-on-surface">19 May 2025</div>
+<div class="font-label-sm text-label-sm text-secondary">Monday • Afternoon</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="font-code text-code px-2 py-0.5 rounded bg-surface-container-high text-on-surface">02:00 PM - 04:00 PM</span>
+<div class="font-body-sm text-body-sm text-secondary mt-0.5">Duration: 120 mins</div>
+</td>
+<td class="py-3.5 px-4 text-center">
+<span class="inline-flex items-center gap-1 font-semibold text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary">person</span> 85
+              </span>
+<div class="font-label-sm text-label-sm text-secondary">Registered</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2">
+<span class="font-code text-code font-bold text-error">1/3 Assigned</span>
+<span class="material-symbols-outlined text-[16px] text-error">error</span>
+</div>
+<div class="text-error font-label-sm text-label-sm font-medium">Needs 2 more proctors</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> Needs Invigilators
+              </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-secondary hover:text-primary hover:bg-surface-container-high transition-colors" onclick="viewExam('EX-2025-0103')" title="View Details">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg text-secondary hover:text-primary hover:bg-surface-container-high transition-colors" onclick="editExam('EX-2025-0103', 'EEE201 - Circuits & Electronics', 'Midterm Exam', '2025-05-19', '14:00', '16:00', 85, 3)" title="Edit Exam Session">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-secondary hover:text-primary hover:bg-surface-container-high transition-colors" title="Assign/Inspect Rooms">
+<span class="material-symbols-outlined text-[18px]">apartment</span>
+</button>
+<button class="p-1.5 rounded-lg bg-primary-container/10 text-primary hover:bg-primary hover:text-on-primary transition-colors" title="Schedule Invigilators">
+<span class="material-symbols-outlined text-[18px]">assignment_ind</span>
+</button>
+<button class="p-1.5 rounded-lg text-secondary hover:text-error hover:bg-error-container transition-colors" onclick="confirmDelete('EX-2025-0103')" title="Delete Exam">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: BUS202 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors exam-row bg-error-container/10" data-action="true" data-dept="BUS" data-status="Rooms Pending" data-term="Midterm">
+<td class="py-3.5 px-4 text-center">
+<input class="row-checkbox rounded bg-surface-container-lowest text-primary focus:ring-primary h-4 w-4" type="checkbox"/>
+</td>
+<td class="py-3.5 px-4 font-semibold text-on-surface">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">event</span>
+<div>
+<div class="font-title-sm text-title-sm">Midterm Exam</div>
+<span class="font-code text-code text-secondary">EX-2025-0104</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-semibold text-on-surface">BUS202 - Principles of Management</div>
+<div class="font-body-sm text-body-sm text-secondary flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> Business Administration • <span class="text-error font-medium">Unallocated</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-medium text-on-surface">21 May 2025</div>
+<div class="font-label-sm text-label-sm text-secondary">Wednesday • Morning</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="font-code text-code px-2 py-0.5 rounded bg-surface-container-high text-on-surface">10:00 AM - 12:00 PM</span>
+<div class="font-body-sm text-body-sm text-secondary mt-0.5">Duration: 120 mins</div>
+</td>
+<td class="py-3.5 px-4 text-center">
+<span class="inline-flex items-center gap-1 font-semibold text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary">person</span> 110
+              </span>
+<div class="font-label-sm text-label-sm text-secondary">Registered</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2">
+<span class="font-code text-code font-bold text-error">0/4 Assigned</span>
+<span class="material-symbols-outlined text-[16px] text-error">schedule</span>
+</div>
+<div class="text-secondary font-label-sm text-label-sm">Requires hall assignment first</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Rooms Pending
+              </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-secondary hover:text-primary hover:bg-surface-container-high transition-colors" onclick="viewExam('EX-2025-0104')" title="View Details">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg text-secondary hover:text-primary hover:bg-surface-container-high transition-colors" onclick="editExam('EX-2025-0104', 'BUS202 - Principles of Management', 'Midterm Exam', '2025-05-21', '10:00', '12:00', 110, 4)" title="Edit Exam Session">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg bg-primary text-on-primary hover:bg-primary-container transition-colors" title="Assign Rooms Now">
+<span class="material-symbols-outlined text-[18px]">apartment</span>
+</button>
+<button class="p-1.5 rounded-lg text-secondary hover:text-primary hover:bg-surface-container-high transition-colors" title="Schedule Invigilators">
+<span class="material-symbols-outlined text-[18px]">assignment_ind</span>
+</button>
+<button class="p-1.5 rounded-lg text-secondary hover:text-error hover:bg-error-container transition-colors" onclick="confirmDelete('EX-2025-0104')" title="Delete Exam">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: LAW105 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors exam-row" data-action="false" data-dept="LAW" data-status="Scheduled" data-term="Midterm">
+<td class="py-3.5 px-4 text-center">
+<input class="row-checkbox rounded bg-surface-container-lowest text-primary focus:ring-primary h-4 w-4" type="checkbox"/>
+</td>
+<td class="py-3.5 px-4 font-semibold text-on-surface">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">event</span>
+<div>
+<div class="font-title-sm text-title-sm">Midterm Exam</div>
+<span class="font-code text-code text-secondary">EX-2025-0105</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-semibold text-on-surface">LAW105 - Constitutional Law I</div>
+<div class="font-body-sm text-body-sm text-secondary flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span> Faculty of Law • Moot Court 1
+              </div>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-medium text-on-surface">22 May 2025</div>
+<div class="font-label-sm text-label-sm text-secondary">Thursday • Afternoon</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="font-code text-code px-2 py-0.5 rounded bg-surface-container-high text-on-surface">02:00 PM - 04:00 PM</span>
+<div class="font-body-sm text-body-sm text-secondary mt-0.5">Duration: 120 mins</div>
+</td>
+<td class="py-3.5 px-4 text-center">
+<span class="inline-flex items-center gap-1 font-semibold text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary">person</span> 45
+              </span>
+<div class="font-label-sm text-label-sm text-secondary">Registered</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2">
+<span class="font-code text-code font-bold text-on-surface">2/2 Assigned</span>
+<span class="material-symbols-outlined text-[16px] text-primary">verified</span>
+</div>
+<div class="text-secondary font-label-sm text-label-sm">Barrister M. Ahmed, Ms. F. Yasmin</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Scheduled
+              </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-secondary hover:text-primary hover:bg-surface-container-high transition-colors" onclick="viewExam('EX-2025-0105')" title="View Details">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg text-secondary hover:text-primary hover:bg-surface-container-high transition-colors" onclick="editExam('EX-2025-0105', 'LAW105 - Constitutional Law I', 'Midterm Exam', '2025-05-22', '14:00', '16:00', 45, 2)" title="Edit Exam Session">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-secondary hover:text-primary hover:bg-surface-container-high transition-colors" title="Assign/Inspect Rooms">
+<span class="material-symbols-outlined text-[18px]">apartment</span>
+</button>
+<button class="p-1.5 rounded-lg text-secondary hover:text-primary hover:bg-surface-container-high transition-colors" title="Schedule Invigilators">
+<span class="material-symbols-outlined text-[18px]">assignment_ind</span>
+</button>
+<button class="p-1.5 rounded-lg text-secondary hover:text-error hover:bg-error-container transition-colors" onclick="confirmDelete('EX-2025-0105')" title="Delete Exam">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6: CSE221 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors exam-row bg-error-container/10" data-action="true" data-dept="CSE" data-status="Needs Invigilators" data-term="Midterm">
+<td class="py-3.5 px-4 text-center">
+<input class="row-checkbox rounded bg-surface-container-lowest text-primary focus:ring-primary h-4 w-4" type="checkbox"/>
+</td>
+<td class="py-3.5 px-4 font-semibold text-on-surface">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">event</span>
+<div>
+<div class="font-title-sm text-title-sm">Midterm Exam</div>
+<span class="font-code text-code text-secondary">EX-2025-0106</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-semibold text-on-surface">CSE221 - Data Structures & Algorithms</div>
+<div class="font-body-sm text-body-sm text-secondary flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary"></span> Computer Science & Engg • Hall 301, 302
+              </div>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-medium text-on-surface">20 May 2025</div>
+<div class="font-label-sm text-label-sm text-secondary">Tuesday • Morning</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="font-code text-code px-2 py-0.5 rounded bg-surface-container-high text-on-surface">10:00 AM - 12:00 PM</span>
+<div class="font-body-sm text-body-sm text-secondary mt-0.5">Duration: 120 mins</div>
+</td>
+<td class="py-3.5 px-4 text-center">
+<span class="inline-flex items-center gap-1 font-semibold text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary">person</span> 95
+              </span>
+<div class="font-label-sm text-label-sm text-secondary">Registered</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2">
+<span class="font-code text-code font-bold text-error">2/3 Assigned</span>
+<span class="material-symbols-outlined text-[16px] text-error">person_alert</span>
+</div>
+<div class="text-error font-label-sm text-label-sm font-medium">1 additional proctor needed</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> Needs Invigilators
+              </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-secondary hover:text-primary hover:bg-surface-container-high transition-colors" onclick="viewExam('EX-2025-0106')" title="View Details">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg text-secondary hover:text-primary hover:bg-surface-container-high transition-colors" onclick="editExam('EX-2025-0106', 'CSE221 - Data Structures & Algorithms', 'Midterm Exam', '2025-05-20', '10:00', '12:00', 95, 3)" title="Edit Exam Session">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-secondary hover:text-primary hover:bg-surface-container-high transition-colors" title="Assign/Inspect Rooms">
+<span class="material-symbols-outlined text-[18px]">apartment</span>
+</button>
+<button class="p-1.5 rounded-lg bg-primary-container/10 text-primary hover:bg-primary hover:text-on-primary transition-colors" title="Schedule Invigilators">
+<span class="material-symbols-outlined text-[18px]">assignment_ind</span>
+</button>
+<button class="p-1.5 rounded-lg text-secondary hover:text-error hover:bg-error-container transition-colors" onclick="confirmDelete('EX-2025-0106')" title="Delete Exam">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer & Pagination Controls -->
+<div class="px-space-lg py-space-md bg-surface-container-low flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm text-secondary font-body-sm text-body-sm">
+<span>Rows per page:</span>
+<select class="bg-surface-container-lowest font-label-md text-label-md px-2 py-1 rounded-lg text-on-surface focus:outline-none">
+<option>10</option>
+<option selected="">25</option>
+<option>50</option>
+<option>100</option>
+</select>
+<span>Showing 1 to 6 of 42 exam sessions</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest text-secondary flex items-center justify-center hover:bg-surface-container-high transition-colors disabled:opacity-40" disabled="">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-primary text-on-primary font-label-md text-label-md flex items-center justify-center">1</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md flex items-center justify-center hover:bg-surface-container-high transition-colors">2</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md flex items-center justify-center hover:bg-surface-container-high transition-colors">3</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md flex items-center justify-center hover:bg-surface-container-high transition-colors">4</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest text-secondary flex items-center justify-center hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Database Architectural Spec & Entity Documentation (System Context) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm mb-space-lg">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">database</span>
+<h3 class="font-title-sm text-title-sm text-on-surface">Target Entity Schema: MySQL `exam` Table Mapping</h3>
+</div>
+<span class="font-code text-code text-secondary bg-surface-container-high px-2 py-0.5 rounded">Action endpoint: exam_save.php</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-sm font-code text-code text-secondary bg-surface-container-low p-space-sm rounded-xl">
+<div><strong class="text-on-surface">exam_id:</strong> INT AUTO_INCREMENT (PK)</div>
+<div><strong class="text-on-surface">course_id:</strong> INT FOREIGN KEY REFERENCES `course`</div>
+<div><strong class="text-on-surface">exam_name:</strong> VARCHAR(150)</div>
+<div><strong class="text-on-surface">exam_date:</strong> DATE (YYYY-MM-DD)</div>
+<div><strong class="text-on-surface">start_time:</strong> TIME (HH:MM:SS)</div>
+<div><strong class="text-on-surface">end_time:</strong> TIME (HH:MM:SS)</div>
+<div><strong class="text-on-surface">student_count:</strong> SMALLINT UNSIGNED</div>
+<div><strong class="text-on-surface">required_invigilators:</strong> TINYINT</div>
+</div>
+</div>
+<!-- MODAL DIALOG: Create New Examination Session (Hidden by default, styled for institutional authority) -->
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-inverse-surface/60 backdrop-blur-sm hidden p-space-md overflow-y-auto" id="examModal">
+<div class="bg-surface-container-lowest w-full max-w-2xl rounded-2xl shadow-2xl overflow-hidden animate-in fade-in zoom-in duration-150">
+<!-- Modal Header -->
+<div class="px-space-lg py-space-md bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-xl bg-primary text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">post_add</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface" id="modalTitle">Create New Examination Session</h3>
+<p class="font-body-sm text-body-sm text-secondary">Registry parameters will automatically compute required hall capacity.</p>
+</div>
+</div>
+<button class="w-8 h-8 rounded-xl text-secondary hover:text-on-surface hover:bg-surface-container-high flex items-center justify-center transition-colors" onclick="closeExamModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Modal Body / Form -->
+<form action="exam_save.php" class="p-space-lg space-y-space-md" id="examForm" method="POST" onsubmit="handleFormSubmit(event)">
+<input id="action_mode" name="action_mode" type="hidden" value="create"/>
+<input id="form_exam_id" name="exam_id" type="hidden" value=""/>
+<!-- Field 1: Course Picker (course_id) -->
+<div class="space-y-1">
+<label class="font-label-lg text-label-lg text-on-surface flex items-center justify-between" for="course_id">
+<span>Course <span class="text-error">*</span></span>
+<span class="font-label-sm text-label-sm text-secondary">Linked to curriculum database</span>
+</label>
+<div class="relative">
+<select class="w-full h-10 px-3 pr-8 bg-surface-container-lowest text-on-surface font-body-md text-body-md rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary appearance-none" id="course_id" name="course_id" required="">
+<option value="">-- Select Course (Code & Title) --</option>
+<option value="101">CSE311 - Database Management Systems (CSE)</option>
+<option value="102">CSE110 - Programming Language I (CSE)</option>
+<option value="103">EEE201 - Circuits & Electronics (EEE)</option>
+<option value="104">BUS202 - Principles of Management (BBA)</option>
+<option value="105">LAW105 - Constitutional Law I (LAW)</option>
+<option value="106">CSE221 - Data Structures & Algorithms (CSE)</option>
+<option value="107">ENG101 - English Reading & Composition (ENG)</option>
+<option value="108">PHR203 - Organic Chemistry & Therapeutics (PHR)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-outline text-[18px]">unfold_more</span>
+</div>
+</div>
+<!-- Field 2: Exam Name (exam_name) -->
+<div class="space-y-1">
+<label class="font-label-lg text-label-lg text-on-surface" for="exam_name">
+            Exam Session Title <span class="text-error">*</span>
+</label>
+<input class="w-full h-10 px-3 bg-surface-container-lowest text-on-surface font-body-md text-body-md rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary" id="exam_name" name="exam_name" placeholder="e.g. Spring 2025 Midterm Examination" required="" type="text" value="Spring 2025 Midterm Examination"/>
+</div>
+<!-- Field 3: Date & Time Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md">
+<div class="space-y-1">
+<label class="font-label-lg text-label-lg text-on-surface" for="exam_date">
+              Exam Date <span class="text-error">*</span>
+</label>
+<input class="w-full h-10 px-3 bg-surface-container-lowest text-on-surface font-body-md text-body-md rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary" id="exam_date" name="exam_date" required="" type="date" value="2025-05-25"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-lg text-label-lg text-on-surface" for="start_time">
+              Start Time <span class="text-error">*</span>
+</label>
+<input class="w-full h-10 px-3 bg-surface-container-lowest text-on-surface font-body-md text-body-md rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary" id="start_time" name="start_time" required="" type="time" value="10:00"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-lg text-label-lg text-on-surface" for="end_time">
+              End Time <span class="text-error">*</span>
+</label>
+<input class="w-full h-10 px-3 bg-surface-container-lowest text-on-surface font-body-md text-body-md rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary" id="end_time" name="end_time" required="" type="time" value="12:00"/>
+</div>
+</div>
+<!-- Field 4: Examinee Count & Required Invigilators -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="space-y-1">
+<label class="font-label-lg text-label-lg text-on-surface flex items-center justify-between" for="student_count">
+<span>Student Count <span class="text-error">*</span></span>
+<span class="font-label-sm text-label-sm text-secondary">Registered batch total</span>
+</label>
+<div class="relative">
+<input class="w-full h-10 pl-3 pr-8 bg-surface-container-lowest text-on-surface font-body-md text-body-md rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary" id="student_count" max="500" min="1" name="student_count" oninput="calcProctors(this.value)" required="" type="number" value="65"/>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none text-outline text-[18px]">group</span>
+</div>
+</div>
+<div class="space-y-1">
+<label class="font-label-lg text-label-lg text-on-surface flex items-center justify-between" for="required_invigilators">
+<span>Required Invigilators <span class="text-error">*</span></span>
+<span class="font-label-sm text-label-sm text-primary font-medium">Policy: 1 per 35 studs</span>
+</label>
+<div class="relative">
+<input class="w-full h-10 pl-3 pr-8 bg-surface-container-lowest text-on-surface font-body-md text-body-md rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary" id="required_invigilators" max="20" min="1" name="required_invigilators" required="" type="number" value="2"/>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none text-outline text-[18px]">badge</span>
+</div>
+</div>
+</div>
+<!-- Automated Compliance Notice -->
+<div class="p-space-sm rounded-xl bg-surface-container-high/60 flex items-start gap-space-sm text-secondary font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">info</span>
+<div>
+            Saving will trigger an automatic hall clash analysis against existing exams scheduled on the same date and slot. Rooms and proctors can be designated immediately in the next step.
+          </div>
+</div>
+<!-- Modal Footer Actions -->
+<div class="pt-space-sm flex items-center justify-end gap-space-sm">
+<button class="h-10 px-space-md rounded-xl text-on-surface hover:bg-surface-container-high transition-colors font-label-lg text-label-lg" onclick="closeExamModal()" type="button">
+            Cancel
+          </button>
+<button class="h-10 px-space-lg rounded-xl bg-primary text-on-primary hover:bg-primary-container shadow-md font-label-lg text-label-lg flex items-center gap-2 transition-all" type="submit">
+<span class="material-symbols-outlined text-[18px]">done_all</span>
+<span id="submitBtnText">Save & Configure Rooms</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+<!-- Notification Toast Container -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-space-sm px-space-md py-space-sm rounded-xl bg-inverse-surface text-inverse-on-surface shadow-2xl" id="toastNotification">
+<span class="material-symbols-outlined text-[20px] text-primary-fixed" id="toastIcon">check_circle</span>
+<span class="font-body-md text-body-md" id="toastMessage">Exam session synchronized successfully.</span>
+</div>
+</div>
+<script>
+  // Client-side interactions & data filtering logic
+
+  function openExamModal(isEdit = false) {
+    const modal = document.getElementById('examModal');
+    modal.classList.remove('hidden');
+    if (!isEdit) {
+      document.getElementById('modalTitle').textContent = "Create New Examination Session";
+      document.getElementById('submitBtnText').textContent = "Save & Configure Rooms";
+      document.getElementById('action_mode').value = "create";
+      document.getElementById('form_exam_id').value = "";
+      document.getElementById('examForm').reset();
+      document.getElementById('exam_name').value = "Spring 2025 Midterm Examination";
+      document.getElementById('exam_date').value = "2025-05-25";
+      document.getElementById('start_time').value = "10:00";
+      document.getElementById('end_time').value = "12:00";
+      document.getElementById('student_count').value = 65;
+      document.getElementById('required_invigilators').value = 2;
+    }
+  }
+
+  function closeExamModal() {
+    document.getElementById('examModal').classList.add('hidden');
+  }
+
+  function calcProctors(studentCount) {
+    const count = parseInt(studentCount, 10);
+    const reqField = document.getElementById('required_invigilators');
+    if (!isNaN(count) && count > 0) {
+      // 1 proctor per 35 students, minimum 2 for exam integrity
+      const calculated = Math.max(2, Math.ceil(count / 35));
+      reqField.value = calculated;
+    }
+  }
+
+  function editExam(id, courseTitle, examName, date, start, end, students, proctors) {
+    openExamModal(true);
+    document.getElementById('modalTitle').textContent = `Edit Exam Session (${id})`;
+    document.getElementById('submitBtnText').textContent = "Update Exam Session";
+    document.getElementById('action_mode').value = "edit";
+    document.getElementById('form_exam_id').value = id;
+    
+    // Select match in dropdown if possible
+    const select = document.getElementById('course_id');
+    for (let i = 0; i < select.options.length; i++) {
+      if (select.options[i].text.includes(courseTitle.substring(0, 6))) {
+        select.selectedIndex = i;
+        break;
+      }
+    }
+    document.getElementById('exam_name').value = examName;
+    document.getElementById('exam_date').value = date;
+    document.getElementById('start_time').value = start;
+    document.getElementById('end_time').value = end;
+    document.getElementById('student_count').value = students;
+    document.getElementById('required_invigilators').value = proctors;
+  }
+
+  function viewExam(id) {
+    showToast(`Exam Session ${id}: Navigating to Room Matrix & Allocations...`, 'info');
+  }
+
+  function confirmDelete(id) {
+    if (confirm(`Are you sure you want to remove examination slot ${id}? This will unassign rooms and notify all scheduled faculty.`)) {
+      showToast(`Exam session ${id} marked as deleted.`, 'delete');
+    }
+  }
+
+  function handleFormSubmit(e) {
+    e.preventDefault();
+    const mode = document.getElementById('action_mode').value;
+    const course = document.getElementById('course_id');
+    const courseText = course.options[course.selectedIndex].text;
+    closeExamModal();
+    if (mode === 'create') {
+      showToast(`Success: Exam created for ${courseText}. Redirecting to hall allocation...`, 'check_circle');
+    } else {
+      showToast(`Session updated successfully. Target: exam_save.php`, 'check_circle');
+    }
+  }
+
+  function filterExams() {
+    const searchVal = document.getElementById('searchInput').value.toLowerCase().trim();
+    const deptVal = document.getElementById('deptFilter').value;
+    const termVal = document.getElementById('termFilter').value;
+    const statusVal = document.getElementById('statusFilter').value;
+
+    const rows = document.querySelectorAll('.exam-row');
+    rows.forEach(row => {
+      const text = row.innerText.toLowerCase();
+      const rowDept = row.getAttribute('data-dept');
+      const rowTerm = row.getAttribute('data-term');
+      const rowStatus = row.getAttribute('data-status');
+
+      const matchesSearch = !searchVal || text.includes(searchVal);
+      const matchesDept = !deptVal || rowDept === deptVal;
+      const matchesTerm = !termVal || rowTerm.includes(termVal);
+      const matchesStatus = !statusVal || rowStatus.includes(statusVal);
+
+      if (matchesSearch && matchesDept && matchesTerm && matchesStatus) {
+        row.style.display = '';
+      } else {
+        row.style.display = 'none';
+      }
+    });
+  }
+
+  function applyQuickFilter(type) {
+    const rows = document.querySelectorAll('.exam-row');
+    document.getElementById('chip-all').className = "px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant transition-all";
+    document.getElementById('chip-action').className = "px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant transition-all";
+    document.getElementById('chip-proctor').className = "px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant transition-all";
+    document.getElementById('chip-rooms').className = "px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant transition-all";
+
+    if (type === 'all') {
+      document.getElementById('chip-all').className = "px-3 py-1 rounded-full bg-primary text-on-primary font-medium transition-all shadow-sm";
+      document.getElementById('statusFilter').value = '';
+      rows.forEach(r => r.style.display = '');
+    } else if (type === 'Needs Action') {
+      document.getElementById('chip-action').className = "px-3 py-1 rounded-full bg-error text-on-error font-medium transition-all shadow-sm";
+      rows.forEach(r => {
+        r.style.display = r.getAttribute('data-action') === 'true' ? '' : 'none';
+      });
+    } else if (type === 'Pending Proctor') {
+      document.getElementById('chip-proctor').className = "px-3 py-1 rounded-full bg-primary text-on-primary font-medium transition-all shadow-sm";
+      rows.forEach(r => {
+        r.style.display = r.getAttribute('data-status') === 'Needs Invigilators' ? '' : 'none';
+      });
+    } else if (type === 'Rooms Pending') {
+      document.getElementById('chip-rooms').className = "px-3 py-1 rounded-full bg-primary text-on-primary font-medium transition-all shadow-sm";
+      rows.forEach(r => {
+        r.style.display = r.getAttribute('data-status') === 'Rooms Pending' ? '' : 'none';
+      });
+    }
+  }
+
+  function resetFilters() {
+    document.getElementById('searchInput').value = '';
+    document.getElementById('deptFilter').value = '';
+    document.getElementById('termFilter').value = '';
+    document.getElementById('statusFilter').value = '';
+    applyQuickFilter('all');
+  }
+
+  function exportCSV() {
+    showToast('Exporting Spring 2025 Midterm Registry (CSV)...', 'download');
+  }
+
+  function showToast(msg, icon = 'check_circle') {
+    const toast = document.getElementById('toastNotification');
+    const msgEl = document.getElementById('toastMessage');
+    const iconEl = document.getElementById('toastIcon');
+    msgEl.textContent = msg;
+    iconEl.textContent = icon;
+    toast.classList.remove('translate-y-24', 'opacity-0');
+    setTimeout(() => {
+      toast.classList.add('translate-y-24', 'opacity-0');
+    }, 3800);
+  }
+
+  // Master Checkbox Toggle
+  document.getElementById('selectAll').addEventListener('change', function() {
+    const boxes = document.querySelectorAll('.row-checkbox');
+    boxes.forEach(b => b.checked = this.checked);
+  });
+</script></main></div></body></html>

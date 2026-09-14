@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-low":"#eff4ff","secondary-fixed":"#dae2fd","primary-fixed":"#dbe1ff","surface-tint":"#0053db","inverse-surface":"#213145","on-tertiary-fixed-variant":"#3323cc","secondary":"#565e74","surface-dim":"#cbdbf5","on-tertiary-fixed":"#0f0069","outline-variant":"#c3c6d7","primary-fixed-dim":"#b4c5ff","surface-container-high":"#dce9ff","error":"#ba1a1a","on-secondary-fixed":"#131b2e","on-secondary":"#ffffff","on-surface":"#0b1c30","on-secondary-container":"#5c647a","on-tertiary":"#ffffff","inverse-on-surface":"#eaf1ff","surface-container-highest":"#d3e4fe","secondary-fixed-dim":"#bec6e0","on-background":"#0b1c30","surface-bright":"#f8f9ff","on-primary-fixed-variant":"#003ea8","primary":"#004ac6","on-error":"#ffffff","on-error-container":"#93000a","inverse-primary":"#b4c5ff","tertiary-container":"#5d55f3","background":"#f8f9ff","surface-variant":"#d3e4fe","outline":"#737686","primary-container":"#2563eb","tertiary-fixed":"#e2dfff","tertiary":"#4338d9","on-tertiary-container":"#f2eeff","on-primary-container":"#eeefff","on-surface-variant":"#434655","surface-container-lowest":"#ffffff","tertiary-fixed-dim":"#c3c0ff","on-secondary-fixed-variant":"#3f465c","surface":"#f8f9ff","on-primary-fixed":"#00174b","error-container":"#ffdad6","on-primary":"#ffffff","secondary-container":"#dae2fd","surface-container":"#e5eeff"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"gutter":"1.5rem","space-sm":"0.5rem","margin":"2rem","space-md":"1rem","gutter-mobile":"1rem","space-xl":"2rem","space-lg":"1.5rem","space-xs":"0.25rem","margin-mobile":"1rem"},fontFamily:{"code":["JetBrains Mono"],"label-sm":["Inter"],"display":["Inter"],"headline-sm":["Inter"],"title-sm":["Inter"],"headline-lg-mobile":["Inter"],"body-sm":["Inter"],"body-lg":["Inter"],"label-md":["Inter"],"label-lg":["Inter"],"headline-md":["Inter"],"body-md":["Inter"],"headline-lg":["Inter"],"title-md":["Inter"]},fontSize:{"code":["12px",{"lineHeight":"16px","fontWeight":"500"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"700"}],"display":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["18px",{"lineHeight":"24px","fontWeight":"600"}],"title-sm":["14px",{"lineHeight":"20px","fontWeight":"600"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.025em","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","fontWeight":"500"}],"headline-md":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"headline-lg":["30px",{"lineHeight":"38px","letterSpacing":"-0.015em","fontWeight":"600"}],"title-md":["16px",{"lineHeight":"22px","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-inverse-surface text-inverse-on-surface z-50 flex flex-col shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-lg flex items-center gap-space-sm bg-inverse-surface"><div class="w-8 h-8 rounded-xl bg-primary flex items-center justify-center text-on-primary font-headline-sm text-headline-sm"><span class="material-symbols-outlined text-[20px]">school</span></div><div class="flex flex-col"><span class="font-title-sm text-title-sm text-inverse-on-surface tracking-tight uppercase">Premier University</span><span class="font-label-sm text-label-sm text-outline-variant font-normal">Exam Control Division</span></div></div><div class="flex-1 overflow-y-auto px-space-md py-space-md space-y-space-lg"><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline-variant">Admin & Controller Tools</div><nav class="space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-label-lg rounded-xl"><a class="flex items-center px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="admin-dashboard" href="#">Admin Dashboard</a><a class="flex items-center px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="department-management" href="#">Department Management</a><a class="flex items-center px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="course-management" href="#">Course Management</a><a class="flex items-center px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="faculty-management" href="#">Faculty Management</a><a class="flex items-center px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="exam-management" href="#">Exam Management</a><a class="flex items-center px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="exam-timetable-and-rooms" href="#">Exam Timetable & Rooms</a><a class="flex items-center px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="room-management" href="#">Room Management</a><a class="flex items-center px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="invigilation-assignments" href="#">Invigilation Assignments</a><a class="flex items-center px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="conflict-center" href="#">Conflict Center</a><a class="flex items-center px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="reports-and-documents" href="#">Reports & Documents</a></nav></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline-variant">Faculty Portal (Preview)</div><nav class="space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-label-lg rounded-xl"><a class="flex items-center px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="faculty-dashboard" href="#">Faculty Dashboard</a><a class="flex items-center px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="my-assigned-duties" href="#">My Assigned Duties</a><a class="flex items-center px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="duty-preferences" href="#">Duty Preferences</a></nav></div></div><div class="p-space-md bg-inverse-surface shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-sm p-space-sm rounded-xl bg-surface-container-high/10"><span class="material-symbols-outlined text-outline-variant text-[20px]">security</span><div class="flex flex-col"><span class="font-label-md text-label-md text-inverse-on-surface">Session Secured</span><span class="font-label-sm text-label-sm text-outline-variant">Academic Year 2024-25</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-lg flex-1 max-w-2xl"><span class="font-title-sm text-title-sm text-on-surface whitespace-nowrap">Office of the Controller of Examinations</span><div class="relative w-full max-w-md"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span><input class="w-full h-10 pl-9 pr-space-md bg-surface-container-lowest font-body-sm text-body-sm text-on-surface placeholder:text-outline rounded-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] focus:outline-none focus:ring-2 focus:ring-primary-container" placeholder="Search faculty, courses, rooms, exams..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center justify-center w-10 h-10 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface cursor-pointer transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></div><div class="flex items-center gap-space-sm pl-space-sm"><div class="text-right hidden sm:flex flex-col"><span class="font-label-md text-label-md text-on-surface">Admin Controller</span><span class="font-label-sm text-label-sm text-on-surface-variant">Office of Exam Control</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface px-space-lg py-space-lg"><div class="flex flex-col w-full">
+<!-- Breadcrumb and Context Navigation -->
+<div class="flex items-center justify-between gap-space-md mb-space-sm">
+<nav aria-label="Breadcrumb" class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[16px]">home</span>
+<span>Home</span>
+</a>
+<span class="text-outline-variant">/</span>
+<span class="hover:text-primary transition-colors cursor-pointer">Academic Operations</span>
+<span class="text-outline-variant">/</span>
+<span class="font-title-sm text-title-sm text-primary">Exam Timetable</span>
+</nav>
+<div class="flex items-center gap-space-sm text-on-surface-variant font-code text-code">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-surface-container font-medium text-secondary">
+<span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span>
+        LIVE REGISTRY: AY-2024-25/SPRING-MID
+      </span>
+</div>
+</div>
+<!-- Main Hero Title & View Switcher Bar -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg mb-space-lg">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg">
+<div class="space-y-1">
+<div class="flex items-center gap-space-sm">
+<span class="px-2.5 py-0.5 rounded text-on-primary bg-primary font-label-sm text-label-sm uppercase tracking-wider">Controller Ledger</span>
+<span class="text-on-surface-variant font-code text-code">SEMESTER MIDTERM v4.2</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Central Examination Timetable & Schedule Matrix</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Synchronized university-wide examination schedule with dual Table View and Calendar Grid view.</p>
+</div>
+<!-- Action Controls and View Mode Switcher -->
+<div class="flex flex-wrap items-center gap-space-md">
+<!-- View Toggle -->
+<div aria-label="Timetable Display View" class="inline-flex p-1 bg-surface-container rounded-lg" role="group">
+<button class="inline-flex items-center gap-1.5 px-space-md py-1.5 rounded-lg bg-surface-container-lowest text-primary font-label-lg text-label-lg shadow-sm transition-all duration-200" id="toggle-table-btn" onclick="switchView('table')" type="button">
+<span class="material-symbols-outlined text-[18px]">table_chart</span>
+            Table View
+          </button>
+<button class="inline-flex items-center gap-1.5 px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-all duration-200" id="toggle-calendar-btn" onclick="switchView('calendar')" type="button">
+<span class="material-symbols-outlined text-[18px]">calendar_view_week</span>
+            Calendar View
+          </button>
+</div>
+<!-- Export Actions -->
+<div class="flex items-center gap-space-xs">
+<button class="inline-flex items-center gap-1.5 h-10 px-space-md bg-surface-container-lowest text-on-surface font-label-lg text-label-lg rounded-lg shadow-sm hover:bg-surface-container-high transition-colors" onclick="window.print()" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">print</span>
+            Print Schedule Ledger
+          </button>
+<button class="inline-flex items-center gap-1.5 h-10 px-space-md bg-primary text-on-primary font-label-lg text-label-lg rounded-lg shadow-sm hover:bg-primary-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+            Export PDF Timetable
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- KPI / Analytical Pulse Strip -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md mb-space-lg">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div>
+<p class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Total Scheduled Slots</p>
+<p class="font-headline-md text-headline-md text-on-surface mt-1">48 Exams</p>
+<span class="font-body-sm text-body-sm text-primary flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">event_available</span> 6 Academic Faculties
+        </span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">assignment</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div>
+<p class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Room Seat Coverage</p>
+<p class="font-headline-md text-headline-md text-on-surface mt-1">2,840 / 3,100</p>
+<span class="font-body-sm text-body-sm text-secondary flex items-center gap-1 mt-0.5">
+<span class="w-2 h-2 rounded-full bg-primary"></span> 91.6% Allocation rate
+        </span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[24px]">meeting_room</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div>
+<p class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Proctors Assigned</p>
+<p class="font-headline-md text-headline-md text-on-surface mt-1">84 / 92</p>
+<span class="font-body-sm text-body-sm text-error font-medium flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">warning</span> 8 slots unstaffed
+        </span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-error-container flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[24px]">shield_person</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div>
+<p class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Conflict Incidents</p>
+<p class="font-headline-md text-headline-md text-on-surface mt-1">0 Clashes</p>
+<span class="font-body-sm text-body-sm text-primary flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">verified</span> Double-booking check clean
+        </span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[24px]">check_circle</span>
+</div>
+</div>
+</div>
+<!-- Filter & Query Control Center (PHP $_GET Schema Form) -->
+<form action="" class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg mb-space-lg" id="timetable-filter-form" method="GET">
+<div class="flex items-center justify-between pb-space-sm mb-space-md bg-surface-container-low px-space-md py-space-sm rounded-lg">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">filter_alt</span>
+<span class="font-title-sm text-title-sm text-on-surface">Filter Schedule Parameters</span>
+<span class="font-body-sm text-body-sm text-outline-variant">• Active Query: Spring Midterms 2025</span>
+</div>
+<button class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary hover:text-primary-container" onclick="resetFilters()" type="button">
+<span class="material-symbols-outlined text-[16px]">restart_alt</span>
+        Reset Filters
+      </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-md">
+<!-- Date Range Filter -->
+<div class="flex flex-col">
+<label class="font-label-lg text-label-lg text-on-surface mb-1 flex items-center gap-1" for="filter_date">
+          Exam Date Window
+        </label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">calendar_month</span>
+<input class="w-full h-10 pl-9 pr-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary-container shadow-sm" id="filter_date" name="filter_date" type="text" value="May 18, 2025 - May 25, 2025"/>
+</div>
+</div>
+<!-- Department Filter -->
+<div class="flex flex-col">
+<label class="font-label-lg text-label-lg text-on-surface mb-1" for="filter_department_id">
+          Department
+        </label>
+<div class="relative">
+<select class="w-full h-10 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary-container shadow-sm appearance-none cursor-pointer" id="filter_department_id" name="filter_department_id">
+<option value="">All Departments</option>
+<option selected="" value="CSE">Computer Science & Engineering</option>
+<option value="EEE">Electrical & Electronic Engg</option>
+<option value="BBA">Business Administration</option>
+<option value="LAW">Law</option>
+<option value="ENG">English</option>
+<option value="PHARM">Pharmacy</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline text-[18px] pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Course Code Filter -->
+<div class="flex flex-col">
+<label class="font-label-lg text-label-lg text-on-surface mb-1" for="filter_course_id">
+          Course Code
+        </label>
+<div class="relative">
+<select class="w-full h-10 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary-container shadow-sm appearance-none cursor-pointer" id="filter_course_id" name="filter_course_id">
+<option value="">All Courses</option>
+<option value="CSE311">CSE311 - Database Systems</option>
+<option value="CSE110">CSE110 - Programming Lang I</option>
+<option value="EEE201">EEE201 - Circuits & Electronics</option>
+<option value="BUS202">BUS202 - Principles of Mgmt</option>
+<option value="LAW105">LAW105 - Constitutional Law I</option>
+<option value="CSE221">CSE221 - Data Structures</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline text-[18px] pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Shift / Slot Filter -->
+<div class="flex flex-col">
+<label class="font-label-lg text-label-lg text-on-surface mb-1" for="filter_shift">
+          Exam Slot / Shift
+        </label>
+<div class="relative">
+<select class="w-full h-10 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary-container shadow-sm appearance-none cursor-pointer" id="filter_shift" name="filter_shift">
+<option value="">All Slots</option>
+<option value="morning">Morning Shift (09:00 - 12:00)</option>
+<option value="afternoon">Afternoon Shift (02:00 - 05:00)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline text-[18px] pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Status Filter -->
+<div class="flex flex-col">
+<label class="font-label-lg text-label-lg text-on-surface mb-1" for="filter_status">
+          Readiness Status
+        </label>
+<div class="relative">
+<select class="w-full h-10 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary-container shadow-sm appearance-none cursor-pointer" id="filter_status" name="filter_status">
+<option value="">All Statuses</option>
+<option value="confirmed">Confirmed</option>
+<option value="room_pending">Needs Room Allocation</option>
+<option value="staff_pending">Staffing Incomplete</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline text-[18px] pointer-events-none">expand_more</span>
+</div>
+</div>
+</div>
+</form>
+<!-- VIEW 1: Main Timetable Data Table Module -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm mb-space-xl overflow-hidden transition-opacity duration-300" id="section-table-view">
+<!-- Table Header Info Bar -->
+<div class="p-space-lg flex flex-col sm:flex-row sm:items-center justify-between gap-space-md bg-surface-container-low/40">
+<div>
+<h2 class="font-title-md text-title-md text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">view_list</span>
+          Master Exam Roster Matrix
+        </h2>
+<p class="font-body-sm text-body-sm text-secondary">Displaying 6 of 48 total synchronized examination sittings</p>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Quick Status:</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> 4 Confirmed
+        </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span> 1 Staffing Alert
+        </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> 1 Action Req
+        </span>
+</div>
+</div>
+<!-- Data Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-md text-body-md border-collapse">
+<thead class="bg-surface-container text-secondary font-label-sm text-label-sm uppercase tracking-wider">
+<tr>
+<th class="py-3 px-4 font-semibold" scope="col">Date & Day</th>
+<th class="py-3 px-4 font-semibold" scope="col">Time Slot</th>
+<th class="py-3 px-4 font-semibold" scope="col">Course & Dept</th>
+<th class="py-3 px-4 font-semibold" scope="col">Exam Title</th>
+<th class="py-3 px-4 font-semibold text-center" scope="col">Students</th>
+<th class="py-3 px-4 font-semibold" scope="col">Allocated Rooms</th>
+<th class="py-3 px-4 font-semibold" scope="col">Invigilator Status</th>
+<th class="py-3 px-4 font-semibold text-center" scope="col">Status</th>
+<th class="py-3 px-4 font-semibold text-right" scope="col">Actions</th>
+</tr>
+</thead>
+<tbody class="text-on-surface">
+<!-- Row 1: CSE311 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-3.5 px-4 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface">18 May 2025</span>
+<span class="inline-block px-1.5 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-secondary w-max">Sunday</span>
+</div>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-code text-code font-bold text-on-surface">10:00 AM - 12:00 PM</span>
+<span class="font-body-sm text-body-sm text-secondary">Morning Slot (2.0 hrs)</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-title-sm text-title-sm text-primary">CSE311</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm">CSE</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate max-w-xs">Database Management Systems</span>
+</div>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap">
+<span class="font-body-md text-body-md text-on-surface">Midterm Examination</span>
+</td>
+<td class="py-3.5 px-4 text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-low text-on-surface font-code text-code font-semibold">
+<span class="material-symbols-outlined text-[14px] text-secondary">group</span>
+                64
+              </span>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-wrap gap-1">
+<span class="px-2 py-0.5 rounded bg-surface-container font-code text-code text-on-surface">Room 402 (Bldg A)</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-code text-code text-on-surface">Room 403 (Bldg A)</span>
+</div>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap">
+<div class="flex flex-col">
+<div class="flex items-center gap-1 text-primary font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+                  2 / 2 Filled
+                </div>
+<span class="font-body-sm text-body-sm text-secondary truncate max-w-[200px]" title="Dr. Tariqul Islam, Ms. Nusrat">Dr. Tariqul Islam, Ms. Nusrat</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                Confirmed
+              </span>
+</td>
+<td class="py-3.5 px-4 text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md transition-colors" title="View Hall Seating Slip" type="button">
+                  Slip
+                </button>
+<button class="p-1.5 rounded-lg text-secondary hover:bg-surface-container-high hover:text-on-surface transition-colors" title="Edit Exam Allocation" type="button">
+<span class="material-symbols-outlined text-[18px]">edit_calendar</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: EEE201 -->
+<tr class="hover:bg-surface-container-low transition-colors group bg-surface-container-low/20">
+<td class="py-3.5 px-4 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface">19 May 2025</span>
+<span class="inline-block px-1.5 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-secondary w-max">Monday</span>
+</div>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-code text-code font-bold text-on-surface">02:00 PM - 04:00 PM</span>
+<span class="font-body-sm text-body-sm text-secondary">Afternoon Slot (2.0 hrs)</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-title-sm text-title-sm text-primary">EEE201</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm">EEE</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate max-w-xs">Circuits & Electronics</span>
+</div>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap">
+<span class="font-body-md text-body-md text-on-surface">Midterm Examination</span>
+</td>
+<td class="py-3.5 px-4 text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-low text-on-surface font-code text-code font-semibold">
+<span class="material-symbols-outlined text-[14px] text-secondary">group</span>
+                85
+              </span>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-wrap gap-1">
+<span class="px-2 py-0.5 rounded bg-surface-container font-code text-code text-on-surface">Room 301 (Bldg B)</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-code text-code text-on-surface">Room 302 (Bldg B)</span>
+</div>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap">
+<div class="flex flex-col">
+<div class="flex items-center gap-1 text-tertiary font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[16px]">pending</span>
+                  2 / 3 (1 Needed)
+                </div>
+<span class="font-body-sm text-body-sm text-secondary truncate max-w-[200px]" title="Dr. S. Rahman, Engr. Kabir">Dr. S. Rahman, Engr. Kabir</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                Staffing Alert
+              </span>
+</td>
+<td class="py-3.5 px-4 text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1 rounded-lg bg-tertiary text-on-tertiary hover:bg-tertiary-container font-label-md text-label-md transition-colors" type="button">
+                  Assign Proctor
+                </button>
+<button class="p-1.5 rounded-lg text-secondary hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">edit_calendar</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: CSE221 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-3.5 px-4 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface">20 May 2025</span>
+<span class="inline-block px-1.5 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-secondary w-max">Tuesday</span>
+</div>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-code text-code font-bold text-on-surface">10:00 AM - 12:00 PM</span>
+<span class="font-body-sm text-body-sm text-secondary">Morning Slot (2.0 hrs)</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-title-sm text-title-sm text-primary">CSE221</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm">CSE</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate max-w-xs">Data Structures & Algorithms</span>
+</div>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap">
+<span class="font-body-md text-body-md text-on-surface">Midterm Examination</span>
+</td>
+<td class="py-3.5 px-4 text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-low text-on-surface font-code text-code font-semibold">
+<span class="material-symbols-outlined text-[14px] text-secondary">group</span>
+                95
+              </span>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-wrap gap-1">
+<span class="px-2 py-0.5 rounded bg-surface-container font-code text-code text-on-surface font-semibold">Hall 101 (Main Aud)</span>
+</div>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap">
+<div class="flex flex-col">
+<div class="flex items-center gap-1 text-primary font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+                  3 / 3 Complete
+                </div>
+<span class="font-body-sm text-body-sm text-secondary truncate max-w-[200px]" title="Prof. Anisul, Ms. Shamima, Mr. Farhan">Prof. Anisul, Ms. Shamima +1</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                Confirmed
+              </span>
+</td>
+<td class="py-3.5 px-4 text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md transition-colors" type="button">
+                  Slip
+                </button>
+<button class="p-1.5 rounded-lg text-secondary hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">edit_calendar</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: BUS202 -->
+<tr class="hover:bg-surface-container-low transition-colors group bg-error-container/10">
+<td class="py-3.5 px-4 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface">21 May 2025</span>
+<span class="inline-block px-1.5 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-secondary w-max">Wednesday</span>
+</div>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-code text-code font-bold text-on-surface">10:00 AM - 12:00 PM</span>
+<span class="font-body-sm text-body-sm text-secondary">Morning Slot (2.0 hrs)</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-title-sm text-title-sm text-primary">BUS202</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm">BBA</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate max-w-xs">Principles of Management</span>
+</div>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap">
+<span class="font-body-md text-body-md text-on-surface">Midterm Examination</span>
+</td>
+<td class="py-3.5 px-4 text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-code text-code font-semibold">
+<span class="material-symbols-outlined text-[14px]">group</span>
+                110
+              </span>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-wrap gap-1">
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-code text-code">Room UB-402 (Unverified)</span>
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-code text-code">UB-403</span>
+</div>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap">
+<div class="flex flex-col">
+<div class="flex items-center gap-1 text-error font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[16px]">error</span>
+                  0 / 4 (Critical)
+                </div>
+<span class="font-body-sm text-body-sm text-error">Rooms & Staff Pending</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                Action Required
+              </span>
+</td>
+<td class="py-3.5 px-4 text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1 rounded-lg bg-error text-on-error hover:bg-error/90 font-label-md text-label-md transition-colors shadow-sm" type="button">
+                  Resolve Hall
+                </button>
+<button class="p-1.5 rounded-lg text-secondary hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">edit_calendar</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: LAW105 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-3.5 px-4 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface">22 May 2025</span>
+<span class="inline-block px-1.5 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-secondary w-max">Thursday</span>
+</div>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-code text-code font-bold text-on-surface">02:00 PM - 04:00 PM</span>
+<span class="font-body-sm text-body-sm text-secondary">Afternoon Slot (2.0 hrs)</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-title-sm text-title-sm text-primary">LAW105</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm">LAW</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate max-w-xs">Constitutional Law I</span>
+</div>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap">
+<span class="font-body-md text-body-md text-on-surface">Midterm Examination</span>
+</td>
+<td class="py-3.5 px-4 text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-low text-on-surface font-code text-code font-semibold">
+<span class="material-symbols-outlined text-[14px] text-secondary">group</span>
+                45
+              </span>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-wrap gap-1">
+<span class="px-2 py-0.5 rounded bg-surface-container font-code text-code text-on-surface">Room 504 (Bldg C)</span>
+</div>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap">
+<div class="flex flex-col">
+<div class="flex items-center gap-1 text-primary font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+                  2 / 2 Complete
+                </div>
+<span class="font-body-sm text-body-sm text-secondary truncate max-w-[200px]" title="Barrister Chowdhury, Ms. Tania">Barrister Chowdhury, Ms. Tania</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                Confirmed
+              </span>
+</td>
+<td class="py-3.5 px-4 text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md transition-colors" type="button">
+                  Slip
+                </button>
+<button class="p-1.5 rounded-lg text-secondary hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">edit_calendar</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6: CSE110 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-3.5 px-4 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface">24 May 2025</span>
+<span class="inline-block px-1.5 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-secondary w-max">Saturday</span>
+</div>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-code text-code font-bold text-on-surface">09:00 AM - 11:00 AM</span>
+<span class="font-body-sm text-body-sm text-secondary">Morning Slot (2.0 hrs)</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-title-sm text-title-sm text-primary">CSE110</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm">CSE</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate max-w-xs">Programming Language I</span>
+</div>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap">
+<span class="font-body-md text-body-md text-on-surface">Midterm Examination</span>
+</td>
+<td class="py-3.5 px-4 text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-low text-on-surface font-code text-code font-semibold">
+<span class="material-symbols-outlined text-[14px] text-secondary">group</span>
+                120
+              </span>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-wrap gap-1">
+<span class="px-2 py-0.5 rounded bg-surface-container font-code text-code text-on-surface">Hall 101</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-code text-code text-on-surface">Room 402</span>
+</div>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap">
+<div class="flex flex-col">
+<div class="flex items-center gap-1 text-primary font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+                  4 / 4 Complete
+                </div>
+<span class="font-body-sm text-body-sm text-secondary truncate max-w-[200px]" title="Dr. S. K. Roy, Ms. Farzana, Mr. Hasan, Ms. Eva">Dr. Roy, Ms. Farzana +2</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                Confirmed
+              </span>
+</td>
+<td class="py-3.5 px-4 text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md transition-colors" type="button">
+                  Slip
+                </button>
+<button class="p-1.5 rounded-lg text-secondary hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">edit_calendar</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination and Registry Metadata Strip -->
+<div class="p-space-md bg-surface-container-low/60 flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm font-body-sm text-body-sm text-secondary">
+<span>Showing records <strong>1 - 6</strong> of <strong>48</strong></span>
+<span>•</span>
+<span>Page 1 of 8</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1.5 rounded-lg bg-surface-container-low text-outline cursor-not-allowed" disabled="" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-primary text-on-primary font-label-md text-label-md" type="button">1</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md" type="button">2</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md" type="button">3</button>
+<span class="px-1 text-secondary">...</span>
+<button class="w-8 h-8 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md" type="button">8</button>
+<button class="p-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- VIEW 2: Interactive Calendar Preview Drawer / Section -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg mb-space-xl" id="section-calendar-view">
+<div class="flex flex-col md:flex-row md:items-center justify-between pb-space-md mb-space-lg gap-space-md bg-surface-container-low px-space-md py-space-sm rounded-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">calendar_view_week</span>
+</div>
+<div>
+<h2 class="font-title-md text-title-md text-on-surface">Weekly Synchronized Examination Grid</h2>
+<p class="font-body-sm text-body-sm text-secondary">Seven-day timeline across Morning (09:00 - 12:00) and Afternoon (14:00 - 17:00) sessions</p>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-3 font-label-sm text-label-sm">
+<span class="flex items-center gap-1.5 text-on-surface"><span class="w-2.5 h-2.5 rounded-sm bg-primary"></span> Confirmed</span>
+<span class="flex items-center gap-1.5 text-on-surface"><span class="w-2.5 h-2.5 rounded-sm bg-tertiary"></span> Staff Alert</span>
+<span class="flex items-center gap-1.5 text-on-surface"><span class="w-2.5 h-2.5 rounded-sm bg-error"></span> Unassigned</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface" title="Previous Week" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<span class="font-label-md text-label-md px-2 text-on-surface">May 18 - May 24, 2025</span>
+<button class="p-1 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface" title="Next Week" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- 7-Day Academic Matrix Grid -->
+<div class="overflow-x-auto">
+<div class="min-w-[960px]">
+<!-- Days Header Row -->
+<div class="grid grid-cols-8 gap-2 mb-2 text-center">
+<div class="p-2 font-label-sm text-label-sm text-secondary uppercase bg-surface-container-low rounded-lg flex items-center justify-center">
+            Shift
+          </div>
+<div class="p-2 bg-surface-container rounded-lg">
+<span class="block font-title-sm text-title-sm text-on-surface">Sun, 18 May</span>
+<span class="font-label-sm text-label-sm text-secondary">Day 01</span>
+</div>
+<div class="p-2 bg-surface-container rounded-lg">
+<span class="block font-title-sm text-title-sm text-on-surface">Mon, 19 May</span>
+<span class="font-label-sm text-label-sm text-secondary">Day 02</span>
+</div>
+<div class="p-2 bg-surface-container rounded-lg">
+<span class="block font-title-sm text-title-sm text-on-surface">Tue, 20 May</span>
+<span class="font-label-sm text-label-sm text-secondary">Day 03</span>
+</div>
+<div class="p-2 bg-surface-container rounded-lg">
+<span class="block font-title-sm text-title-sm text-on-surface">Wed, 21 May</span>
+<span class="font-label-sm text-label-sm text-secondary">Day 04</span>
+</div>
+<div class="p-2 bg-surface-container rounded-lg">
+<span class="block font-title-sm text-title-sm text-on-surface">Thu, 22 May</span>
+<span class="font-label-sm text-label-sm text-secondary">Day 05</span>
+</div>
+<div class="p-2 bg-surface-container-low rounded-lg opacity-60">
+<span class="block font-title-sm text-title-sm text-on-surface">Fri, 23 May</span>
+<span class="font-label-sm text-label-sm text-secondary">Jummah Recess</span>
+</div>
+<div class="p-2 bg-surface-container rounded-lg">
+<span class="block font-title-sm text-title-sm text-on-surface">Sat, 24 May</span>
+<span class="font-label-sm text-label-sm text-secondary">Day 06</span>
+</div>
+</div>
+<!-- Shift 1: Morning (09:00 - 12:00) -->
+<div class="grid grid-cols-8 gap-2 mb-2 items-stretch">
+<div class="bg-surface-container-low p-2 rounded-lg flex flex-col justify-center items-center text-center">
+<span class="material-symbols-outlined text-[18px] text-primary mb-1">wb_sunny</span>
+<span class="font-label-sm text-label-sm uppercase font-bold text-on-surface">Morning</span>
+<span class="font-code text-code text-secondary">09:00-12:00</span>
+</div>
+<!-- Sun Morning: CSE311 -->
+<div class="bg-surface-container-lowest p-2.5 rounded-lg shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="px-1.5 py-0.5 rounded bg-primary text-on-primary font-label-sm text-label-sm font-bold">CSE311</span>
+<span class="text-primary font-code text-code">10:00 AM</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface line-clamp-1">Database Mgmt</p>
+<p class="font-body-sm text-body-sm text-secondary">R-402, 403 (64 std)</p>
+</div>
+<div class="mt-2 pt-1 flex items-center justify-between text-secondary font-label-sm text-label-sm">
+<span class="text-primary flex items-center gap-0.5"><span class="material-symbols-outlined text-[14px]">check</span> 2/2 Staff</span>
+<span class="font-code">CSE</span>
+</div>
+</div>
+<!-- Mon Morning: Empty Slot -->
+<div class="bg-surface-container-low/30 p-2.5 rounded-lg flex items-center justify-center">
+<span class="font-label-sm text-label-sm text-outline-variant uppercase tracking-wider">No Sitting</span>
+</div>
+<!-- Tue Morning: CSE221 -->
+<div class="bg-surface-container-lowest p-2.5 rounded-lg shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="px-1.5 py-0.5 rounded bg-primary text-on-primary font-label-sm text-label-sm font-bold">CSE221</span>
+<span class="text-primary font-code text-code">10:00 AM</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface line-clamp-1">Data Structures</p>
+<p class="font-body-sm text-body-sm text-secondary">Auditorium 101 (95 std)</p>
+</div>
+<div class="mt-2 pt-1 flex items-center justify-between text-secondary font-label-sm text-label-sm">
+<span class="text-primary flex items-center gap-0.5"><span class="material-symbols-outlined text-[14px]">check</span> 3/3 Staff</span>
+<span class="font-code">CSE</span>
+</div>
+</div>
+<!-- Wed Morning: BUS202 Alert -->
+<div class="bg-error-container/20 p-2.5 rounded-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="px-1.5 py-0.5 rounded bg-error text-on-error font-label-sm text-label-sm font-bold">BUS202</span>
+<span class="text-error font-code text-code font-bold">10:00 AM</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface line-clamp-1">Principles of Mgmt</p>
+<p class="font-body-sm text-body-sm text-error">UB-402, 403 (110 std)</p>
+</div>
+<div class="mt-2 pt-1 flex items-center justify-between text-error font-label-sm text-label-sm">
+<span class="flex items-center gap-0.5 font-bold"><span class="material-symbols-outlined text-[14px]">warning</span> 0/4 Staff</span>
+<span class="font-code font-bold">BBA</span>
+</div>
+</div>
+<!-- Thu Morning: Empty -->
+<div class="bg-surface-container-low/30 p-2.5 rounded-lg flex items-center justify-center">
+<span class="font-label-sm text-label-sm text-outline-variant uppercase tracking-wider">No Sitting</span>
+</div>
+<!-- Fri Morning: Recess -->
+<div class="bg-surface-container-low/50 p-2.5 rounded-lg flex items-center justify-center text-center">
+<span class="font-label-sm text-label-sm text-outline">University Recess</span>
+</div>
+<!-- Sat Morning: CSE110 -->
+<div class="bg-surface-container-lowest p-2.5 rounded-lg shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="px-1.5 py-0.5 rounded bg-primary text-on-primary font-label-sm text-label-sm font-bold">CSE110</span>
+<span class="text-primary font-code text-code">09:00 AM</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface line-clamp-1">Prog Language I</p>
+<p class="font-body-sm text-body-sm text-secondary">Hall 101, R-402 (120 std)</p>
+</div>
+<div class="mt-2 pt-1 flex items-center justify-between text-secondary font-label-sm text-label-sm">
+<span class="text-primary flex items-center gap-0.5"><span class="material-symbols-outlined text-[14px]">check</span> 4/4 Staff</span>
+<span class="font-code">CSE</span>
+</div>
+</div>
+</div>
+<!-- Shift 2: Afternoon (14:00 - 17:00) -->
+<div class="grid grid-cols-8 gap-2 items-stretch">
+<div class="bg-surface-container-low p-2 rounded-lg flex flex-col justify-center items-center text-center">
+<span class="material-symbols-outlined text-[18px] text-tertiary mb-1">wb_twilight</span>
+<span class="font-label-sm text-label-sm uppercase font-bold text-on-surface">Afternoon</span>
+<span class="font-code text-code text-secondary">14:00-17:00</span>
+</div>
+<!-- Sun Afternoon: Empty -->
+<div class="bg-surface-container-low/30 p-2.5 rounded-lg flex items-center justify-center">
+<span class="font-label-sm text-label-sm text-outline-variant uppercase tracking-wider">No Sitting</span>
+</div>
+<!-- Mon Afternoon: EEE201 -->
+<div class="bg-surface-container-lowest p-2.5 rounded-lg shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="px-1.5 py-0.5 rounded bg-tertiary text-on-tertiary font-label-sm text-label-sm font-bold">EEE201</span>
+<span class="text-tertiary font-code text-code font-bold">02:00 PM</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface line-clamp-1">Circuits & Electronics</p>
+<p class="font-body-sm text-body-sm text-secondary">R-301, 302 (85 std)</p>
+</div>
+<div class="mt-2 pt-1 flex items-center justify-between text-secondary font-label-sm text-label-sm">
+<span class="text-tertiary flex items-center gap-0.5 font-bold"><span class="material-symbols-outlined text-[14px]">pending</span> 2/3 Staff</span>
+<span class="font-code">EEE</span>
+</div>
+</div>
+<!-- Tue Afternoon: Empty -->
+<div class="bg-surface-container-low/30 p-2.5 rounded-lg flex items-center justify-center">
+<span class="font-label-sm text-label-sm text-outline-variant uppercase tracking-wider">No Sitting</span>
+</div>
+<!-- Wed Afternoon: Empty -->
+<div class="bg-surface-container-low/30 p-2.5 rounded-lg flex items-center justify-center">
+<span class="font-label-sm text-label-sm text-outline-variant uppercase tracking-wider">No Sitting</span>
+</div>
+<!-- Thu Afternoon: LAW105 -->
+<div class="bg-surface-container-lowest p-2.5 rounded-lg shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="px-1.5 py-0.5 rounded bg-primary text-on-primary font-label-sm text-label-sm font-bold">LAW105</span>
+<span class="text-primary font-code text-code">02:00 PM</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface line-clamp-1">Constitutional Law I</p>
+<p class="font-body-sm text-body-sm text-secondary">Room 504 Bldg C (45 std)</p>
+</div>
+<div class="mt-2 pt-1 flex items-center justify-between text-secondary font-label-sm text-label-sm">
+<span class="text-primary flex items-center gap-0.5"><span class="material-symbols-outlined text-[14px]">check</span> 2/2 Staff</span>
+<span class="font-code">LAW</span>
+</div>
+</div>
+<!-- Fri Afternoon: Recess -->
+<div class="bg-surface-container-low/50 p-2.5 rounded-lg flex items-center justify-center text-center">
+<span class="font-label-sm text-label-sm text-outline">University Recess</span>
+</div>
+<!-- Sat Afternoon: Empty -->
+<div class="bg-surface-container-low/30 p-2.5 rounded-lg flex items-center justify-center">
+<span class="font-label-sm text-label-sm text-outline-variant uppercase tracking-wider">No Sitting</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Operational Ledger / Database Mapping Architecture Footer Panel -->
+<div class="bg-inverse-surface text-inverse-on-surface rounded-xl p-space-lg shadow-md mb-space-lg">
+<div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high/10 flex items-center justify-center text-primary-fixed">
+<span class="material-symbols-outlined text-[24px]">database</span>
+</div>
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="font-title-sm text-title-sm text-inverse-on-surface">Data Engine Relational Binding</span>
+<span class="px-2 py-0.5 rounded bg-primary font-code text-code text-on-primary">PostgreSQL / InnoDB</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline-variant">
+            Target schema entity <code class="text-secondary-fixed font-code font-bold">exam</code> inner joined with 
+            <code class="text-secondary-fixed font-code font-bold">exam_room</code>, 
+            <code class="text-secondary-fixed font-code font-bold">room</code>, and 
+            <code class="text-secondary-fixed font-code font-bold">invigilation_assignment</code>.
+          </p>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm font-code text-code">
+<span class="px-2.5 py-1.5 rounded-lg bg-surface-container-high/10 text-outline-variant">
+          URI Query: <span class="text-primary-fixed">?dept=CSE&status=all&slot=morning</span>
+</span>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md hover:bg-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+          Re-index Schema
+        </button>
+</div>
+</div>
+</div>
+<!-- View Toggle Client-side Script -->
+<script>
+    function switchView(mode) {
+      const tableBtn = document.getElementById('toggle-table-btn');
+      const calendarBtn = document.getElementById('toggle-calendar-btn');
+      const tableView = document.getElementById('section-table-view');
+      const calendarView = document.getElementById('section-calendar-view');
+
+      if (mode === 'table') {
+        // Table Active state
+        tableBtn.className = 'inline-flex items-center gap-1.5 px-space-md py-1.5 rounded-lg bg-surface-container-lowest text-primary font-label-lg text-label-lg shadow-sm transition-all duration-200';
+        calendarBtn.className = 'inline-flex items-center gap-1.5 px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-all duration-200';
+        
+        tableView.classList.remove('hidden');
+        calendarView.classList.remove('hidden');
+        tableView.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        // Calendar Active state
+        calendarBtn.className = 'inline-flex items-center gap-1.5 px-space-md py-1.5 rounded-lg bg-surface-container-lowest text-primary font-label-lg text-label-lg shadow-sm transition-all duration-200';
+        tableBtn.className = 'inline-flex items-center gap-1.5 px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-all duration-200';
+        
+        calendarView.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    function resetFilters() {
+      const form = document.getElementById('timetable-filter-form');
+      if (form) {
+        form.reset();
+        document.getElementById('filter_department_id').value = '';
+        document.getElementById('filter_course_id').value = '';
+        document.getElementById('filter_shift').value = '';
+        document.getElementById('filter_status').value = '';
+        document.getElementById('filter_date').value = 'May 18, 2025 - May 25, 2025';
+      }
+    }
+  </script>
+</div></main></div></body></html>

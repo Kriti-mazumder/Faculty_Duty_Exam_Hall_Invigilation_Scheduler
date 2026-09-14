@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-low":"#eff4ff","secondary-fixed":"#dae2fd","primary-fixed":"#dbe1ff","surface-tint":"#0053db","inverse-surface":"#213145","on-tertiary-fixed-variant":"#3323cc","secondary":"#565e74","surface-dim":"#cbdbf5","on-tertiary-fixed":"#0f0069","outline-variant":"#c3c6d7","primary-fixed-dim":"#b4c5ff","surface-container-high":"#dce9ff","error":"#ba1a1a","on-secondary-fixed":"#131b2e","on-secondary":"#ffffff","on-surface":"#0b1c30","on-secondary-container":"#5c647a","on-tertiary":"#ffffff","inverse-on-surface":"#eaf1ff","surface-container-highest":"#d3e4fe","secondary-fixed-dim":"#bec6e0","on-background":"#0b1c30","surface-bright":"#f8f9ff","on-primary-fixed-variant":"#003ea8","primary":"#004ac6","on-error":"#ffffff","on-error-container":"#93000a","inverse-primary":"#b4c5ff","tertiary-container":"#5d55f3","background":"#f8f9ff","surface-variant":"#d3e4fe","outline":"#737686","primary-container":"#2563eb","tertiary-fixed":"#e2dfff","tertiary":"#4338d9","on-tertiary-container":"#f2eeff","on-primary-container":"#eeefff","on-surface-variant":"#434655","surface-container-lowest":"#ffffff","tertiary-fixed-dim":"#c3c0ff","on-secondary-fixed-variant":"#3f465c","surface":"#f8f9ff","on-primary-fixed":"#00174b","error-container":"#ffdad6","on-primary":"#ffffff","secondary-container":"#dae2fd","surface-container":"#e5eeff"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"gutter":"1.5rem","space-sm":"0.5rem","margin":"2rem","space-md":"1rem","gutter-mobile":"1rem","space-xl":"2rem","space-lg":"1.5rem","space-xs":"0.25rem","margin-mobile":"1rem"},fontFamily:{"code":["JetBrains Mono"],"label-sm":["Inter"],"display":["Inter"],"headline-sm":["Inter"],"title-sm":["Inter"],"headline-lg-mobile":["Inter"],"body-sm":["Inter"],"body-lg":["Inter"],"label-md":["Inter"],"label-lg":["Inter"],"headline-md":["Inter"],"body-md":["Inter"],"headline-lg":["Inter"],"title-md":["Inter"]},fontSize:{"code":["12px",{"lineHeight":"16px","fontWeight":"500"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"700"}],"display":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["18px",{"lineHeight":"24px","fontWeight":"600"}],"title-sm":["14px",{"lineHeight":"20px","fontWeight":"600"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.025em","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","fontWeight":"500"}],"headline-md":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"headline-lg":["30px",{"lineHeight":"38px","letterSpacing":"-0.015em","fontWeight":"600"}],"title-md":["16px",{"lineHeight":"22px","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-inverse-surface text-inverse-on-surface z-50 flex flex-col shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-lg flex items-center gap-space-sm bg-inverse-surface"><div class="w-8 h-8 rounded-xl bg-primary flex items-center justify-center text-on-primary font-headline-sm text-headline-sm"><span class="material-symbols-outlined text-[20px]">school</span></div><div class="flex flex-col"><span class="font-title-sm text-title-sm text-inverse-on-surface tracking-tight uppercase">Premier University</span><span class="font-label-sm text-label-sm text-outline-variant font-normal">Exam Control Division</span></div></div><div class="flex-1 overflow-y-auto px-space-md py-space-md space-y-space-lg"><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline-variant">Admin & Controller Tools</div><nav class="space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-label-lg rounded-xl"><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="admin-dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span>Admin Dashboard</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="faculty-management" href="#"><span class="material-symbols-outlined text-[20px]">groups</span>Faculty Management</a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-2.5 transition-colors bg-primary-container text-on-primary-container font-label-lg rounded-xl" data-path="department-management" href="#"><span class="material-symbols-outlined text-[20px]">corporate_fare</span>Department Management</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="course-management" href="#"><span class="material-symbols-outlined text-[20px]">menu_book</span>Course Management</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="exam-management" href="#"><span class="material-symbols-outlined text-[20px]">assignment</span>Exam Management</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="timetable-and-rooms" href="#"><span class="material-symbols-outlined text-[20px]">meeting_room</span>Timetable & Rooms</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="invigilation-assignments" href="#"><span class="material-symbols-outlined text-[20px]">badge</span>Invigilation Assignments</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="conflict-center" href="#"><span class="material-symbols-outlined text-[20px]">warning</span>Conflict Center</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="reports-and-documents" href="#"><span class="material-symbols-outlined text-[20px]">description</span>Reports & Documents</a></nav></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline-variant">Faculty Portal (Preview)</div><nav class="space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-label-lg rounded-xl"><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="faculty-dashboard" href="#"><span class="material-symbols-outlined text-[20px]">person</span>Faculty Dashboard</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="my-assigned-duties" href="#"><span class="material-symbols-outlined text-[20px]">event_available</span>My Assigned Duties</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-high/10 hover:text-inverse-on-surface transition-colors" data-path="duty-preferences" href="#"><span class="material-symbols-outlined text-[20px]">tune</span>Duty Preferences</a></nav></div></div><div class="p-space-md bg-inverse-surface shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-sm p-space-sm rounded-xl bg-surface-container-high/10"><span class="material-symbols-outlined text-outline-variant text-[20px]">security</span><div class="flex flex-col"><span class="font-label-md text-label-md text-inverse-on-surface">Session Secured</span><span class="font-label-sm text-label-sm text-outline-variant">Academic Year 2024-25</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-lg flex-1 max-w-2xl"><span class="font-title-sm text-title-sm text-on-surface whitespace-nowrap">Office of the Controller of Examinations</span><div class="relative w-full max-w-md"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span><input class="w-full h-10 pl-9 pr-space-md bg-surface-container-lowest font-body-sm text-body-sm text-on-surface placeholder:text-outline rounded-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] focus:outline-none focus:ring-2 focus:ring-primary-container" placeholder="Search faculty, courses, departments..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center justify-center w-10 h-10 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface cursor-pointer transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></div><div class="flex items-center gap-space-sm pl-space-sm"><div class="text-right hidden sm:flex flex-col"><span class="font-label-md text-label-md text-on-surface">Admin Controller</span><span class="font-label-sm text-label-sm text-on-surface-variant">Office of Exam Control</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface px-space-lg py-space-lg"><div class="flex flex-col w-full">
+<div class="flex flex-col gap-y-space-lg w-full max-w-[1600px] mx-auto">
+<!-- Breadcrumb & Top Bar Section -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<nav class="flex items-center gap-2 font-label-sm text-label-sm text-secondary">
+<a class="hover:text-primary transition-colors" href="#">Home</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span>Academic Structure</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-bold">Department Management</span>
+</nav>
+<div class="flex items-center gap-space-sm">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Academic Department Directory</h1>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-code text-code">DB_VERSION: 2.4.1</span>
+</div>
+</div>
+<!-- Action Toolbar Triggering Modal & Export -->
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="h-10 px-space-md rounded-xl bg-surface-container-lowest text-on-surface hover:bg-surface-container-high transition-colors shadow-sm flex items-center gap-space-xs font-label-lg text-label-lg" onclick="exportData()" type="button">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+          Export Directory
+        </button>
+<button class="h-10 px-space-md rounded-xl bg-primary-container text-on-primary font-label-lg text-label-lg hover:bg-primary transition-colors shadow-md flex items-center gap-space-xs" onclick="openModal('add')" type="button">
+<span class="material-symbols-outlined text-[20px]">add</span>
+          + Add New Department
+        </button>
+</div>
+</div>
+<!-- Top Metric / KPI Strip -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- KPI 1 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex items-start justify-between relative overflow-hidden">
+<div class="flex flex-col gap-space-xs z-10">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Total Academic Departments</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display text-display text-on-surface font-bold">8</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Registered</span>
+</div>
+<div class="flex items-center gap-1 font-body-sm text-body-sm text-primary">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>100% Accredited</span>
+</div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[26px]">corporate_fare</span>
+</div>
+<div class="absolute -right-3 -bottom-3 w-16 h-16 rounded-full bg-primary/5 pointer-events-none"></div>
+</div>
+<!-- KPI 2 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex items-start justify-between relative overflow-hidden">
+<div class="flex flex-col gap-space-xs z-10">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Total Active Faculty</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display text-display text-on-surface font-bold">48</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Members</span>
+</div>
+<div class="flex items-center gap-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-tertiary">badge</span>
+<span>Professors & Lecturers</span>
+</div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[26px]">groups</span>
+</div>
+<div class="absolute -right-3 -bottom-3 w-16 h-16 rounded-full bg-primary/5 pointer-events-none"></div>
+</div>
+<!-- KPI 3 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex items-start justify-between relative overflow-hidden">
+<div class="flex flex-col gap-space-xs z-10">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Registered Courses</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display text-display text-on-surface font-bold">114</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Curricula</span>
+</div>
+<div class="flex items-center gap-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">menu_book</span>
+<span>Course Offerings Active</span>
+</div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[26px]">library_books</span>
+</div>
+<div class="absolute -right-3 -bottom-3 w-16 h-16 rounded-full bg-primary/5 pointer-events-none"></div>
+</div>
+<!-- KPI 4 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex items-start justify-between relative overflow-hidden">
+<div class="flex flex-col gap-space-xs z-10">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Exam Center Distribution</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display text-display text-on-surface font-bold">4</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Divisions</span>
+</div>
+<div class="flex items-center gap-1 font-body-sm text-body-sm text-secondary">
+<span class="material-symbols-outlined text-[16px]">domain</span>
+<span>Academic Faculties Base</span>
+</div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[26px]">apartment</span>
+</div>
+<div class="absolute -right-3 -bottom-3 w-16 h-16 rounded-full bg-primary/5 pointer-events-none"></div>
+</div>
+</div>
+<!-- Analytical Progress Strip / Quota Balance -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-xl bg-secondary-container flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[22px]">balance</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface">Invigilation Quota Balancing Status</span>
+<span class="font-body-sm text-body-sm text-secondary">All 8 academic departments have submitted faculty availability profiles for Final Term 2024-25</span>
+</div>
+</div>
+<div class="flex items-center gap-space-lg w-full lg:w-auto">
+<div class="flex flex-col gap-1 w-full lg:w-64">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-secondary">Roster Finalization</span>
+<span class="text-primary font-bold">87.5%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="bg-primary h-full rounded-full transition-all duration-500" style="width: 87.5%;"></div>
+</div>
+</div>
+<div class="hidden xl:flex items-center gap-space-xs font-code text-code text-secondary bg-surface-container px-3 py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-[16px]">storage</span>
+<span>InnoDB utf8mb4</span>
+</div>
+</div>
+</div>
+<!-- Action & Filter Bar -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col md:flex-row items-stretch md:items-center justify-between gap-space-md">
+<div class="flex flex-col sm:flex-row items-center gap-space-md flex-1">
+<div class="relative w-full max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-secondary text-[18px]">search</span>
+<input class="w-full h-10 pl-9 pr-space-md bg-surface-container-low font-body-sm text-body-sm text-on-surface placeholder:text-secondary rounded-xl focus:outline-none focus:bg-surface-container-lowest focus:shadow-md transition-all" id="dept_search" name="dept_search" oninput="handleSearch(this.value)" placeholder="Search department name or code..." type="text"/>
+</div>
+<div class="flex items-center gap-space-xs w-full sm:w-auto">
+<span class="font-label-sm text-label-sm text-secondary uppercase whitespace-nowrap">Filter Status:</span>
+<select class="h-10 px-space-md bg-surface-container-low font-body-sm text-body-sm text-on-surface rounded-xl focus:outline-none focus:bg-surface-container-lowest focus:shadow-md cursor-pointer transition-all" id="status_filter" name="status_filter" onchange="handleFilter(this.value)">
+<option value="ALL">All Statuses</option>
+<option selected="" value="ACTIVE">Active Only</option>
+<option value="INACTIVE">Inactive Only</option>
+</select>
+</div>
+</div>
+<div class="flex items-center gap-space-xs justify-end text-secondary font-label-sm text-label-sm">
+<span>Showing</span>
+<span class="text-on-surface font-bold" id="resultsCount">6</span>
+<span>of 8 records</span>
+</div>
+</div>
+<!-- Data Table - Academic Departments -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm overflow-hidden flex flex-col">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-secondary font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-space-md px-space-lg">Dept ID</th>
+<th class="py-space-md px-space-lg">Department Name & Code</th>
+<th class="py-space-md px-space-lg">Faculty Allocation</th>
+<th class="py-space-md px-space-lg">Course Curriculum</th>
+<th class="py-space-md px-space-lg">Operational Status</th>
+<th class="py-space-md px-space-lg text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md text-on-surface" id="departmentTableBody">
+<!-- Row 1: CSE -->
+<tr class="dept-row hover:bg-surface-container-high/30 transition-colors" data-code="CSE" data-name="Computer Science & Engineering" data-status="ACTIVE">
+<td class="py-space-md px-space-lg font-code text-code text-primary font-bold">DEPT-101</td>
+<td class="py-space-md px-space-lg">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-title-sm text-title-sm font-bold text-on-surface">Computer Science & Engineering</span>
+<span class="px-2 py-0.5 rounded-lg bg-surface-container text-on-surface-variant font-code text-code">CSE</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">Lead: Dr. Tariqul Islam • Faculty of Engineering</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<span class="px-2.5 py-1 rounded-xl bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">14 Faculty</span>
+<a class="font-body-sm text-body-sm text-primary hover:underline flex items-center gap-0.5" href="#">
+                    View Faculty
+                    <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<span class="px-2.5 py-1 rounded-xl bg-surface-container text-on-surface-variant font-label-sm text-label-sm">28 Courses</span>
+<a class="font-body-sm text-body-sm text-primary hover:underline flex items-center gap-0.5" href="#">
+                    View Courses
+                    <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+                  Active
+                </span>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="p-2 rounded-lg bg-surface-container-low text-primary hover:bg-surface-container-high transition-colors" onclick="viewRoster('DEPT-101', 'Computer Science & Engineering')" title="View Invigilation Roster" type="button">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+</button>
+<button class="p-2 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container-high transition-colors" onclick="openModal('edit', 'DEPT-101', 'Department of Computer Science & Engineering', 'CSE', 'Dr. Tariqul Islam')" title="Edit Department" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-2 rounded-lg bg-error-container text-on-error-container hover:bg-error hover:text-on-error transition-colors" onclick="confirmDelete('DEPT-101', 'CSE')" title="Delete Department" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: EEE -->
+<tr class="dept-row hover:bg-surface-container-high/30 transition-colors" data-code="EEE" data-name="Electrical & Electronic Engineering" data-status="ACTIVE">
+<td class="py-space-md px-space-lg font-code text-code text-primary font-bold">DEPT-102</td>
+<td class="py-space-md px-space-lg">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-title-sm text-title-sm font-bold text-on-surface">Electrical & Electronic Engineering</span>
+<span class="px-2 py-0.5 rounded-lg bg-surface-container text-on-surface-variant font-code text-code">EEE</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">Lead: Prof. Anisur Rahman • Faculty of Engineering</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<span class="px-2.5 py-1 rounded-xl bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">10 Faculty</span>
+<a class="font-body-sm text-body-sm text-primary hover:underline flex items-center gap-0.5" href="#">
+                    View Faculty
+                    <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<span class="px-2.5 py-1 rounded-xl bg-surface-container text-on-surface-variant font-label-sm text-label-sm">22 Courses</span>
+<a class="font-body-sm text-body-sm text-primary hover:underline flex items-center gap-0.5" href="#">
+                    View Courses
+                    <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+                  Active
+                </span>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="p-2 rounded-lg bg-surface-container-low text-primary hover:bg-surface-container-high transition-colors" onclick="viewRoster('DEPT-102', 'Electrical & Electronic Engineering')" title="View Invigilation Roster" type="button">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+</button>
+<button class="p-2 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container-high transition-colors" onclick="openModal('edit', 'DEPT-102', 'Department of Electrical & Electronic Engineering', 'EEE', 'Prof. Anisur Rahman')" title="Edit Department" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-2 rounded-lg bg-error-container text-on-error-container hover:bg-error hover:text-on-error transition-colors" onclick="confirmDelete('DEPT-102', 'EEE')" title="Delete Department" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: BBA -->
+<tr class="dept-row hover:bg-surface-container-high/30 transition-colors" data-code="BBA" data-name="Business Administration" data-status="ACTIVE">
+<td class="py-space-md px-space-lg font-code text-code text-primary font-bold">DEPT-103</td>
+<td class="py-space-md px-space-lg">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-title-sm text-title-sm font-bold text-on-surface">Business Administration</span>
+<span class="px-2 py-0.5 rounded-lg bg-surface-container text-on-surface-variant font-code text-code">BBA</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">Lead: Dr. Farhana Chowdhury • Faculty of Business Studies</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<span class="px-2.5 py-1 rounded-xl bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">12 Faculty</span>
+<a class="font-body-sm text-body-sm text-primary hover:underline flex items-center gap-0.5" href="#">
+                    View Faculty
+                    <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<span class="px-2.5 py-1 rounded-xl bg-surface-container text-on-surface-variant font-label-sm text-label-sm">30 Courses</span>
+<a class="font-body-sm text-body-sm text-primary hover:underline flex items-center gap-0.5" href="#">
+                    View Courses
+                    <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+                  Active
+                </span>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="p-2 rounded-lg bg-surface-container-low text-primary hover:bg-surface-container-high transition-colors" onclick="viewRoster('DEPT-103', 'Business Administration')" title="View Invigilation Roster" type="button">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+</button>
+<button class="p-2 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container-high transition-colors" onclick="openModal('edit', 'DEPT-103', 'Department of Business Administration', 'BBA', 'Dr. Farhana Chowdhury')" title="Edit Department" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-2 rounded-lg bg-error-container text-on-error-container hover:bg-error hover:text-on-error transition-colors" onclick="confirmDelete('DEPT-103', 'BBA')" title="Delete Department" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: LAW -->
+<tr class="dept-row hover:bg-surface-container-high/30 transition-colors" data-code="LAW" data-name="Department of Law" data-status="ACTIVE">
+<td class="py-space-md px-space-lg font-code text-code text-primary font-bold">DEPT-104</td>
+<td class="py-space-md px-space-lg">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-title-sm text-title-sm font-bold text-on-surface">Department of Law</span>
+<span class="px-2 py-0.5 rounded-lg bg-surface-container text-on-surface-variant font-code text-code">LAW</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">Lead: Barrister S. K. Alam • Faculty of Law</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<span class="px-2.5 py-1 rounded-xl bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">5 Faculty</span>
+<a class="font-body-sm text-body-sm text-primary hover:underline flex items-center gap-0.5" href="#">
+                    View Faculty
+                    <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<span class="px-2.5 py-1 rounded-xl bg-surface-container text-on-surface-variant font-label-sm text-label-sm">16 Courses</span>
+<a class="font-body-sm text-body-sm text-primary hover:underline flex items-center gap-0.5" href="#">
+                    View Courses
+                    <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+                  Active
+                </span>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="p-2 rounded-lg bg-surface-container-low text-primary hover:bg-surface-container-high transition-colors" onclick="viewRoster('DEPT-104', 'Department of Law')" title="View Invigilation Roster" type="button">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+</button>
+<button class="p-2 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container-high transition-colors" onclick="openModal('edit', 'DEPT-104', 'Department of Law', 'LAW', 'Barrister S. K. Alam')" title="Edit Department" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-2 rounded-lg bg-error-container text-on-error-container hover:bg-error hover:text-on-error transition-colors" onclick="confirmDelete('DEPT-104', 'LAW')" title="Delete Department" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: ENG -->
+<tr class="dept-row hover:bg-surface-container-high/30 transition-colors" data-code="ENG" data-name="Department of English" data-status="ACTIVE">
+<td class="py-space-md px-space-lg font-code text-code text-primary font-bold">DEPT-105</td>
+<td class="py-space-md px-space-lg">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-title-sm text-title-sm font-bold text-on-surface">Department of English</span>
+<span class="px-2 py-0.5 rounded-lg bg-surface-container text-on-surface-variant font-code text-code">ENG</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">Lead: Dr. Maliha Jahan • Faculty of Arts & Social Sciences</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<span class="px-2.5 py-1 rounded-xl bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">4 Faculty</span>
+<a class="font-body-sm text-body-sm text-primary hover:underline flex items-center gap-0.5" href="#">
+                    View Faculty
+                    <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<span class="px-2.5 py-1 rounded-xl bg-surface-container text-on-surface-variant font-label-sm text-label-sm">10 Courses</span>
+<a class="font-body-sm text-body-sm text-primary hover:underline flex items-center gap-0.5" href="#">
+                    View Courses
+                    <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+                  Active
+                </span>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="p-2 rounded-lg bg-surface-container-low text-primary hover:bg-surface-container-high transition-colors" onclick="viewRoster('DEPT-105', 'Department of English')" title="View Invigilation Roster" type="button">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+</button>
+<button class="p-2 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container-high transition-colors" onclick="openModal('edit', 'DEPT-105', 'Department of English', 'ENG', 'Dr. Maliha Jahan')" title="Edit Department" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-2 rounded-lg bg-error-container text-on-error-container hover:bg-error hover:text-on-error transition-colors" onclick="confirmDelete('DEPT-105', 'ENG')" title="Delete Department" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6: PHARM -->
+<tr class="dept-row hover:bg-surface-container-high/30 transition-colors" data-code="PHARM" data-name="Department of Pharmacy" data-status="ACTIVE">
+<td class="py-space-md px-space-lg font-code text-code text-primary font-bold">DEPT-106</td>
+<td class="py-space-md px-space-lg">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-title-sm text-title-sm font-bold text-on-surface">Department of Pharmacy</span>
+<span class="px-2 py-0.5 rounded-lg bg-surface-container text-on-surface-variant font-code text-code">PHARM</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">Lead: Dr. Nasir Uddin Ahmed • Faculty of Life Sciences</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<span class="px-2.5 py-1 rounded-xl bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">3 Faculty</span>
+<a class="font-body-sm text-body-sm text-primary hover:underline flex items-center gap-0.5" href="#">
+                    View Faculty
+                    <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<span class="px-2.5 py-1 rounded-xl bg-surface-container text-on-surface-variant font-label-sm text-label-sm">8 Courses</span>
+<a class="font-body-sm text-body-sm text-primary hover:underline flex items-center gap-0.5" href="#">
+                    View Courses
+                    <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+                  Active
+                </span>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="p-2 rounded-lg bg-surface-container-low text-primary hover:bg-surface-container-high transition-colors" onclick="viewRoster('DEPT-106', 'Department of Pharmacy')" title="View Invigilation Roster" type="button">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+</button>
+<button class="p-2 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container-high transition-colors" onclick="openModal('edit', 'DEPT-106', 'Department of Pharmacy', 'PHARM', 'Dr. Nasir Uddin Ahmed')" title="Edit Department" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-2 rounded-lg bg-error-container text-on-error-container hover:bg-error hover:text-on-error transition-colors" onclick="confirmDelete('DEPT-106', 'PHARM')" title="Delete Department" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- DBMS Architectural Schema Indicator Footer -->
+<div class="px-space-lg py-space-sm bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm font-code text-code text-secondary">
+<span class="material-symbols-outlined text-[16px] text-primary">schema</span>
+<span>MySQL DBMS Relational Constraint: <strong class="text-on-surface">Primary Key: department_id</strong> | Foreign references mapped in <strong class="text-on-surface">FACULTY.dept_id</strong>, <strong class="text-on-surface">COURSE.dept_id</strong> tables (ON DELETE RESTRICT).</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">Premier Uni SIS-Sync: Active</span>
+</div>
+</div>
+<!-- Faculty Roster View Sheet / Micro Inspector Section -->
+<div class="hidden p-space-lg rounded-xl bg-surface-container-lowest shadow-md transition-all" id="quickRosterPanel">
+<div class="flex items-center justify-between pb-space-sm mb-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[24px]">event_seat</span>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold" id="rosterTitle">Department Invigilation Overview</h3>
+<p class="font-body-sm text-body-sm text-secondary">Current exam session duty distribution across registered halls</p>
+</div>
+</div>
+<button class="p-1 rounded-lg bg-surface-container-low hover:bg-surface-container-high text-secondary" onclick="closeRosterPanel()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-secondary uppercase">Assigned Exam Halls</span>
+<span class="font-title-sm text-title-sm font-bold text-on-surface">Auditorium East, Room 402, Lab 3</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-secondary uppercase">Scheduled Invigilation Shifts</span>
+<span class="font-title-sm text-title-sm font-bold text-primary">32 Shifts Allocated</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-secondary uppercase">Conflict Status</span>
+<span class="font-title-sm text-title-sm font-bold text-on-surface flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span> Zero Schedule Clashes
+          </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Modal: Add / Edit Academic Department -->
+<div class="fixed inset-0 z-50 flex items-center justify-center hidden" id="departmentModal">
+<!-- Backdrop -->
+<div class="absolute inset-0 bg-inverse-surface/60 backdrop-blur-sm" onclick="closeModal()"></div>
+<!-- Modal Content Card -->
+<div class="relative w-full max-w-xl bg-surface-container-lowest rounded-xl shadow-xl z-10 overflow-hidden m-4">
+<!-- Modal Header -->
+<div class="px-space-xl py-space-lg bg-inverse-surface text-inverse-on-surface flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[20px]">corporate_fare</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-title-md text-title-md font-bold text-inverse-on-surface" id="modalMainTitle">Register New Department</h2>
+<p class="font-body-sm text-body-sm text-outline-variant">Assign department metadata for exam invigilation quotas and scheduling</p>
+</div>
+</div>
+<button class="text-outline-variant hover:text-inverse-on-surface p-1 rounded-lg transition-colors" onclick="closeModal()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Modal Body (PHP POST Action Target) -->
+<form action="department_save.php" class="p-space-xl flex flex-col gap-space-md" id="departmentForm" method="POST" onsubmit="handleFormSubmit(event)">
+<input id="action_type" name="action_type" type="hidden" value="create"/>
+<input id="department_id" name="department_id" type="hidden" value=""/>
+<!-- Field 1: Department Name -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-lg text-label-lg text-on-surface flex items-center gap-1" for="department_name">
+            Department Name <span class="text-error font-bold">*</span>
+</label>
+<input class="h-10 px-space-md bg-surface-container-low font-body-md text-body-md text-on-surface rounded-lg focus:outline-none focus:bg-surface-container-lowest focus:shadow-md transition-all" id="department_name" name="department_name" placeholder="e.g. Department of Mechanical Engineering" required="" type="text"/>
+<span class="font-body-sm text-body-sm text-secondary">Official institutional title according to academic charter.</span>
+</div>
+<!-- Field 2: Department Code -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-lg text-label-lg text-on-surface flex items-center gap-1" for="department_code">
+            Department Code <span class="text-error font-bold">*</span>
+</label>
+<input class="h-10 px-space-md uppercase font-code text-code text-on-surface bg-surface-container-low rounded-lg focus:outline-none focus:bg-surface-container-lowest focus:shadow-md transition-all" id="department_code" maxlength="8" name="department_code" placeholder="e.g. ME or CE" required="" type="text"/>
+<span class="font-body-sm text-body-sm text-secondary">Short acronym used for hall tags and course prefix (Max 8 characters).</span>
+</div>
+<!-- Field 3: Faculty Lead / Dean Name -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-lg text-label-lg text-on-surface flex items-center gap-1" for="faculty_lead">
+            Department Head / Dean In-Charge <span class="text-error font-bold">*</span>
+</label>
+<select class="h-10 px-space-md bg-surface-container-low font-body-md text-body-md text-on-surface rounded-lg focus:outline-none focus:bg-surface-container-lowest focus:shadow-md transition-all cursor-pointer" id="faculty_lead" name="faculty_lead" required="">
+<option value="">-- Select Senior Faculty Member --</option>
+<option value="Dr. Tariqul Islam">Dr. Tariqul Islam (Senior Professor, CSE)</option>
+<option value="Prof. Anisur Rahman">Prof. Anisur Rahman (Dean of Engineering)</option>
+<option value="Dr. Farhana Chowdhury">Dr. Farhana Chowdhury (Associate Professor, BBA)</option>
+<option value="Barrister S. K. Alam">Barrister S. K. Alam (Head of Law)</option>
+<option value="Dr. Maliha Jahan">Dr. Maliha Jahan (Faculty of Arts)</option>
+<option value="Dr. Nasir Uddin Ahmed">Dr. Nasir Uddin Ahmed (Professor, Pharmacy)</option>
+<option value="Dr. S. M. Rezaul Karim">Dr. S. M. Rezaul Karim (Academic Council Member)</option>
+</select>
+<span class="font-body-sm text-body-sm text-secondary">Accountable for invigilator substitutions and emergency roll calls.</span>
+</div>
+<!-- Relational Note Badge -->
+<div class="p-space-sm bg-surface-container-high/40 rounded-lg flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">info</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Saving registers this unit with default 6 invigilation slots per full-time faculty member.</span>
+</div>
+<!-- Form Action Buttons -->
+<div class="flex items-center justify-end gap-space-sm pt-space-sm mt-space-xs">
+<button class="h-10 px-space-lg rounded-lg bg-surface-container-high text-on-surface font-label-lg text-label-lg hover:bg-surface-container transition-colors" onclick="closeModal()" type="button">
+            Cancel
+          </button>
+<button class="h-10 px-space-lg rounded-lg bg-primary-container text-on-primary font-label-lg text-label-lg hover:bg-primary transition-colors shadow-md flex items-center gap-1" type="submit">
+<span class="material-symbols-outlined text-[18px]">check</span>
+<span id="submitBtnText">Save Department</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+<!-- Notification Toast -->
+<div class="fixed bottom-6 right-6 z-50 hidden flex items-center gap-space-sm px-space-lg py-space-md rounded-xl bg-inverse-surface text-inverse-on-surface shadow-xl" id="toastNotification">
+<span class="material-symbols-outlined text-[20px] text-primary" id="toastIcon">check_circle</span>
+<span class="font-body-md text-body-md" id="toastMessage">Department action completed successfully</span>
+</div>
+<!-- Inline Micro-Interactions Script -->
+<script>
+    function openModal(mode, id = '', name = '', code = '', lead = '') {
+      const modal = document.getElementById('departmentModal');
+      const mainTitle = document.getElementById('modalMainTitle');
+      const submitText = document.getElementById('submitBtnText');
+      const actionType = document.getElementById('action_type');
+      const deptIdField = document.getElementById('department_id');
+      const nameInput = document.getElementById('department_name');
+      const codeInput = document.getElementById('department_code');
+      const leadSelect = document.getElementById('faculty_lead');
+
+      if (mode === 'edit') {
+        mainTitle.textContent = 'Edit Academic Department';
+        submitText.textContent = 'Update Department';
+        actionType.value = 'update';
+        deptIdField.value = id;
+        nameInput.value = name;
+        codeInput.value = code;
+        leadSelect.value = lead;
+      } else {
+        mainTitle.textContent = 'Register New Department';
+        submitText.textContent = 'Save Department';
+        actionType.value = 'create';
+        deptIdField.value = '';
+        nameInput.value = '';
+        codeInput.value = '';
+        leadSelect.value = '';
+      }
+
+      modal.classList.remove('hidden');
+    }
+
+    function closeModal() {
+      document.getElementById('departmentModal').classList.add('hidden');
+    }
+
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const form = e.target;
+      const deptName = form.department_name.value;
+      const deptCode = form.department_code.value;
+      const isEdit = form.action_type.value === 'update';
+
+      closeModal();
+      showToast(isEdit ? `Department ${deptCode} updated successfully.` : `Department ${deptCode} - ${deptName} registered.`);
+    }
+
+    function confirmDelete(id, code) {
+      if (confirm(`Are you sure you want to delete department ${code} (${id})?\n\nNOTE: If active faculty or courses are linked, DBMS referential integrity will abort the deletion.`)) {
+        showToast(`Department ${code} successfully removed from active directory.`);
+      }
+    }
+
+    function viewRoster(id, name) {
+      const panel = document.getElementById('quickRosterPanel');
+      const title = document.getElementById('rosterTitle');
+      title.textContent = `${name} (${id}) — Active Examination Schedule`;
+      panel.classList.remove('hidden');
+      panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    function closeRosterPanel() {
+      document.getElementById('quickRosterPanel').classList.add('hidden');
+    }
+
+    function handleSearch(query) {
+      const rows = document.querySelectorAll('.dept-row');
+      const lower = query.toLowerCase();
+      let visibleCount = 0;
+
+      rows.forEach(row => {
+        const name = (row.getAttribute('data-name') || '').toLowerCase();
+        const code = (row.getAttribute('data-code') || '').toLowerCase();
+        const matches = name.includes(lower) || code.includes(lower);
+        row.style.display = matches ? '' : 'none';
+        if (matches) visibleCount++;
+      });
+
+      document.getElementById('resultsCount').textContent = visibleCount;
+    }
+
+    function handleFilter(status) {
+      const rows = document.querySelectorAll('.dept-row');
+      let visibleCount = 0;
+
+      rows.forEach(row => {
+        const rowStatus = row.getAttribute('data-status');
+        const matches = status === 'ALL' || rowStatus === status;
+        row.style.display = matches ? '' : 'none';
+        if (matches) visibleCount++;
+      });
+
+      document.getElementById('resultsCount').textContent = visibleCount;
+    }
+
+    function exportData() {
+      showToast('Exporting academic department roster to CSV...');
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toastNotification');
+      const text = document.getElementById('toastMessage');
+      text.textContent = msg;
+      toast.classList.remove('hidden');
+      setTimeout(() => {
+        toast.classList.add('hidden');
+      }, 3500);
+    }
+  </script>
+</div></main></div></body></html>
