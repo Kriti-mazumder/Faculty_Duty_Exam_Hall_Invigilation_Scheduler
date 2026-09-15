@@ -8,6 +8,14 @@ $facultyName = $_SESSION['faculty_name'] ?? ($_SESSION['username'] ?? 'Faculty')
 $profileHref = ($_SESSION['role'] ?? '') === 'admin'
     ? '/Faculty_Duty_Exam_Hall_Invigilation_Scheduler/Php/admin_profile.php'
     : '/Faculty_Duty_Exam_Hall_Invigilation_Scheduler/Php/faculty_profile.php';
+
+$userId = (int)($_SESSION['user_id'] ?? 0);
+$unreadNotifCount = 0;
+if ($userId > 0 && isset($pdo)) {
+    $stmt = $pdo->prepare('SELECT COUNT(*) FROM notification WHERE user_id = ? AND is_read = 0');
+    $stmt->execute([$userId]);
+    $unreadNotifCount = (int) $stmt->fetchColumn();
+}
 ?>
 
 <!-- Impersonation Notice Banner -->
@@ -65,6 +73,9 @@ $profileHref = ($_SESSION['role'] ?? '') === 'admin'
          class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"
          title="Notifications">
         <span class="material-symbols-outlined text-[22px]">notifications</span>
+        <?php if ($unreadNotifCount > 0): ?>
+          <span class="absolute top-1.5 right-2 w-2.5 h-2.5 bg-error rounded-full border-2 border-surface"></span>
+        <?php endif; ?>
       </a>
 
       <a href="<?= $profileHref ?>" class="flex items-center gap-space-sm pl-space-sm hover:opacity-80 transition-opacity" title="View Profile">

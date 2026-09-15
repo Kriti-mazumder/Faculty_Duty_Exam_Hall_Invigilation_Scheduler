@@ -10,6 +10,13 @@ $activePage = 'notifications';
 $userId = (int) $_SESSION['user_id'];
 
 // Mark as read if requested
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['mark_read_id'])) {
+    $pdo->prepare('UPDATE notification SET is_read = 1 WHERE notification_id = ? AND user_id = ?')
+        ->execute([(int)$_POST['mark_read_id'], $userId]);
+    header('Location: /Faculty_Duty_Exam_Hall_Invigilation_Scheduler/Php/notifications.php');
+    exit();
+}
+
 if (isset($_GET['mark_all_read'])) {
     $pdo->prepare('UPDATE notification SET is_read = 1 WHERE user_id = ?')->execute([$userId]);
     header('Location: /Faculty_Duty_Exam_Hall_Invigilation_Scheduler/Php/notifications.php');
@@ -73,7 +80,17 @@ require_once __DIR__ . '/../includes/topnav.php';
         </p>
         <span class="font-label-sm text-label-sm text-on-surface-variant whitespace-nowrap"><?= date('d M, g:i a', strtotime($n['created_at'])) ?></span>
       </div>
-      <p class="font-body-sm text-body-sm text-on-surface-variant mt-1"><?= htmlspecialchars($n['message']) ?></p>
+      <div class="flex items-end justify-between gap-4 mt-1">
+        <p class="font-body-sm text-body-sm text-on-surface-variant"><?= nl2br(htmlspecialchars($n['message'])) ?></p>
+        <?php if (!$n['is_read']): ?>
+        <form method="POST" action="/Faculty_Duty_Exam_Hall_Invigilation_Scheduler/Php/notifications.php" class="flex-shrink-0">
+          <input type="hidden" name="mark_read_id" value="<?= $n['notification_id'] ?>">
+          <button type="submit" class="px-3 py-1.5 bg-surface-container hover:bg-surface-container-high text-primary font-label-sm text-[12px] rounded-lg transition-colors">
+            Mark Read
+          </button>
+        </form>
+        <?php endif; ?>
+      </div>
     </div>
   </div>
   <?php endforeach; ?>

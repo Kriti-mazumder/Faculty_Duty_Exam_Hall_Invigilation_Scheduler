@@ -75,16 +75,38 @@ $rooms = $pdo->query(
      ORDER BY r.building, r.room_no"
 )->fetchAll();
 
-// ── Alerts ─────────────────────────────────────────────────────
-$unassignedExams = $pdo->query(
-    "SELECT COUNT(DISTINCT e.exam_id)
-     FROM exam e
-     WHERE e.exam_date >= CURDATE() AND e.status = 'scheduled'
-       AND e.exam_id NOT IN (
-           SELECT DISTINCT er2.exam_id FROM exam_room er2
-           JOIN invigilation_assignment ia2 ON ia2.exam_room_id = er2.exam_room_id
-       )"
+// ── Alerts: Count scheduled upcoming exams that have fewer than required invigilators ──
+$unassignedExams = (int) $pdo->query(
+    "SELECT COUNT(*) FROM (
+        SELECT e.exam_id, e.required_invigilators
+        FROM exam e
+        JOIN exam_room er ON er.exam_id = e.exam_id
+        LEFT JOIN invigilation_assignment ia ON ia.exam_room_id = er.exam_room_id AND ia.assignment_status = 'assigned'
+        WHERE e.exam_date >= CURDATE() AND e.status = 'scheduled'
+        GROUP BY e.exam_id, e.required_invigilators
+        HAVING COUNT(DISTINCT ia.assignment_id) < e.required_invigilators
+    ) AS under_assigned_exams"
 )->fetchColumn();
+
+// Maintain single active admin notification for staffing alert
+if ($unassignedExams > 0) {
+    $alertTitle = 'Staffing Alert';
+    
+    // Check for existing unread staffing alert for admin (user_id = 1)
+    $stmt = $pdo->prepare('SELECT notification_id FROM notification WHERE user_id = 1 AND title = ? AND is_read = 0');
+    $stmt->execute([$alertTitle]);
+    $existingAlertId = $stmt->fetchColumn();
+    
+    $msg = "{$unassignedExams} upcoming scheduled exam(s) require more invigilators to meet required staffing.";
+    
+    if (!$existingAlertId) {
+        $pdo->prepare('INSERT INTO notification (user_id, title, message) VALUES (1, ?, ?)')
+            ->execute([$alertTitle, $msg]);
+    } else {
+        $pdo->prepare('UPDATE notification SET message = ?, created_at = NOW() WHERE notification_id = ?')
+            ->execute([$msg, $existingAlertId]);
+    }
+}
 
 require_once __DIR__ . '/../includes/header.php';
 require_once __DIR__ . '/../includes/sidebar.php';
@@ -305,24 +327,24 @@ require_once __DIR__ . '/../includes/topnav.php';
   </div>
 </section>
 
-<!-- ── Alerts & Notifications ───────────────────────────────── -->
+<!-- ── Alerts & Staffing Status ────────────────────────────── -->
 <section class="mb-6">
-  <h2 class="font-headline-md text-headline-md text-on-surface mb-3">Alerts &amp; Notifications</h2>
+  <h2 class="font-headline-md text-headline-md text-on-surface mb-3">Alerts &amp; Staffing Status</h2>
   <div class="space-y-2">
     <?php if ($unassignedExams > 0): ?>
     <div class="flex items-start gap-3 p-4 rounded-xl bg-error/5 border border-error/20">
       <span class="material-symbols-outlined text-error text-[20px] mt-0.5">warning</span>
       <div>
-        <p class="font-label-md text-label-md text-error">Unassigned Exams</p>
-        <p class="font-body-sm text-body-sm text-on-surface-variant"><?= $unassignedExams ?> upcoming exam<?= $unassignedExams !== 1 ? 's have' : ' has' ?> no invigilator assigned yet.</p>
+        <p class="font-label-md text-label-md text-error font-semibold">Staffing Alert: Under-assigned / Unassigned Exams</p>
+        <p class="font-body-sm text-body-sm text-on-surface-variant"><?= $unassignedExams ?> upcoming scheduled exam<?= $unassignedExams !== 1 ? 's require' : ' requires' ?> more invigilators to meet required staffing.</p>
       </div>
       <a href="/Faculty_Duty_Exam_Hall_Invigilation_Scheduler/Php/exam_room_management.php"
-         class="ml-auto font-label-md text-label-md text-error hover:underline whitespace-nowrap">Fix now →</a>
+         class="ml-auto font-label-md text-label-md text-error hover:underline whitespace-nowrap font-medium">Assign Invigilators →</a>
     </div>
     <?php else: ?>
-    <div class="flex items-center gap-3 p-4 rounded-xl bg-green-50 border border-green-200">
+    <div class="flex items-center gap-3 p-4 rounded-xl bg-green-50 border border-green-200 shadow-sm">
       <span class="material-symbols-outlined text-green-600 text-[20px]">check_circle</span>
-      <p class="font-label-md text-label-md text-green-700">All upcoming exams have invigilators assigned.</p>
+      <p class="font-label-md text-label-md text-green-700 font-semibold">All upcoming exams have sufficient invigilators assigned (100% staffed).</p>
     </div>
     <?php endif; ?>
   </div>

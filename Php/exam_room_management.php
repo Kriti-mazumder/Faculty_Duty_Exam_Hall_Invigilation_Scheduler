@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 require_once __DIR__ . '/../config/db.php';
 require_once __DIR__ . '/../includes/auth_check.php';
 
@@ -14,7 +14,7 @@ $examRooms = $pdo->query(
             c.course_code, c.course_title,
             r.room_no, r.building,
             COUNT(ia.assignment_id) AS assigned_count,
-            GROUP_CONCAT(CONCAT(f.faculty_name,' (',ia.duty_role,')') SEPARATOR ' · ') AS assignments
+            GROUP_CONCAT(CONCAT(ia.assignment_id, ':', f.faculty_name,' (',ia.duty_role,')') SEPARATOR '|') AS assignments
      FROM exam_room er
      JOIN exam e ON e.exam_id = er.exam_id
      JOIN course c ON c.course_id = e.course_id
@@ -138,13 +138,41 @@ require_once __DIR__ . '/../includes/topnav.php';
             <?= $er['assigned_count'] ?><?= $gap > 0 ? " (need $gap more)" : '' ?>
           </span>
         </td>
-        <td class="px-4 py-3 text-xs text-on-surface-variant"><?= htmlspecialchars($er['assignments'] ?? '—') ?></td>
+        <td class="px-4 py-3 text-xs text-on-surface-variant">
+          <?php if (!empty($er['assignments'])): ?>
+            <div class="space-y-1">
+              <?php foreach(explode('|', $er['assignments']) as $assignStr): ?>
+                <?php if($assignStr): list($assignId, $assignText) = explode(':', $assignStr, 2); ?>
+                  <div class="flex items-center justify-between bg-surface-container rounded px-2 py-1">
+                    <span><?= htmlspecialchars($assignText) ?></span>
+                    <form method="POST" action="/Faculty_Duty_Exam_Hall_Invigilation_Scheduler/actions/assignment_delete.php"
+                          class="inline" onsubmit="return confirm('Are you sure you want to remove this invigilator?');">
+                      <input type="hidden" name="assignment_id" value="<?= $assignId ?>">
+                      <button type="submit" class="text-error hover:text-error/80" title="Remove">
+                        <span class="material-symbols-outlined text-[14px]">close</span>
+                      </button>
+                    </form>
+                  </div>
+                <?php endif; ?>
+              <?php endforeach; ?>
+            </div>
+          <?php else: ?>
+            —
+          <?php endif; ?>
+        </td>
         <td class="px-4 py-3 text-right">
           <?php if ($er['exam_status'] === 'scheduled'): ?>
-          <button onclick="openAssignModal(<?= $er['exam_room_id'] ?>, '<?= htmlspecialchars($er['course_code'].' '.$er['exam_name'].' – Room '.$er['room_no'], ENT_QUOTES) ?>')"
-                  class="px-3 py-1.5 rounded-lg bg-primary/10 text-primary font-label-sm text-label-sm hover:bg-primary hover:text-on-primary transition-colors">
-            Assign
-          </button>
+            <?php if ($er['assigned_count'] >= $er['required_invigilators']): ?>
+              <span class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-green-50 text-green-700 font-label-sm text-xs font-semibold border border-green-200" title="Required staffing limit reached">
+                <span class="material-symbols-outlined text-[14px]">check_circle</span> Staffed (<?= $er['assigned_count'] ?>/<?= $er['required_invigilators'] ?>)
+              </span>
+            <?php else: ?>
+              <button onclick="openAssignModal(<?= $er['exam_room_id'] ?>, '<?= htmlspecialchars($er['course_code'].' '.$er['exam_name'].' – Room '.$er['room_no'], ENT_QUOTES) ?>', <?= (int)$er['assigned_count'] ?>, <?= (int)$er['required_invigilators'] ?>)"
+                      class="px-3 py-1.5 rounded-lg bg-primary/10 text-primary font-label-sm text-label-sm hover:bg-primary hover:text-on-primary transition-colors inline-flex items-center gap-1">
+                <span class="material-symbols-outlined text-[15px]">person_add</span>
+                <span>Assign (<?= $er['assigned_count'] ?>/<?= $er['required_invigilators'] ?>)</span>
+              </button>
+            <?php endif; ?>
           <?php endif; ?>
         </td>
       </tr>
@@ -156,13 +184,16 @@ require_once __DIR__ . '/../includes/topnav.php';
 <!-- Assign Invigilator Modal -->
 <div id="assign-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/40 backdrop-blur-sm">
   <div class="bg-surface-container-lowest rounded-2xl shadow-2xl p-8 w-full max-w-md">
-    <h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">Assign Invigilator</h3>
+    <div class="flex items-center justify-between mb-1">
+      <h3 class="font-headline-sm text-headline-sm text-on-surface">Assign Invigilator</h3>
+      <span id="assign-badge" class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-primary/10 text-primary"></span>
+    </div>
     <p class="font-body-sm text-body-sm text-on-surface-variant mb-5" id="assign-label"></p>
-    <form method="POST" action="/Faculty_Duty_Exam_Hall_Invigilation_Scheduler/actions/assignment_save.php" class="space-y-4">
+    <form id="assign-form" method="POST" action="/Faculty_Duty_Exam_Hall_Invigilation_Scheduler/actions/assignment_save.php" class="space-y-4">
       <input type="hidden" name="exam_room_id" id="a-exam-room-id"/>
       <div>
-        <label class="block font-label-sm text-label-sm text-on-surface-variant mb-1">Faculty *</label>
-        <select name="faculty_id" required
+        <label class="block font-label-sm text-label-sm text-on-surface-variant mb-1">Faculty Member *</label>
+        <select name="faculty_id" id="a-faculty-id" required
                 class="w-full px-4 py-2.5 rounded-xl border border-outline-variant bg-surface text-on-surface text-sm focus:outline-none focus:ring-2 focus:ring-primary-container">
           <option value="">Select Faculty</option>
           <?php foreach ($allFaculty as $f): ?>
@@ -171,7 +202,7 @@ require_once __DIR__ . '/../includes/topnav.php';
         </select>
       </div>
       <div>
-        <label class="block font-label-sm text-label-sm text-on-surface-variant mb-1">Role</label>
+        <label class="block font-label-sm text-label-sm text-on-surface-variant mb-1">Invigilation Role</label>
         <select name="duty_role"
                 class="w-full px-4 py-2.5 rounded-xl border border-outline-variant bg-surface text-on-surface text-sm focus:outline-none focus:ring-2 focus:ring-primary-container">
           <option value="assistant">Assistant Invigilator</option>
@@ -179,7 +210,7 @@ require_once __DIR__ . '/../includes/topnav.php';
         </select>
       </div>
       <div class="flex gap-3 pt-2">
-        <button type="submit" class="flex-1 py-2.5 rounded-xl bg-primary text-on-primary font-label-md text-label-md transition-colors">Assign</button>
+        <button type="submit" id="btn-submit-assign" class="flex-1 py-2.5 rounded-xl bg-primary text-on-primary font-label-md text-label-md transition-colors">Assign</button>
         <button type="button" onclick="closeModal()" class="flex-1 py-2.5 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md transition-colors">Cancel</button>
       </div>
     </form>
@@ -187,9 +218,22 @@ require_once __DIR__ . '/../includes/topnav.php';
 </div>
 
 <script>
-function openAssignModal(examRoomId, label) {
+function openAssignModal(examRoomId, label, currentCount, maxLimit) {
   document.getElementById('a-exam-room-id').value = examRoomId;
   document.getElementById('assign-label').textContent = label;
+  document.getElementById('assign-badge').textContent = `Slot ${currentCount + 1} of ${maxLimit}`;
+  
+  const submitBtn = document.getElementById('btn-submit-assign');
+  if (currentCount >= maxLimit) {
+    submitBtn.disabled = true;
+    submitBtn.classList.add('opacity-50', 'cursor-not-allowed');
+    submitBtn.textContent = 'Maximum Limit Reached';
+  } else {
+    submitBtn.disabled = false;
+    submitBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+    submitBtn.textContent = 'Assign Invigilator';
+  }
+  
   document.getElementById('assign-modal').classList.remove('hidden');
   document.getElementById('assign-modal').classList.add('flex');
 }
