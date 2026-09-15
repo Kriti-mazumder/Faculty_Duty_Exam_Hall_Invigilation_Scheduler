@@ -9,6 +9,7 @@ $adminLinks = [
     ['path' => 'department-management',  'href' => $base.'department_management.php',      'icon' => 'corporate_fare',      'label' => 'Department Management'],
     ['path' => 'course-management',      'href' => $base.'course_management.php',          'icon' => 'menu_book',           'label' => 'Course Management'],
     ['path' => 'faculty-management',     'href' => $base.'faculty_management.php',         'icon' => 'badge',               'label' => 'Faculty Management'],
+    ['path' => 'faculty-availability',   'href' => $base.'faculty_availability.php',       'icon' => 'event_available',     'label' => 'Faculty Availability'],
     ['path' => 'exam-management',        'href' => $base.'exam_management.php',            'icon' => 'assignment',          'label' => 'Exam Management'],
     ['path' => 'exam-timetable',         'href' => $base.'exam_timetable.php',             'icon' => 'calendar_month',      'label' => 'Exam Timetable & Rooms'],
     ['path' => 'room-management',        'href' => $base.'room_management.php',            'icon' => 'meeting_room',        'label' => 'Room Management'],
@@ -65,10 +66,6 @@ if (!function_exists('sidebarLink')) {
             <span class="font-label-sm text-label-sm uppercase tracking-wider text-slate-400 font-bold px-space-sm">Admin &amp; Controller Tools</span>
           </div>
           <?php foreach ($adminLinks as $link): echo sidebarLink($link, $activePage); endforeach; ?>
-          <div class="pt-space-md pb-space-xs">
-            <span class="font-label-sm text-label-sm uppercase tracking-wider text-slate-400 font-bold px-space-sm">Faculty Portal (Preview)</span>
-          </div>
-          <?php foreach (array_slice($facultyLinks, 0, 4) as $link): echo sidebarLink($link, $activePage); endforeach; ?>
         <?php else: ?>
           <div class="pt-space-sm pb-space-xs">
             <span class="font-label-sm text-label-sm uppercase tracking-wider text-slate-400 font-bold px-space-sm">Faculty Portal</span>
@@ -96,4 +93,3 @@ if (!function_exists('sidebarLink')) {
     </a>
   </div>
 </aside>
-

@@ -34,6 +34,12 @@ require_once __DIR__ . '/../includes/topnav.php';
   <span class="font-title-sm text-title-sm text-primary">Faculty Management</span>
 </nav>
 
+<?php if (isset($_GET['impersonation_ended'])): ?>
+<div class="mb-4 flex items-center gap-2 px-4 py-3 rounded-xl bg-blue-50 border border-blue-200 text-blue-700 text-sm">
+  <span class="material-symbols-outlined text-[18px]">admin_panel_settings</span> Impersonation session ended. You are back in the Admin Console.
+</div>
+<?php endif; ?>
+
 <?php if ($success): ?>
 <div class="mb-4 flex items-center gap-2 px-4 py-3 rounded-xl bg-green-50 border border-green-200 text-green-700 text-sm">
   <span class="material-symbols-outlined text-[18px]">check_circle</span> Faculty record saved.
@@ -85,6 +91,12 @@ require_once __DIR__ . '/../includes/topnav.php';
           </span>
         </td>
         <td class="px-6 py-3 text-right flex items-center justify-end gap-1">
+          <a href="/Faculty_Duty_Exam_Hall_Invigilation_Scheduler/Php/impersonate.php?action=start&faculty_id=<?= $f['faculty_id'] ?>"
+             class="p-1.5 rounded-lg hover:bg-primary/10 text-primary transition-colors flex items-center gap-1 font-label-sm text-label-sm"
+             title="Impersonate & View Faculty Perspective">
+            <span class="material-symbols-outlined text-[18px]">visibility</span>
+            <span class="hidden xl:inline">Impersonate</span>
+          </a>
           <button onclick="openEditModal(<?= htmlspecialchars(json_encode($f), ENT_QUOTES) ?>)"
                   class="p-1.5 rounded-lg hover:bg-surface-container-high transition-colors text-on-surface-variant" title="Edit">
             <span class="material-symbols-outlined text-[18px]">edit</span>
