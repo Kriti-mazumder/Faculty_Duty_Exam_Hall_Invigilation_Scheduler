@@ -138,7 +138,6 @@ require_once __DIR__ . '/../includes/topnav.php';
   $links = [
     ['href'=>'my_duties.php',                 'icon'=>'checklist',     'label'=>'My Duties'],
     ['href'=>'faculty_availability.php',       'icon'=>'event_available','label'=>'Availability'],
-    ['href'=>'duty_preference_management.php', 'icon'=>'tune',          'label'=>'Preferences'],
     ['href'=>'faculty_profile.php',            'icon'=>'manage_accounts','label'=>'My Profile'],
   ];
   $b = '/Faculty_Duty_Exam_Hall_Invigilation_Scheduler/Php/';

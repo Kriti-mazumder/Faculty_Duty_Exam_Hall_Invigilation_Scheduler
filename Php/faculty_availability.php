@@ -117,8 +117,13 @@ require_once __DIR__ . '/../includes/topnav.php';
     Showing <strong><?= count($availability) ?></strong> record(s)
   </div>
 </div>
+<div class="mb-6 p-4 rounded-xl bg-surface-container-high/40 text-on-surface-variant text-sm border border-surface-container-high">
+  <span class="material-symbols-outlined text-[18px] align-text-bottom mr-1">info</span>
+  Availability is declared by faculty members. Use Invigilation Assignments to schedule duties.
+</div>
 <?php endif; ?>
 
+<?php if (!$isAdmin): ?>
 <!-- Add availability -->
 <section class="bg-surface-container-lowest rounded-xl shadow-sm p-6 mb-6 border border-surface-container-high/60">
   <h2 class="font-headline-md text-headline-md text-on-surface mb-4 flex items-center gap-2">
@@ -176,6 +181,7 @@ require_once __DIR__ . '/../includes/topnav.php';
     </div>
   </form>
 </section>
+<?php endif; ?>
 
 <!-- Availability Table -->
 <section class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden border border-surface-container-high/60">
@@ -203,7 +209,9 @@ require_once __DIR__ . '/../includes/topnav.php';
           <th class="px-5 py-3 text-left font-label-sm text-label-sm text-on-surface-variant font-bold">Start Time</th>
           <th class="px-5 py-3 text-left font-label-sm text-label-sm text-on-surface-variant font-bold">End Time</th>
           <th class="px-5 py-3 text-center font-label-sm text-label-sm text-on-surface-variant font-bold">Status</th>
+          <?php if (!$isAdmin): ?>
           <th class="px-5 py-3 text-right font-label-sm text-label-sm text-on-surface-variant font-bold">Actions</th>
+          <?php endif; ?>
         </tr>
       </thead>
       <tbody class="divide-y divide-surface-container-high">
@@ -232,6 +240,7 @@ require_once __DIR__ . '/../includes/topnav.php';
               <?= ucfirst($a['status']) ?>
             </span>
           </td>
+          <?php if (!$isAdmin): ?>
           <td class="px-5 py-3.5 text-right">
             <div class="inline-flex items-center gap-1">
               <button onclick="openEdit(<?= htmlspecialchars(json_encode($a), ENT_QUOTES) ?>)"
@@ -246,6 +255,7 @@ require_once __DIR__ . '/../includes/topnav.php';
               </button>
             </div>
           </td>
+          <?php endif; ?>
         </tr>
         <?php endforeach; ?>
       </tbody>

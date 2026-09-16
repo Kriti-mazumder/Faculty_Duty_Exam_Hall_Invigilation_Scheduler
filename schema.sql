@@ -1,4 +1,4 @@
-﻿-- MariaDB dump 10.19  Distrib 10.4.32-MariaDB, for Win64 (AMD64)
+-- MariaDB dump 10.19  Distrib 10.4.32-MariaDB, for Win64 (AMD64)
 --
 -- Host: localhost    Database: invigilation_scheduler
 -- ------------------------------------------------------
@@ -43,6 +43,7 @@ DROP TABLE IF EXISTS `department`;
 CREATE TABLE `department` (
   `department_id` int(11) NOT NULL AUTO_INCREMENT,
   `department_name` varchar(100) NOT NULL,
+  `status` ENUM('active','inactive') DEFAULT 'active',
   PRIMARY KEY (`department_id`),
   UNIQUE KEY `department_name` (`department_name`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;

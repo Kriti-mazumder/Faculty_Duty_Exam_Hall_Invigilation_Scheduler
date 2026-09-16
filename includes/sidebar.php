@@ -25,7 +25,6 @@ $facultyLinks = [
     ['path' => 'faculty-dashboard',      'href' => $base.'faculty_dashboard.php',          'icon' => 'space_dashboard',     'label' => 'Faculty Dashboard'],
     ['path' => 'my-assigned-duties',     'href' => $base.'my_duties.php',                  'icon' => 'checklist',           'label' => 'My Assigned Duties'],
     ['path' => 'faculty-availability',   'href' => $base.'faculty_availability.php',       'icon' => 'event_available',     'label' => 'Faculty Availability'],
-    ['path' => 'duty-preferences',       'href' => $base.'duty_preference_management.php',  'icon' => 'tune',                'label' => 'Duty Preferences'],
     ['path' => 'notifications',          'href' => $base.'notifications.php',              'icon' => 'notifications',       'label' => 'Notifications'],
 ];
 

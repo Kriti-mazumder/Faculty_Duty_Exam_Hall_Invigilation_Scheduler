@@ -7,7 +7,7 @@ $pageTitle  = 'Department Management';
 $activePage = 'department-management';
 
 $departments = $pdo->query(
-    'SELECT d.department_id, d.department_name,
+    'SELECT d.department_id, d.department_name, d.status,
             COUNT(DISTINCT f.faculty_id) AS faculty_count,
             COUNT(DISTINCT c.course_id)  AS course_count
      FROM department d
@@ -70,6 +70,7 @@ require_once __DIR__ . '/../includes/topnav.php';
         <th class="px-6 py-3 text-left font-label-sm text-label-sm text-on-surface-variant">Department Name</th>
         <th class="px-6 py-3 text-center font-label-sm text-label-sm text-on-surface-variant">Faculty</th>
         <th class="px-6 py-3 text-center font-label-sm text-label-sm text-on-surface-variant">Courses</th>
+        <th class="px-6 py-3 text-center font-label-sm text-label-sm text-on-surface-variant">Status</th>
         <th class="px-6 py-3 text-right font-label-sm text-label-sm text-on-surface-variant">Actions</th>
       </tr>
     </thead>
@@ -80,6 +81,11 @@ require_once __DIR__ . '/../includes/topnav.php';
         <td class="px-6 py-3 font-label-md text-label-md"><?= htmlspecialchars($dept['department_name']) ?></td>
         <td class="px-6 py-3 text-center"><?= $dept['faculty_count'] ?></td>
         <td class="px-6 py-3 text-center"><?= $dept['course_count'] ?></td>
+        <td class="px-6 py-3 text-center">
+          <span class="px-2 py-0.5 rounded-full font-label-sm text-label-sm <?= ($dept['status'] ?? 'active')==='active' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700' ?>">
+            <?= ucfirst($dept['status'] ?? 'active') ?>
+          </span>
+        </td>
         <td class="px-6 py-3 text-right flex items-center justify-end gap-2">
           <!-- Edit (inline) -->
           <button onclick="openEditDept(<?= $dept['department_id'] ?>, '<?= htmlspecialchars($dept['department_name'], ENT_QUOTES) ?>')"
@@ -90,11 +96,12 @@ require_once __DIR__ . '/../includes/topnav.php';
           <form method="POST" action="/Faculty_Duty_Exam_Hall_Invigilation_Scheduler/actions/toggle_status.php" class="inline">
             <input type="hidden" name="table" value="department"/>
             <input type="hidden" name="id" value="<?= $dept['department_id'] ?>"/>
-            <input type="hidden" name="current_status" value="active"/>
+            <input type="hidden" name="current_status" value="<?= $dept['status'] ?? 'active' ?>"/>
             <input type="hidden" name="redirect" value="/Faculty_Duty_Exam_Hall_Invigilation_Scheduler/Php/department_management.php"/>
-            <button type="submit" class="p-1.5 rounded-lg hover:bg-red-50 transition-colors text-error" title="Deactivate"
-                    onclick="return confirm('Deactivate this department?')">
-              <span class="material-symbols-outlined text-[18px]">block</span>
+            <button type="submit" class="p-1.5 rounded-lg hover:bg-red-50 transition-colors <?= ($dept['status'] ?? 'active')==='active' ? 'text-error' : 'text-green-600' ?>" 
+                    title="<?= ($dept['status'] ?? 'active')==='active' ? 'Deactivate' : 'Reactivate' ?>"
+                    onclick="return confirm('<?= ($dept['status'] ?? 'active')==='active' ? 'Deactivate' : 'Reactivate' ?> this department?')">
+              <span class="material-symbols-outlined text-[18px]"><?= ($dept['status'] ?? 'active')==='active' ? 'block' : 'check_circle' ?></span>
             </button>
           </form>
         </td>

@@ -23,6 +23,16 @@ try {
     if ($id > 0) {
         $stmt = db()->prepare('UPDATE exam SET course_id=?,exam_name=?,exam_date=?,start_time=?,end_time=?,required_invigilators=?,student_count=?,status=? WHERE exam_id=?');
         $stmt->execute([$courseId,$name,$date,$start,$end,$req,$students,$status,$id]);
+        
+        if ($status === 'cancelled') {
+            $cancelStmt = db()->prepare('
+                UPDATE invigilation_assignment ia
+                JOIN exam_room er ON er.exam_room_id = ia.exam_room_id
+                SET ia.assignment_status = ?
+                WHERE er.exam_id = ?
+            ');
+            $cancelStmt->execute(['cancelled', $id]);
+        }
     } else {
         $stmt = db()->prepare('INSERT INTO exam (course_id,exam_name,exam_date,start_time,end_time,required_invigilators,student_count,status) VALUES (?,?,?,?,?,?,?,?)');
         $stmt->execute([$courseId,$name,$date,$start,$end,$req,$students,$status]);
